@@ -10,7 +10,7 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
 
 [node name="player" parent="." unique_id=1533921175 instance=ExtResource("2_jllyp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.312176, 4)
 
 [node name="cam" type="Camera3D" parent="." unique_id=145874791 node_paths=PackedStringArray("target")]
 transform = Transform3D(1, 0, 0, 0, 0.7387024, 0.67403173, 0, -0.67403173, 0.7387024, 0, 5.95739, 6.2851663)

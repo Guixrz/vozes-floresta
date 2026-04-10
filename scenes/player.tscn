@@ -1,21 +1,362 @@
 [gd_scene format=3 uid="uid://d26gkabaieoif"]
 
-[ext_resource type="Texture2D" uid="uid://cqe3ahhfc5k7n" path="res://icon.svg" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://ncx3d3y22oy5" path="res://scripts/Player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://5le7dm3ws5gj" path="res://testes-actors-sprites/goblin/Back - Walking/Back - Walking_000.png" id="2_2dvfe"]
+[ext_resource type="Texture2D" uid="uid://0oovuwobc52r" path="res://testes-actors-sprites/goblin/Front - Walking/Front - Walking_000.png" id="2_a38lo"]
+[ext_resource type="Texture2D" uid="uid://diomradgck17r" path="res://testes-actors-sprites/goblin/Front - Walking/Front - Walking_001.png" id="3_4ni07"]
+[ext_resource type="Texture2D" uid="uid://dxbngjy6iy0fy" path="res://testes-actors-sprites/goblin/Back - Walking/Back - Walking_001.png" id="3_giy8y"]
+[ext_resource type="Texture2D" uid="uid://evx5pmc620fh" path="res://testes-actors-sprites/goblin/Back - Walking/Back - Walking_002.png" id="4_fdfoy"]
+[ext_resource type="Texture2D" uid="uid://c35kb3r1xiqke" path="res://testes-actors-sprites/goblin/Front - Walking/Front - Walking_002.png" id="4_l71n6"]
+[ext_resource type="Texture2D" uid="uid://78hiqs8ofdb2" path="res://testes-actors-sprites/goblin/Back - Walking/Back - Walking_003.png" id="5_hhpqf"]
+[ext_resource type="Texture2D" uid="uid://dn73axw7aa6ko" path="res://testes-actors-sprites/goblin/Front - Walking/Front - Walking_003.png" id="5_ke2ow"]
+[ext_resource type="Texture2D" uid="uid://8so7shdhkeld" path="res://testes-actors-sprites/goblin/Back - Walking/Back - Walking_004.png" id="6_g5jhy"]
+[ext_resource type="Texture2D" uid="uid://3g4maygixge0" path="res://testes-actors-sprites/goblin/Front - Walking/Front - Walking_004.png" id="6_ujl30"]
+[ext_resource type="Texture2D" uid="uid://del02wpia06bh" path="res://testes-actors-sprites/goblin/Front - Walking/Front - Walking_005.png" id="7_31cv2"]
+[ext_resource type="Texture2D" uid="uid://ubbhffio0cvi" path="res://testes-actors-sprites/goblin/Back - Walking/Back - Walking_005.png" id="7_holxr"]
+[ext_resource type="Texture2D" uid="uid://cs52gjftyln50" path="res://testes-actors-sprites/goblin/Back - Walking/Back - Walking_006.png" id="8_mx1m4"]
+[ext_resource type="Texture2D" uid="uid://bbet8ltq7iytj" path="res://testes-actors-sprites/goblin/Front - Walking/Front - Walking_006.png" id="8_pf23h"]
+[ext_resource type="Texture2D" uid="uid://cqgya1td3jwv2" path="res://testes-actors-sprites/goblin/Back - Walking/Back - Walking_007.png" id="9_4gjji"]
+[ext_resource type="Texture2D" uid="uid://bctj8kitrifsd" path="res://testes-actors-sprites/goblin/Front - Walking/Front - Walking_007.png" id="9_dt7fs"]
+[ext_resource type="Texture2D" uid="uid://cnx2cd0d7h1tj" path="res://testes-actors-sprites/goblin/Back - Walking/Back - Walking_008.png" id="10_u2ulf"]
+[ext_resource type="Texture2D" uid="uid://8b2oldrw1ajb" path="res://testes-actors-sprites/goblin/Front - Walking/Front - Walking_008.png" id="10_wqfne"]
+[ext_resource type="Texture2D" uid="uid://bcv7ctqxo05c3" path="res://testes-actors-sprites/goblin/Back - Walking/Back - Walking_009.png" id="11_6e8lb"]
+[ext_resource type="Texture2D" uid="uid://dqedivdks8jfs" path="res://testes-actors-sprites/goblin/Front - Walking/Front - Walking_009.png" id="11_wnwbv"]
+[ext_resource type="Texture2D" uid="uid://iiqraqxhgw67" path="res://testes-actors-sprites/goblin/Back - Walking/Back - Walking_010.png" id="12_2gdjj"]
+[ext_resource type="Texture2D" uid="uid://f5nb2mgige8s" path="res://testes-actors-sprites/goblin/Front - Walking/Front - Walking_010.png" id="12_gl8cc"]
+[ext_resource type="Texture2D" uid="uid://no410bip3kr8" path="res://testes-actors-sprites/goblin/Front - Walking/Front - Walking_011.png" id="13_487ah"]
+[ext_resource type="Texture2D" uid="uid://sfas6f13b776" path="res://testes-actors-sprites/goblin/Back - Walking/Back - Walking_011.png" id="13_sc3ue"]
+[ext_resource type="Texture2D" uid="uid://ctjqk54nsgr0i" path="res://testes-actors-sprites/goblin/Back - Walking/Back - Walking_012.png" id="14_lxlsd"]
+[ext_resource type="Texture2D" uid="uid://dtb8g7juuynxh" path="res://testes-actors-sprites/goblin/Front - Walking/Front - Walking_012.png" id="14_md1ol"]
+[ext_resource type="Texture2D" uid="uid://mtravupnk88g" path="res://testes-actors-sprites/goblin/Front - Walking/Front - Walking_013.png" id="15_bj30b"]
+[ext_resource type="Texture2D" uid="uid://jnkudu7b6de5" path="res://testes-actors-sprites/goblin/Back - Walking/Back - Walking_013.png" id="15_ha2mi"]
+[ext_resource type="Texture2D" uid="uid://c1281dw8bswvv" path="res://testes-actors-sprites/goblin/Back - Walking/Back - Walking_014.png" id="16_apa73"]
+[ext_resource type="Texture2D" uid="uid://1gfqyecnd5di" path="res://testes-actors-sprites/goblin/Front - Walking/Front - Walking_014.png" id="16_jc3p3"]
+[ext_resource type="Texture2D" uid="uid://6rjyprh01ybd" path="res://testes-actors-sprites/goblin/Back - Walking/Back - Walking_015.png" id="17_74r1k"]
+[ext_resource type="Texture2D" uid="uid://bons4tdnhr7e3" path="res://testes-actors-sprites/goblin/Front - Walking/Front - Walking_015.png" id="17_hax0n"]
+[ext_resource type="Texture2D" uid="uid://c6t74lrmg8l0c" path="res://testes-actors-sprites/goblin/Back - Walking/Back - Walking_016.png" id="18_8svfe"]
+[ext_resource type="Texture2D" uid="uid://di1ko17gjyclt" path="res://testes-actors-sprites/goblin/Front - Walking/Front - Walking_016.png" id="18_t4otl"]
+[ext_resource type="Texture2D" uid="uid://boqxelikfxlul" path="res://testes-actors-sprites/goblin/Back - Walking/Back - Walking_017.png" id="19_2a3c5"]
+[ext_resource type="Texture2D" uid="uid://ikrbhrkiihxh" path="res://testes-actors-sprites/goblin/Front - Walking/Front - Walking_017.png" id="19_j2b1d"]
+[ext_resource type="Texture2D" uid="uid://bjig7favhop1l" path="res://testes-actors-sprites/goblin/Back - Walking/Back - Walking_018.png" id="20_42b1b"]
+[ext_resource type="Texture2D" uid="uid://c57gxuugdvsbf" path="res://testes-actors-sprites/goblin/Front - Walking/Front - Walking_018.png" id="20_cs1tg"]
+[ext_resource type="Texture2D" uid="uid://bsu31vei5fnhm" path="res://testes-actors-sprites/goblin/Front - Walking/Front - Walking_019.png" id="21_2dvfe"]
+[ext_resource type="Texture2D" uid="uid://dbb3ra016npn0" path="res://testes-actors-sprites/goblin/Back - Walking/Back - Walking_019.png" id="21_h7ic4"]
+[ext_resource type="Texture2D" uid="uid://chpgsljcyh2o5" path="res://testes-actors-sprites/goblin/Left - Walking/Left - Walking_000.png" id="42_p21yu"]
+[ext_resource type="Texture2D" uid="uid://bibl54sebg3qn" path="res://testes-actors-sprites/goblin/Left - Walking/Left - Walking_001.png" id="43_irpag"]
+[ext_resource type="Texture2D" uid="uid://d4a413mjir5re" path="res://testes-actors-sprites/goblin/Left - Walking/Left - Walking_002.png" id="44_bpsgo"]
+[ext_resource type="Texture2D" uid="uid://dsko6i74fo2lw" path="res://testes-actors-sprites/goblin/Left - Walking/Left - Walking_003.png" id="45_jx8is"]
+[ext_resource type="Texture2D" uid="uid://b1h22ffnuqlcw" path="res://testes-actors-sprites/goblin/Left - Walking/Left - Walking_004.png" id="46_vx63k"]
+[ext_resource type="Texture2D" uid="uid://6r7b01yc3odv" path="res://testes-actors-sprites/goblin/Left - Walking/Left - Walking_005.png" id="47_lw0jh"]
+[ext_resource type="Texture2D" uid="uid://6pdpdeaw2gal" path="res://testes-actors-sprites/goblin/Left - Walking/Left - Walking_006.png" id="48_ry8ed"]
+[ext_resource type="Texture2D" uid="uid://uxpn3hdsc2yk" path="res://testes-actors-sprites/goblin/Left - Walking/Left - Walking_007.png" id="49_au8ao"]
+[ext_resource type="Texture2D" uid="uid://b5mbc7w5mq8dx" path="res://testes-actors-sprites/goblin/Left - Walking/Left - Walking_008.png" id="50_w5j5w"]
+[ext_resource type="Texture2D" uid="uid://bimkffxt1xcp3" path="res://testes-actors-sprites/goblin/Left - Walking/Left - Walking_009.png" id="51_cbf1i"]
+[ext_resource type="Texture2D" uid="uid://d20b8ukwp3dhm" path="res://testes-actors-sprites/goblin/Left - Walking/Left - Walking_010.png" id="52_4vfid"]
+[ext_resource type="Texture2D" uid="uid://dw6c7wa4yoq1p" path="res://testes-actors-sprites/goblin/Left - Walking/Left - Walking_011.png" id="53_ljgr3"]
+[ext_resource type="Texture2D" uid="uid://cf11fj7tmtesm" path="res://testes-actors-sprites/goblin/Left - Walking/Left - Walking_012.png" id="54_fr8ja"]
+[ext_resource type="Texture2D" uid="uid://bu0n3ai1g6d3m" path="res://testes-actors-sprites/goblin/Left - Walking/Left - Walking_013.png" id="55_gvmy4"]
+[ext_resource type="Texture2D" uid="uid://dualnw8b0nkr" path="res://testes-actors-sprites/goblin/Left - Walking/Left - Walking_014.png" id="56_fcu33"]
+[ext_resource type="Texture2D" uid="uid://44hu7q5t2cf0" path="res://testes-actors-sprites/goblin/Left - Walking/Left - Walking_015.png" id="57_qmsq4"]
+[ext_resource type="Texture2D" uid="uid://wmsuo4x15k0a" path="res://testes-actors-sprites/goblin/Left - Walking/Left - Walking_016.png" id="58_5vs2b"]
+[ext_resource type="Texture2D" uid="uid://ch1cb4dvmve5u" path="res://testes-actors-sprites/goblin/Left - Walking/Left - Walking_017.png" id="59_a7i4v"]
+[ext_resource type="Texture2D" uid="uid://bpyqrsukad1pm" path="res://testes-actors-sprites/goblin/Left - Walking/Left - Walking_018.png" id="60_b5l0c"]
+[ext_resource type="Texture2D" uid="uid://dqqee014c8yvv" path="res://testes-actors-sprites/goblin/Left - Walking/Left - Walking_019.png" id="61_2a33p"]
+[ext_resource type="Texture2D" uid="uid://dhvs1xybgxrfm" path="res://testes-actors-sprites/goblin/Right - Walking/Right - Walking_000.png" id="62_reqs7"]
+[ext_resource type="Texture2D" uid="uid://jojo088tqpq7" path="res://testes-actors-sprites/goblin/Right - Walking/Right - Walking_001.png" id="63_2yjfb"]
+[ext_resource type="Texture2D" uid="uid://bvbrpn80lp8hf" path="res://testes-actors-sprites/goblin/Right - Walking/Right - Walking_002.png" id="64_dnnjp"]
+[ext_resource type="Texture2D" uid="uid://geidf52alyvx" path="res://testes-actors-sprites/goblin/Right - Walking/Right - Walking_003.png" id="65_wqna8"]
+[ext_resource type="Texture2D" uid="uid://bo122wbvy36mv" path="res://testes-actors-sprites/goblin/Right - Walking/Right - Walking_004.png" id="66_l7gmo"]
+[ext_resource type="Texture2D" uid="uid://dk8yn78kvx82f" path="res://testes-actors-sprites/goblin/Right - Walking/Right - Walking_005.png" id="67_kft7l"]
+[ext_resource type="Texture2D" uid="uid://dfmyjux3fcjkn" path="res://testes-actors-sprites/goblin/Right - Walking/Right - Walking_006.png" id="68_2s4os"]
+[ext_resource type="Texture2D" uid="uid://ctnm1510p81gs" path="res://testes-actors-sprites/goblin/Right - Walking/Right - Walking_007.png" id="69_2em0j"]
+[ext_resource type="Texture2D" uid="uid://pewer1ovratp" path="res://testes-actors-sprites/goblin/Right - Walking/Right - Walking_008.png" id="70_qe2k6"]
+[ext_resource type="Texture2D" uid="uid://cjulba176388p" path="res://testes-actors-sprites/goblin/Right - Walking/Right - Walking_009.png" id="71_edwuo"]
+[ext_resource type="Texture2D" uid="uid://ukd1nnr8b8iq" path="res://testes-actors-sprites/goblin/Right - Walking/Right - Walking_010.png" id="72_5eiju"]
+[ext_resource type="Texture2D" uid="uid://blexsu4i7lj8l" path="res://testes-actors-sprites/goblin/Right - Walking/Right - Walking_011.png" id="73_uukdq"]
+[ext_resource type="Texture2D" uid="uid://bafjvnqpbkwlq" path="res://testes-actors-sprites/goblin/Right - Walking/Right - Walking_012.png" id="74_3k3j0"]
+[ext_resource type="Texture2D" uid="uid://cklknmw6mw36u" path="res://testes-actors-sprites/goblin/Right - Walking/Right - Walking_013.png" id="75_0bpox"]
+[ext_resource type="Texture2D" uid="uid://bsb6hxn7bli3p" path="res://testes-actors-sprites/goblin/Right - Walking/Right - Walking_014.png" id="76_5c21n"]
+[ext_resource type="Texture2D" uid="uid://cwu3lksgo30bn" path="res://testes-actors-sprites/goblin/Right - Walking/Right - Walking_015.png" id="77_e8m1u"]
+[ext_resource type="Texture2D" uid="uid://ce06u1qyj68uj" path="res://testes-actors-sprites/goblin/Right - Walking/Right - Walking_016.png" id="78_77pet"]
+[ext_resource type="Texture2D" uid="uid://cl14g4njeth1l" path="res://testes-actors-sprites/goblin/Right - Walking/Right - Walking_017.png" id="79_tlhxf"]
+[ext_resource type="Texture2D" uid="uid://d1ov3jjfum5mg" path="res://testes-actors-sprites/goblin/Right - Walking/Right - Walking_018.png" id="80_hrkfm"]
+[ext_resource type="Texture2D" uid="uid://brh3d7d4t14l5" path="res://testes-actors-sprites/goblin/Right - Walking/Right - Walking_019.png" id="81_oxcmq"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g2els"]
+height = 4.095459
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qhqgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2dvfe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_giy8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fdfoy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hhpqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_g5jhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_holxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mx1m4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4gjji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_u2ulf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6e8lb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2gdjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_sc3ue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_lxlsd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ha2mi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_apa73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_74r1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_8svfe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_2a3c5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_42b1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_h7ic4")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_a38lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4ni07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_l71n6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ke2ow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ujl30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_31cv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pf23h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dt7fs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wqfne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_wnwbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_gl8cc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_487ah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_md1ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bj30b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_jc3p3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_hax0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_t4otl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_j2b1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_cs1tg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_2dvfe")
+}],
+"loop": true,
+"name": &"walk_front",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_p21yu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_irpag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_bpsgo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_jx8is")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_vx63k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_lw0jh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_ry8ed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_au8ao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_w5j5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_cbf1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_4vfid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_ljgr3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_fr8ja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_gvmy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_fcu33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_qmsq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_5vs2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_a7i4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_b5l0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_2a33p")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("62_reqs7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_2yjfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_dnnjp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_wqna8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_l7gmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_kft7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_2s4os")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_2em0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_qe2k6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_edwuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_5eiju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_uukdq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_3k3j0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_0bpox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_5c21n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_e8m1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_77pet")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_tlhxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_hrkfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_oxcmq")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 24.0
+}]
 
 [node name="player" type="CharacterBody3D" unique_id=1533921175]
 script = ExtResource("1_g2els")
 
 [node name="collider" type="CollisionShape3D" parent="." unique_id=756545275]
+transform = Transform3D(1, 0, 0, 0, -0.99984705, -0.01748732, 0, 0.01748732, -0.99984705, 0, -0.1262157, 0.005185144)
 shape = SubResource("CapsuleShape3D_g2els")
 
-[node name="quando_houver_spritesheet" type="AnimatedSprite3D" parent="." unique_id=1972327104]
+[node name="animator3D_sprite" type="AnimatedSprite3D" parent="." unique_id=1972327104]
+transform = Transform3D(0.5, 0, 0, 0, 0.3986972, 0.30172926, 0, -0.30172926, 0.3986972, 0, 0, 0)
 sprite_frames = SubResource("SpriteFrames_qhqgy")
-
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=533579983]
-transform = Transform3D(1, 0, 0, 0, 0.63317823, 0.774006, 0, -0.774006, 0.63317823, 0, 0, 0)
-texture = ExtResource("1_3vyb7")
+animation = &"walk_left"
+frame_progress = 0.32003564
