@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://d26gkabaieoif"]
+
+[ext_resource type="Texture2D" uid="uid://cqe3ahhfc5k7n" path="res://icon.svg" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://ncx3d3y22oy5" path="res://scripts/Player.gd" id="1_g2els"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g2els"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qhqgy"]
+
+[node name="player" type="CharacterBody3D" unique_id=1533921175]
+script = ExtResource("1_g2els")
+
+[node name="collider" type="CollisionShape3D" parent="." unique_id=756545275]
+shape = SubResource("CapsuleShape3D_g2els")
+
+[node name="quando_houver_spritesheet" type="AnimatedSprite3D" parent="." unique_id=1972327104]
+sprite_frames = SubResource("SpriteFrames_qhqgy")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=533579983]
+transform = Transform3D(1, 0, 0, 0, 0.63317823, 0.774006, 0, -0.774006, 0.63317823, 0, 0, 0)
+texture = ExtResource("1_3vyb7")
