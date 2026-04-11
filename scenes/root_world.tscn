@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cw7odrfrx1cct" path="res://scenes/floor_example.tscn" id="1_w537w"]
 [ext_resource type="PackedScene" uid="uid://d26gkabaieoif" path="res://scenes/player.tscn" id="2_jllyp"]
 [ext_resource type="Script" uid="uid://bfx3m8qsj1lcd" path="res://scripts/Cam.gd" id="3_tjohw"]
+[ext_resource type="PackedScene" uid="uid://dm2u1am3pev4b" path="res://scenes/tree.tscn" id="4_m18so"]
 
 [node name="root_world" type="Node3D" unique_id=484457010]
 
@@ -10,12 +11,22 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
 
 [node name="player" parent="." unique_id=1533921175 instance=ExtResource("2_jllyp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.312176, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.58921814, 1.6150067, 7.555133)
 
 [node name="cam" type="Camera3D" parent="." unique_id=145874791 node_paths=PackedStringArray("target")]
-transform = Transform3D(1, 0, 0, 0, 0.7387024, 0.67403173, 0, -0.67403173, 0.7387024, 0, 5.95739, 6.2851663)
+transform = Transform3D(1, 0, 0, 0, 0.8475205, 0.53076273, 0, -0.53076273, 0.8475205, 0, 5.3495, 10.267378)
+size = 0.12
 script = ExtResource("3_tjohw")
 target = NodePath("../player")
 
 [node name="sol" type="DirectionalLight3D" parent="." unique_id=147940065]
 transform = Transform3D(1, -0.00012230873, 0, 1.0672668e-05, 0.08726007, 0.99618554, -0.00012184219, -0.99618554, 0.08726007, 0, 6.3716354, 0)
+
+[node name="tree" parent="." unique_id=1207702173 instance=ExtResource("4_m18so")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -4.3206177, 1.6999999, 4.504672)
+
+[node name="tree2" parent="." unique_id=2098392812 instance=ExtResource("4_m18so")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 2.6759443, 1.6999999, 8.978132)
+
+[node name="tree3" parent="." unique_id=1085053632 instance=ExtResource("4_m18so")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -4.530731, 1.699999, 9.419384)

@@ -5,6 +5,7 @@ extends Camera3D
 #varia de 0 a 1
 var weightLerpCam:float = 0.3
 var offsetZ:float = 5
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
