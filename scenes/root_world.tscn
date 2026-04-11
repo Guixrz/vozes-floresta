@@ -13,12 +13,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
 [node name="player" parent="." unique_id=1533921175 instance=ExtResource("2_jllyp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.58921814, 1.6150067, 7.555133)
 
-[node name="cam" type="Camera3D" parent="." unique_id=145874791 node_paths=PackedStringArray("target")]
-transform = Transform3D(1, 0, 0, 0, 0.8475205, 0.53076273, 0, -0.53076273, 0.8475205, 0, 5.3495, 10.267378)
-size = 0.12
-script = ExtResource("3_tjohw")
-target = NodePath("../player")
-
 [node name="sol" type="DirectionalLight3D" parent="." unique_id=147940065]
 transform = Transform3D(1, -0.00012230873, 0, 1.0672668e-05, 0.08726007, 0.99618554, -0.00012184219, -0.99618554, 0.08726007, 0, 6.3716354, 0)
 
@@ -30,3 +24,8 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 2.6759443, 1.6999999, 8.97813
 
 [node name="tree3" parent="." unique_id=1085053632 instance=ExtResource("4_m18so")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -4.530731, 1.699999, 9.419384)
+
+[node name="cam" type="Camera3D" parent="." unique_id=1392582398 node_paths=PackedStringArray("target")]
+transform = Transform3D(1, 0, 0, 0, 0.7236902, 0.690125, 0, -0.690125, 0.7236902, 0, 4.048208, 0)
+script = ExtResource("3_tjohw")
+target = NodePath("../player")

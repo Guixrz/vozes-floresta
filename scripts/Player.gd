@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+
 var SPEED:float = 1.5
 @onready var animConfig:AnimatedSprite3D = $animator3D_sprite
 enum {
