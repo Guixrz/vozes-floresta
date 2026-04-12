@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://biu1hd4sv85am"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yxo5d"]
+load_path = "res://.godot/imported/4.2.png-6d151ee74e6e8dd88aec93c7a415c4de.s3tc.ctex"
+
+[node name="tree_sprite" type="Node3D" unique_id=1724910583]
+
+[node name="tree" type="Sprite3D" parent="." unique_id=1825171448]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.3624786, 0)
+billboard = 2
+alpha_cut = 1
+texture_filter = 0
+texture = SubResource("CompressedTexture2D_yxo5d")
