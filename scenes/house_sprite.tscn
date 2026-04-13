@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bguk7ulxhwih6"]
+
+[ext_resource type="Texture2D" uid="uid://bo2hlh4nike4i" path="res://scenario/house/layer_1_house_back.png" id="1_h6gdw"]
+[ext_resource type="Texture2D" uid="uid://bcqkux48k5fsw" path="res://scenario/house/layer_2_house_walls.png" id="2_gxtja"]
+[ext_resource type="Texture2D" uid="uid://cjs86ocwddwkp" path="res://scenario/house/layer_3_roof_front.png" id="3_jb0vg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h6gdw"]
+size = Vector3(2.3656616, 2.6440125, 0.94444275)
+
+[node name="house_sprite" type="Node3D" unique_id=617827361]
+
+[node name="house_back" type="Sprite3D" parent="." unique_id=1768215176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+texture = ExtResource("1_h6gdw")
+
+[node name="house_walls" type="Sprite3D" parent="." unique_id=1734314504]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+sorting_offset = 0.01
+texture = ExtResource("2_gxtja")
+
+[node name="roof_front" type="Sprite3D" parent="." unique_id=1210316408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+sorting_offset = 0.05
+texture_filter = 0
+texture = ExtResource("3_jb0vg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1393916602]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=770662823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.10220337, 0.8220062, -0.15636444)
+shape = SubResource("BoxShape3D_h6gdw")

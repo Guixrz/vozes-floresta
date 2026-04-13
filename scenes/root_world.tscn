@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bfx3m8qsj1lcd" path="res://scripts/Cam.gd" id="3_tjohw"]
 [ext_resource type="PackedScene" uid="uid://biu1hd4sv85am" path="res://scenes/tree_sprite.tscn" id="4_m18so"]
 [ext_resource type="PackedScene" uid="uid://b6ax6jt5jvxw3" path="res://scenes/floor_physics.tscn" id="4_tue00"]
+[ext_resource type="PackedScene" uid="uid://bguk7ulxhwih6" path="res://scenes/house_sprite.tscn" id="5_tue00"]
 
 [sub_resource type="Environment" id="Environment_tjohw"]
 background_mode = 1
@@ -23,7 +24,8 @@ adjustment_contrast = 1.25
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20895925, 1.0124627, 7.555133)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="player" unique_id=1135498521]
-light_energy = 1.5
+light_energy = 0.5
+omni_range = 3.0910523
 
 [node name="sol" type="DirectionalLight3D" parent="." unique_id=147940065]
 transform = Transform3D(1, -0.00012230875, 1.2750472e-12, 0.00010764249, 0.88008827, 0.47481036, -5.8073423e-05, -0.47481036, 0.88008827, 0, 6.3716354, 0)
@@ -69,3 +71,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.098648, 1.8375212, 6.52107
 
 [node name="tree_sprite9" parent="trees" unique_id=145374222 instance=ExtResource("4_m18so")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.700906, 1.8375221, 8.308954)
+
+[node name="tree_sprite10" parent="trees" unique_id=1085946215 instance=ExtResource("4_m18so")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.39702, 1.8375207, 7.2867947)
+
+[node name="tree_sprite11" parent="trees" unique_id=513595963 instance=ExtResource("4_m18so")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.686311, 1.8375217, 0.15153408)
+
+[node name="tree_sprite12" parent="trees" unique_id=720670995 instance=ExtResource("4_m18so")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9422946, 1.8375217, 2.6737247)
+
+[node name="tree_sprite13" parent="trees" unique_id=278186648 instance=ExtResource("4_m18so")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.252892, 1.8375212, 0.25952435)
+
+[node name="tree_sprite14" parent="trees" unique_id=647821741 instance=ExtResource("4_m18so")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.867727, 1.8375212, 3.1319385)
+
+[node name="house_sprite" parent="." unique_id=617827361 instance=ExtResource("5_tue00")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.5540657, 0.46655655, -0.4248054)

@@ -3,6 +3,10 @@
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yxo5d"]
 load_path = "res://.godot/imported/4.2.png-6d151ee74e6e8dd88aec93c7a415c4de.s3tc.ctex"
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yxo5d"]
+radius = 0.35986328
+height = 3.3623047
+
 [node name="tree_sprite" type="Node3D" unique_id=1724910583]
 
 [node name="tree" type="Sprite3D" parent="." unique_id=1825171448]
@@ -11,3 +15,9 @@ billboard = 2
 alpha_cut = 1
 texture_filter = 0
 texture = SubResource("CompressedTexture2D_yxo5d")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=502712347]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1539806304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.041890502, -0.16748047, 0.02158904)
+shape = SubResource("CapsuleShape3D_yxo5d")
