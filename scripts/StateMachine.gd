@@ -59,7 +59,14 @@ func walk() -> void:
 func idle()->void:
 	player.animConfig.stop()
 func running() -> void:
-	pass
+	if player.vector_dir.is_equal_approx(Vector2(0, 1)):
+		player.animConfig.play("running_front")
+	if player.vector_dir.is_equal_approx(Vector2(0, -1)):
+		player.animConfig.play("running_down")
+	if player.vector_dir.is_equal_approx(Vector2(1, 0)):
+		player.animConfig.play("running_right")
+	if player.vector_dir.is_equal_approx(Vector2(-1, 0)):
+		player.animConfig.play("running_left")
 	
 func attack()-> void:
 	pass
