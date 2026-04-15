@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://bmq8bhyfxf554"]
 
+[ext_resource type="Script" uid="uid://sdok8l4ofang" path="res://scripts/StateMachine.gd" id="1_jkenv"]
 [ext_resource type="PackedScene" uid="uid://cw7odrfrx1cct" path="res://scenes/floor_example.tscn" id="1_w537w"]
 [ext_resource type="PackedScene" uid="uid://d26gkabaieoif" path="res://scenes/player.tscn" id="2_jllyp"]
 [ext_resource type="Script" uid="uid://bfx3m8qsj1lcd" path="res://scripts/Cam.gd" id="3_tjohw"]
 [ext_resource type="PackedScene" uid="uid://dm2u1am3pev4b" path="res://scenes/tree.tscn" id="4_m18so"]
 
 [node name="root_world" type="Node3D" unique_id=484457010]
+script = ExtResource("1_jkenv")
 
 [node name="floor_example" parent="." unique_id=2000456163 instance=ExtResource("1_w537w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
@@ -26,6 +28,6 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 2.6759443, 1.6999999, 8.97813
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -4.530731, 1.699999, 9.419384)
 
 [node name="cam" type="Camera3D" parent="." unique_id=1392582398 node_paths=PackedStringArray("target")]
-transform = Transform3D(1, 0, 0, 0, 0.7236902, 0.690125, 0, -0.690125, 0.7236902, 0, 4.048208, 0)
+transform = Transform3D(1, 0, 0, 0, 0.7236902, 0.690125, 0, -0.690125, 0.7236902, 0, 8.957129, -3.0331526)
 script = ExtResource("3_tjohw")
 target = NodePath("../player")
