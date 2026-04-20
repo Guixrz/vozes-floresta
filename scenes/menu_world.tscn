@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dnk1v3qp7bu1d"]
+
+[ext_resource type="PackedScene" uid="uid://bp13n7ri1i1a0" path="res://scenes/menu.tscn" id="1_wnoju"]
+[ext_resource type="AudioStream" uid="uid://dc6c0pue65ijm" path="res://sounds/menu/Winds Of Stories.mp3" id="2_b2oix"]
+[ext_resource type="Texture2D" uid="uid://c60n2cg8u8520" path="res://sprites/player/calvo_walking_front.png" id="3_b2oix"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wnoju"]
+
+[node name="menu-world" type="Node3D" unique_id=755105807]
+
+[node name="Menu" parent="." unique_id=614541986 instance=ExtResource("1_wnoju")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=489080770]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.7517289)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1086316042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.80104697, 0)
+mesh = SubResource("BoxMesh_wnoju")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=213988421]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=790128959]
+stream = ExtResource("2_b2oix")
+autoplay = true
+parameters/looping = false
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1581313659]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -0.37581116, 0.03917283, -0.41408324)
+texture = ExtResource("3_b2oix")
+hframes = 7
