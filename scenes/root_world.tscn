@@ -1,91 +1,28 @@
 [gd_scene format=3 uid="uid://bmq8bhyfxf554"]
 
+[ext_resource type="Script" uid="uid://c07yjmabm6xg5" path="res://scripts/root_world.gd" id="1_jkenv"]
 [ext_resource type="PackedScene" uid="uid://d26gkabaieoif" path="res://scenes/player.tscn" id="2_jllyp"]
 [ext_resource type="Script" uid="uid://bfx3m8qsj1lcd" path="res://scripts/Cam.gd" id="3_tjohw"]
-[ext_resource type="PackedScene" uid="uid://biu1hd4sv85am" path="res://scenes/tree_sprite.tscn" id="4_m18so"]
-[ext_resource type="PackedScene" uid="uid://b6ax6jt5jvxw3" path="res://scenes/floor_physics.tscn" id="4_tue00"]
 [ext_resource type="PackedScene" uid="uid://bguk7ulxhwih6" path="res://scenes/house_sprite.tscn" id="5_tue00"]
-
-[sub_resource type="Environment" id="Environment_tjohw"]
-background_mode = 1
-background_color = Color(0.10980392, 0.10980392, 0.16862746, 1)
-fog_enabled = true
-fog_mode = 1
-fog_light_color = Color(0.5176471, 0.5529412, 0.7411765, 1)
-fog_light_energy = 0.0
-fog_density = 1.0
-fog_sky_affect = 0.75
-adjustment_enabled = true
-adjustment_contrast = 1.25
+[ext_resource type="PackedScene" uid="uid://bqru0nbbrqef1" path="res://scenes/map.tscn" id="6_jkenv"]
+[ext_resource type="PackedScene" uid="uid://ckgikngy3rkbq" path="res://scenes/path.tscn" id="8_2jlvb"]
 
 [node name="root_world" type="Node3D" unique_id=484457010]
+script = ExtResource("1_jkenv")
 
 [node name="player" parent="." unique_id=1533921175 instance=ExtResource("2_jllyp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20895925, 1.0124627, 7.555133)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="player" unique_id=1135498521]
-light_energy = 0.5
-omni_range = 3.0910523
-
-[node name="sol" type="DirectionalLight3D" parent="." unique_id=147940065]
-transform = Transform3D(1, -0.00012230875, 1.2750472e-12, 0.00010764249, 0.88008827, 0.47481036, -5.8073423e-05, -0.47481036, 0.88008827, 0, 6.3716354, 0)
-shadow_enabled = true
-shadow_bias = 1.0
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.20895925, 0.863778, 7.555133)
 
 [node name="cam" type="Camera3D" parent="." unique_id=1392582398 node_paths=PackedStringArray("target")]
 transform = Transform3D(1, 0, 0, 0, 0.73659307, 0.67633617, 0, -0.67633617, 0.73659307, 0, 4.048208, 0)
 script = ExtResource("3_tjohw")
 target = NodePath("../player")
 
-[node name="floor_physics" parent="." unique_id=384934807 instance=ExtResource("4_tue00")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=412382671]
-environment = SubResource("Environment_tjohw")
-
-[node name="trees" type="Node3D" parent="." unique_id=412394255]
-
-[node name="tree_sprite" parent="trees" unique_id=1724910583 instance=ExtResource("4_m18so")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.345551, 0.23752129, 3.543767)
-
-[node name="tree_sprite2" parent="trees" unique_id=1230716813 instance=ExtResource("4_m18so")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8205276, 1.8375221, 0.26541185)
-
-[node name="tree_sprite3" parent="trees" unique_id=123727369 instance=ExtResource("4_m18so")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.4062967, 1.8375221, 1.1512156)
-
-[node name="tree_sprite4" parent="trees" unique_id=1865841162 instance=ExtResource("4_m18so")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.69674, 1.8375212, 2.754284)
-
-[node name="tree_sprite5" parent="trees" unique_id=833924157 instance=ExtResource("4_m18so")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6273265, 1.8375212, -1.4030328)
-
-[node name="tree_sprite6" parent="trees" unique_id=534676436 instance=ExtResource("4_m18so")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.073529, 1.8375221, -0.5280323)
-
-[node name="tree_sprite7" parent="trees" unique_id=1318237080 instance=ExtResource("4_m18so")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.051434, 1.8375212, 4.504115)
-
-[node name="tree_sprite8" parent="trees" unique_id=1338782313 instance=ExtResource("4_m18so")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.098648, 1.8375212, 6.5210795)
-
-[node name="tree_sprite9" parent="trees" unique_id=145374222 instance=ExtResource("4_m18so")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.700906, 1.8375221, 8.308954)
-
-[node name="tree_sprite10" parent="trees" unique_id=1085946215 instance=ExtResource("4_m18so")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.39702, 1.8375207, 7.2867947)
-
-[node name="tree_sprite11" parent="trees" unique_id=513595963 instance=ExtResource("4_m18so")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.686311, 1.8375217, 0.15153408)
-
-[node name="tree_sprite12" parent="trees" unique_id=720670995 instance=ExtResource("4_m18so")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9422946, 1.8375217, 2.6737247)
-
-[node name="tree_sprite13" parent="trees" unique_id=278186648 instance=ExtResource("4_m18so")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.252892, 1.8375212, 0.25952435)
-
-[node name="tree_sprite14" parent="trees" unique_id=647821741 instance=ExtResource("4_m18so")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.867727, 1.8375212, 3.1319385)
-
 [node name="house_sprite" parent="." unique_id=617827361 instance=ExtResource("5_tue00")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.5540657, 0.46655655, -0.4248054)
+
+[node name="path" parent="." unique_id=877749558 instance=ExtResource("8_2jlvb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.599616, 0.04854369, 4.1919746)
+
+[node name="map" parent="." unique_id=533742463 instance=ExtResource("6_jkenv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16319847, 0, 0.010390282)

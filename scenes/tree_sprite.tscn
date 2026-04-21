@@ -1,23 +1,22 @@
 [gd_scene format=3 uid="uid://biu1hd4sv85am"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yxo5d"]
-load_path = "res://.godot/imported/4.2.png-6d151ee74e6e8dd88aec93c7a415c4de.s3tc.ctex"
+[ext_resource type="Texture2D" uid="uid://dhow2cttg028c" path="res://scenario/floresta/92 Sem Título3_20260420155029.png" id="1_4v10y"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yxo5d"]
-radius = 0.35986328
+radius = 0.6567383
 height = 3.3623047
 
 [node name="tree_sprite" type="Node3D" unique_id=1724910583]
 
 [node name="tree" type="Sprite3D" parent="." unique_id=1825171448]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.3624786, 0)
-billboard = 2
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.62882745, 0)
+billboard = 1
 alpha_cut = 1
 texture_filter = 0
-texture = SubResource("CompressedTexture2D_yxo5d")
+texture = ExtResource("1_4v10y")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=502712347]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1539806304]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.041890502, -0.16748047, 0.02158904)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26930678, -0.16748047, 1.2767125)
 shape = SubResource("CapsuleShape3D_yxo5d")
