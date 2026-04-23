@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://biu1hd4sv85am"]
 
-[ext_resource type="Texture2D" uid="uid://dhow2cttg028c" path="res://scenario/floresta/92 Sem Título3_20260420155029.png" id="1_4v10y"]
+[ext_resource type="Texture2D" uid="uid://klwiiofgjl8q" path="res://scenario/floresta/92 Sem Título3_20260421163125.png" id="1_4v10y"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yxo5d"]
 radius = 0.6567383
@@ -9,7 +9,7 @@ height = 3.3623047
 [node name="tree_sprite" type="Node3D" unique_id=1724910583]
 
 [node name="tree" type="Sprite3D" parent="." unique_id=1825171448]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.62882745, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.9749671, 0)
 billboard = 1
 alpha_cut = 1
 texture_filter = 0

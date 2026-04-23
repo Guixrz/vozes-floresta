@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dvyo5q1felxbu"]
+
+[ext_resource type="Texture2D" uid="uid://cy72xs6f8p1ce" path="res://scenario/floresta/92 Sem Título3_20260421170934.png" id="1_dcrw2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3bkaj"]
+size = Vector3(4.2996216, 2.4194946, 0.96047974)
+
+[node name="tree_curupira_sprite" type="Node3D" unique_id=679795820]
+
+[node name="tree" type="Sprite3D" parent="." unique_id=147055706]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 2.4848623, 0)
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_dcrw2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=27751305]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=925573248]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0483093, 0.7097473, 0.87971497)
+shape = SubResource("BoxShape3D_3bkaj")

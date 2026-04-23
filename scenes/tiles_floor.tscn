@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://co3n5w2lmrhii"]
 
+[ext_resource type="Texture2D" uid="uid://df6p8w1fg72ba" path="res://scenario/floresta/98 Sem Título_20260421161906.png" id="1_dqhki"]
 [ext_resource type="Texture2D" uid="uid://lu1hbqx8cvqf" path="res://scenario/floresta/98 Sem Título_20260420161433.png" id="1_pc3v8"]
 [ext_resource type="Texture2D" uid="uid://dj2rm2u8cnltn" path="res://scenario/floresta/98 Sem Título_20260420161727.png" id="2_7tryd"]
+[ext_resource type="Texture2D" uid="uid://y2hg3cd1bke3" path="res://scenario/floresta/teste.png" id="4_a0c0i"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ltriu"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_7tryd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dqhki"]
-albedo_texture = ExtResource("1_pc3v8")
+albedo_texture = ExtResource("1_dqhki")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dqhki"]
 
@@ -16,6 +18,20 @@ albedo_texture = ExtResource("1_pc3v8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tiejl"]
 albedo_texture = ExtResource("2_7tryd")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_a0c0i"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tiejl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_538r3"]
+albedo_texture = ExtResource("1_pc3v8")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_tiejl"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_u2wus"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1pwdc"]
+albedo_texture = ExtResource("4_a0c0i")
 
 [node name="tiles_floor" type="Node3D" unique_id=2003168697]
 
@@ -36,3 +52,21 @@ shape = SubResource("ConcavePolygonShape3D_dqhki")
 [node name="florest-dirt" type="MeshInstance3D" parent="florest_floor_dirt" unique_id=202121049]
 mesh = SubResource("PlaneMesh_a0c0i")
 surface_material_override/0 = SubResource("StandardMaterial3D_tiejl")
+
+[node name="florest_floor_w" type="StaticBody3D" parent="." unique_id=745952693]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="florest_floor_w" unique_id=1754947360]
+shape = SubResource("ConcavePolygonShape3D_a0c0i")
+
+[node name="florest-w" type="MeshInstance3D" parent="florest_floor_w" unique_id=1850857888]
+mesh = SubResource("PlaneMesh_tiejl")
+surface_material_override/0 = SubResource("StandardMaterial3D_538r3")
+
+[node name="teste" type="StaticBody3D" parent="." unique_id=2112861217]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="teste" unique_id=413063865]
+shape = SubResource("ConcavePolygonShape3D_tiejl")
+
+[node name="teste" type="MeshInstance3D" parent="teste" unique_id=516839238]
+mesh = SubResource("PlaneMesh_u2wus")
+surface_material_override/0 = SubResource("StandardMaterial3D_1pwdc")

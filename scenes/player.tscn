@@ -2,37 +2,30 @@
 
 [ext_resource type="Script" uid="uid://ncx3d3y22oy5" path="res://scripts/Player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://bfajq4cjngff" path="res://animations/Andando_20260413_204736_0000.png" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://c80ue60b257gr" path="res://animations/AndandoCostas_20260422_190936_0000.png" id="2_qhqgy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g2els"]
 height = 2.2223816
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
-atlas = ExtResource("2_g2els")
+atlas = ExtResource("2_qhqgy")
 region = Rect2(0, 0, 960, 960)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
-atlas = ExtResource("2_g2els")
+atlas = ExtResource("2_qhqgy")
 region = Rect2(960, 0, 960, 960)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
-atlas = ExtResource("2_g2els")
+atlas = ExtResource("2_qhqgy")
 region = Rect2(1920, 0, 960, 960)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
-atlas = ExtResource("2_g2els")
+atlas = ExtResource("2_qhqgy")
 region = Rect2(2880, 0, 960, 960)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
-atlas = ExtResource("2_g2els")
+atlas = ExtResource("2_qhqgy")
 region = Rect2(3840, 0, 960, 960)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
-atlas = ExtResource("2_g2els")
-region = Rect2(4800, 0, 960, 960)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
-atlas = ExtResource("2_g2els")
-region = Rect2(5760, 0, 960, 960)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
 atlas = ExtResource("2_g2els")
@@ -135,12 +128,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fjrip")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_smehm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ur7pv")
 }],
 "loop": true,
 "name": &"walk_down",
@@ -237,6 +224,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.49999997, 0, 0, 0, 0.49999997, 0, 0, 0)
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_qhqgy")
 animation = &"walk_down"
+frame_progress = 0.9112195
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1655214500]
 light_energy = 0.5
