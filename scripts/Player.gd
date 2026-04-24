@@ -34,3 +34,5 @@ func update_animation(dir: Vector2) -> void:
 		animConfig.play("walk_right" if dir.x > 0 else "walk_left")
 	else:
 		animConfig.play("walk_front" if dir.y > 0 else "walk_down")
+func setInCutScene(condition:bool) -> void:
+	em_cutscene = condition

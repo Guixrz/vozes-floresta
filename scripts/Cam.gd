@@ -1,6 +1,8 @@
 extends Camera3D
 
-@export var target: Node3D
+@export var target: Node3D #player
+var player:Node3D
+@export var child: Node3D #filho
 
 
 var weightLerpCam:float = 2# var q segue o player lentamente, talvez precise de melhora no futuro
@@ -10,7 +12,8 @@ var offsetZ:float = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	#pq target já começa com  REF DO PLyer
+	player = target
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -21,7 +24,13 @@ func _physics_process(delta: float) -> void:
 	lerpCam(delta)
 
 func lerpCam(delta:float) -> void:
-	#essa parte do codigo soh funciona pq eh filha de um objeto
 	#essa funcao deve ser provisoria, ta muito simples esse smooth e o efeito nao eh muito perceptivel
 	position.x = lerpf(position.x ,target.position.x, weightLerpCam * delta)
 	position.z = lerpf(position.z, target.position.z + offsetZ, weightLerpCam * delta)
+
+#ao inves de animar a camera pra seguir um personagem, só mudar por aq
+func setTarget(who: String):
+	if who == "child":
+		target = child
+	elif who == "player":
+		target = player
