@@ -1,7 +1,7 @@
 extends Control
 
 
-
+@export var nameWorld:String 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 func _on_btn_play_button_down() -> void:
 	#quando botao play for apertado carrega uma cena
 	#root_world é provisorio, uma outra cena pode ser usada no lugar
-	get_tree().change_scene_to_file("res://scenes/root_world.tscn")
+	get_tree().change_scene_to_file("res://scenes/"+nameWorld)
 	
 
 
