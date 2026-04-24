@@ -71,6 +71,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.032623, 4.7683716e-07, 9.3
 [node name="Sprite3D" type="Sprite3D" parent="bush" unique_id=859503400]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -7.164286, 0.94215345, 6.472209)
 billboard = 1
+double_sided = false
 texture = ExtResource("2_2lpho")
 
 [node name="Sprite3D24" type="Sprite3D" parent="bush" unique_id=920830514]

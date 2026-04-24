@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://ut581ihhxbr7"]
 
-[ext_resource type="PackedScene" uid="uid://bmq8bhyfxf554" path="res://scenes/root_world.tscn" id="1_0lnua"]
+[ext_resource type="PackedScene" uid="uid://dq1g5uxxxijqo" path="res://scenes/root_world.tscn" id="1_0lnua"]
 [ext_resource type="Texture2D" uid="uid://bfajq4cjngff" path="res://animations/Andando_20260413_204736_0000.png" id="2_0bfnf"]
 [ext_resource type="Texture2D" uid="uid://b6v5scu65g3yw" path="res://animations/filhoDoHoracio.jpeg" id="3_0bfnf"]
 [ext_resource type="Texture2D" uid="uid://bcylshkel75jy" path="res://testes-actors-sprites/textures/pegadas.png" id="4_eadcl"]
-[ext_resource type="Script" uid="uid://cusbf3tjeemb3" path="res://scripts/CutSceneConfig.gd" id="5_vlvx4"]
+[ext_resource type="Script" path="res://scripts/CutSceneConfig.gd" id="5_vlvx4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
 atlas = ExtResource("2_0bfnf")
@@ -229,6 +229,38 @@ animations = [{
 atlas = ExtResource("3_0bfnf")
 region = Rect2(0, 0, 1200, 1600)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_vlvx4"]
+atlas = ExtResource("3_0bfnf")
+region = Rect2(0, 0, 1200, 1600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nj6lx"]
+atlas = ExtResource("2_0bfnf")
+region = Rect2(0, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgko5"]
+atlas = ExtResource("2_0bfnf")
+region = Rect2(960, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6dvn"]
+atlas = ExtResource("2_0bfnf")
+region = Rect2(1920, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgrjd"]
+atlas = ExtResource("2_0bfnf")
+region = Rect2(2880, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ga10t"]
+atlas = ExtResource("2_0bfnf")
+region = Rect2(3840, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vufu7"]
+atlas = ExtResource("2_0bfnf")
+region = Rect2(4800, 0, 960, 960)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whbtb"]
+atlas = ExtResource("2_0bfnf")
+region = Rect2(5760, 0, 960, 960)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_vlvx4"]
 animations = [{
 "frames": [{
@@ -237,6 +269,40 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vlvx4")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nj6lx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgko5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6dvn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgrjd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ga10t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vufu7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whbtb")
+}],
+"loop": true,
+"name": &"walk",
 "speed": 5.0
 }]
 
@@ -256,6 +322,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(1.76, 1, 15)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("root_world/horacioJunior:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_0lnua"]
@@ -285,10 +363,10 @@ tracks/1/path = NodePath("root_world/horacioJunior:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.99, 7.5),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 1.99, 5.01, 6.81, 7.78),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(1.76, 1, 15), Vector3(1.7601295, 1.0633068, 14.909278), Vector3(-15.028267, 1.0633068, 6.2607946)]
+"values": [Vector3(1.76, 1, 15), Vector3(1.76, 1, 15), Vector3(-8.210953, 1, 8.297912), Vector3(-15.477961, 1, 3.2818747), Vector3(-23.8404, 1, 3.2818747)]
 }
 tracks/2/type = "method"
 tracks/2/imported = false
@@ -306,6 +384,32 @@ tracks/2/keys = {
 "args": [false],
 "method": &"setInCutScene"
 }]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("root_world/horacioJunior/horacioJuniorSprite")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.0666666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"idle", 1.0, false],
+"method": &"play"
+}]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("root_world/horacioJunior:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(8.133333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_siw1x"]
@@ -336,6 +440,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.76, 1, 15)
 transform = Transform3D(0.115, 0, 0, 0, 0.115, 0, 0, 0, 0.115, 0, 0, 0)
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_vlvx4")
+animation = &"idle"
+frame_progress = 0.15663837
 
 [node name="pegadasHoracio" type="Node3D" parent="root_world" unique_id=1308270173]
 

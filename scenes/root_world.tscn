@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://bmq8bhyfxf554"]
+[gd_scene format=3 uid="uid://dq1g5uxxxijqo"]
 
-[ext_resource type="Script" uid="uid://c07yjmabm6xg5" path="res://scripts/root_world.gd" id="1_jkenv"]
+[ext_resource type="Script" path="res://scripts/root_world.gd" id="1_jkenv"]
 [ext_resource type="PackedScene" uid="uid://d26gkabaieoif" path="res://scenes/player.tscn" id="2_jllyp"]
 [ext_resource type="Script" uid="uid://bfx3m8qsj1lcd" path="res://scripts/Cam.gd" id="3_tjohw"]
 [ext_resource type="PackedScene" uid="uid://bguk7ulxhwih6" path="res://scenes/house_sprite.tscn" id="5_tue00"]
