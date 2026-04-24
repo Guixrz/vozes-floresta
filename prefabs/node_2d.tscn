@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://rxsrlmv66rdi"]
+
+[ext_resource type="Script" uid="uid://co2xh5hdy1tbq" path="res://prefabs/player.gd" id="1_5aw6u"]
+[ext_resource type="Texture2D" uid="uid://wwenmxebcyjq" path="res://assetsdialog/assets/text.png" id="1_5evgo"]
+[ext_resource type="Texture2D" uid="uid://jgql21dy7q5i" path="res://assetsdialog/assets/interrogation.png" id="3_ieijk"]
+[ext_resource type="Script" uid="uid://b3danfw5g564s" path="res://prefabs/hit_pop.gd" id="4_nl0pr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yuhfq"]
+size = Vector2(1076, 125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5aw6u"]
+size = Vector2(26, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vcpno"]
+size = Vector2(20, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gj6c3"]
+size = Vector2(20, 8)
+
+[node name="Node2D" type="Node2D" unique_id=455261625]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1116382429]
+position = Vector2(534, 524)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=704678082]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_yuhfq")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=301692951]
+position = Vector2(181, 237)
+script = ExtResource("1_5aw6u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1216235883]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_5aw6u")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=286546471]
+texture = ExtResource("1_5evgo")
+
+[node name="pop_up" type="StaticBody2D" parent="." unique_id=2059631156]
+position = Vector2(295, 379)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pop_up" unique_id=415182595]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_vcpno")
+
+[node name="caixa" type="Sprite2D" parent="pop_up" unique_id=1330449094]
+texture = ExtResource("3_ieijk")
+
+[node name="hit_pop" type="Area2D" parent="pop_up" unique_id=1383173159]
+scale = Vector2(2.4400012, 7.48)
+collision_layer = 2
+script = ExtResource("4_nl0pr")
+dialog_texts = Array[String](["Ola! Seja bem Vindo!", "Existem muitas tarefas para fazer", "Boa sorte em sua nova jornada!"])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pop_up/hit_pop" unique_id=808968090]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_gj6c3")
+
+[connection signal="body_entered" from="pop_up/hit_pop" to="pop_up/hit_pop" method="_on_body_entered"]

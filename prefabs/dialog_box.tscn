@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://lctemrq6i6qg"]
+
+[ext_resource type="Texture2D" uid="uid://nd5cc5daygll" path="res://assetsdialog/assets/boxtext.png" id="1_hf03b"]
+[ext_resource type="Script" uid="uid://c764enaa2h7ow" path="res://prefabs/dialog_box.gd" id="1_t14ly"]
+[ext_resource type="FontFile" uid="uid://bhvep8ybir3gy" path="res://assetsdialog/font/Pix32.ttf" id="3_d17km"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_p3326"]
+font = ExtResource("3_d17km")
+font_color = Color(0.20006266, 0.067907475, 0.0012922806, 1)
+
+[node name="dialog_box" type="MarginContainer" unique_id=783677060]
+process_mode = 3
+anchors_preset = -1
+anchor_left = 0.41200003
+anchor_top = 0.439
+anchor_right = 0.588
+anchor_bottom = 0.56100005
+offset_left = 77.45996
+offset_top = 23.777985
+offset_right = -77.45996
+offset_bottom = -23.778046
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.41833803, 0.48186994)
+script = ExtResource("1_t14ly")
+
+[node name="bg_dialogic" type="NinePatchRect" parent="." unique_id=2112151972]
+layout_mode = 2
+texture = ExtResource("1_hf03b")
+region_rect = Rect2(-0.037036896, 0.20987606, 32.395058, 31.604935)
+
+[node name="text_container" type="MarginContainer" parent="." unique_id=1832767263]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 29
+theme_override_constants/margin_bottom = 23
+
+[node name="text_label" type="Label" parent="text_container" unique_id=990873937]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+label_settings = SubResource("LabelSettings_p3326")
+vertical_alignment = 1
+autowrap_mode = 2
