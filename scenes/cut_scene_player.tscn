@@ -260,6 +260,42 @@ tracks/2/keys = {
 "update": 1,
 "values": [""]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("root_world/sonHoracio:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-13.270875, 0.8751626, 2.8091555)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("root_world/sonHoracio:em_cutscene")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("root_world/sonHoracio:anim_cutscene")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
 
 [sub_resource type="Animation" id="Animation_7mu6q"]
 resource_name = "caminho_casa"
@@ -300,6 +336,42 @@ tracks/2/keys = {
 "update": 1,
 "values": ["walk", "", "walk"]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("root_world/sonHoracio:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1, 4, 6.5, 10, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-13.270875, 0.8751626, 2.8091555), Vector3(-6.93267, 0.8751626, 2.8091555), Vector3(-6.93267, 0.8751626, 2.8091555), Vector3(-1.1532569, 0.8751626, 4.1295295), Vector3(2.0100508, 0.8751626, 1.6029706)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("root_world/sonHoracio:em_cutscene")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.1333333, 11.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("root_world/sonHoracio:anim_cutscene")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1, 3.5, 7, 11.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["walk", "", "walk", ""]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_siw1x"]
 _data = {
@@ -317,6 +389,10 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -13.443313, 0.863778, 4
 [node name="animator3D_sprite" parent="root_world/player" index="1" unique_id=1972327104]
 sprite_frames = SubResource("SpriteFrames_u6iqx")
 animation = &"walk_right"
+frame_progress = 0.0
+
+[node name="sonHoracio" parent="root_world" index="5" unique_id=2003751006]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -13.270875, 0.8751626, 2.8091555)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1518414913]
 libraries/ = SubResource("AnimationLibrary_siw1x")
@@ -324,3 +400,4 @@ autoplay = &"caminho_casa"
 
 [editable path="root_world"]
 [editable path="root_world/player"]
+[editable path="root_world/sonHoracio"]

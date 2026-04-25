@@ -2,6 +2,16 @@
 
 [ext_resource type="Texture2D" uid="uid://cy72xs6f8p1ce" path="res://scenario/floresta/92 Sem Título3_20260421170934.png" id="1_dcrw2"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dcrw2"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("1_dcrw2")
+billboard_mode = 1
+billboard_keep_scale = true
+distance_fade_mode = 3
+distance_fade_min_distance = 15.0
+distance_fade_max_distance = 8.0
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_3bkaj"]
 size = Vector3(4.2996216, 2.4194946, 0.96047974)
 
@@ -9,6 +19,8 @@ size = Vector3(4.2996216, 2.4194946, 0.96047974)
 
 [node name="tree" type="Sprite3D" parent="." unique_id=147055706]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 2.4848623, 0)
+material_override = SubResource("StandardMaterial3D_dcrw2")
+cast_shadow = 0
 billboard = 1
 alpha_cut = 1
 texture_filter = 0

@@ -1,6 +1,20 @@
 [gd_scene format=3 uid="uid://biu1hd4sv85am"]
 
-[ext_resource type="Texture2D" uid="uid://klwiiofgjl8q" path="res://scenario/floresta/92 Sem Título3_20260421163125.png" id="1_4v10y"]
+[ext_resource type="Texture2D" uid="uid://dhow2cttg028c" path="res://scenario/floresta/92 Sem Título3_20260420155029.png" id="1_4v10y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q1ilb"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1.0024691, 1.0024691, 1.0024691, 1)
+albedo_texture = ExtResource("1_4v10y")
+billboard_mode = 1
+billboard_keep_scale = true
+distance_fade_mode = 3
+distance_fade_min_distance = 15.0
+distance_fade_max_distance = 8.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4q706"]
+load_path = "res://.godot/imported/92 Sem Título3_20260421163125.png-b97c424243f3ac520d46643a0c51dc3c.s3tc.ctex"
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yxo5d"]
 radius = 0.6567383
@@ -9,14 +23,19 @@ height = 3.3623047
 [node name="tree_sprite" type="Node3D" unique_id=1724910583]
 
 [node name="tree" type="Sprite3D" parent="." unique_id=1825171448]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.9749671, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 1.9844074, 0)
+material_override = SubResource("StandardMaterial3D_q1ilb")
+cast_shadow = 0
+visibility_range_end = 25.0
+visibility_range_end_margin = 10.0
 billboard = 1
 alpha_cut = 1
 texture_filter = 0
-texture = ExtResource("1_4v10y")
+texture = SubResource("CompressedTexture2D_4q706")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=502712347]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0094402, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1539806304]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26930678, -0.16748047, 1.2767125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19674182, -0.16748047, 0.9196309)
 shape = SubResource("CapsuleShape3D_yxo5d")

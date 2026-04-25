@@ -7,6 +7,7 @@ extends CharacterBody3D
 @onready var animConfig: AnimatedSprite3D = $animator3D_sprite
 
 func _physics_process(_delta: float) -> void:
+	RenderingServer.global_shader_parameter_set("player_position", global_position)
 	if em_cutscene:
 		if anim_cutscene != "":
 			animConfig.play("walk_right")

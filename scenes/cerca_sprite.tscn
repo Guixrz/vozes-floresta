@@ -2,18 +2,30 @@
 
 [ext_resource type="Texture2D" uid="uid://cyl13uaekkpno" path="res://scenario/pasto-sombrio/92 Sem Título2_20260416213555.png" id="1_b8xc5"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b8xc5"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_b8xc5")
+distance_fade_mode = 3
+distance_fade_min_distance = 15.0
+distance_fade_max_distance = 8.0
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_sor0m"]
 size = Vector3(1.3876343, 1, 0.3638916)
 
 [node name="cerca_sprite" type="Node3D" unique_id=601785468]
 
 [node name="cerca" type="Sprite3D" parent="." unique_id=702231102]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.6482865, 0)
+material_override = SubResource("StandardMaterial3D_b8xc5")
+cast_shadow = 0
+alpha_cut = 1
 texture_filter = 0
 texture = ExtResource("1_b8xc5")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=431411091]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=326258932]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05026245, 0, 0.031677246)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05026245, 0.5355725, 0.031677246)
 shape = SubResource("BoxShape3D_sor0m")
