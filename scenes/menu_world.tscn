@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://dnk1v3qp7bu1d"]
 
+[ext_resource type="Script" uid="uid://emtgmrpoyf2b" path="res://scripts/MenuLogicObjects.gd" id="1_s66br"]
 [ext_resource type="PackedScene" uid="uid://bp13n7ri1i1a0" path="res://scenes/menu.tscn" id="1_wnoju"]
-[ext_resource type="AudioStream" uid="uid://dc6c0pue65ijm" path="res://sounds/menu/Winds Of Stories.mp3" id="2_b2oix"]
+[ext_resource type="AudioStream" uid="uid://cpkc6kqlagbf5" path="res://sounds/menu/audio-de-floresta.mp3" id="2_l75x4"]
 [ext_resource type="Texture2D" uid="uid://c60n2cg8u8520" path="res://sprites/player/calvo_walking_front.png" id="3_b2oix"]
 [ext_resource type="Shader" uid="uid://y88dsxjmkqry" path="res://shader/tree_shader.gdshader" id="4_l75x4"]
 [ext_resource type="Texture2D" uid="uid://22iwurf8jhwj" path="res://scenario/floresta/tree.png" id="4_pgo3v"]
 [ext_resource type="Texture2D" uid="uid://bot71k0u5dj1y" path="res://scenario/floresta/skybox.jpeg" id="5_8ess1"]
+[ext_resource type="Texture2D" uid="uid://b1e8oihmxxufl" path="res://sprites/ghost/eyes.png" id="8_dw4a5"]
+[ext_resource type="Script" uid="uid://dt2465eraqqgv" path="res://scripts/eyeMenu.gd" id="9_dw4a5"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_wnoju"]
 
@@ -61,7 +64,18 @@ glow_map_strength = 0.53
 
 [sub_resource type="Compositor" id="Compositor_l75x4"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t76o2"]
+transparency = 1
+albedo_texture = ExtResource("8_dw4a5")
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_l5lq6"]
+material = SubResource("StandardMaterial3D_t76o2")
+size = Vector2(1, 1)
+
 [node name="menu-world" type="Node3D" unique_id=755105807]
+script = ExtResource("1_s66br")
 
 [node name="Menu" parent="." unique_id=614541986 instance=ExtResource("1_wnoju")]
 nameWorld = "root_world"
@@ -76,12 +90,13 @@ mesh = SubResource("BoxMesh_wnoju")
 [node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=213988421]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=790128959]
-stream = ExtResource("2_b2oix")
+stream = ExtResource("2_l75x4")
 autoplay = true
 parameters/looping = false
 
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1581313659]
-transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -0.37581116, 0.03917283, -2.2612526)
+[node name="horacio" type="Sprite3D" parent="." unique_id=1581313659]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -0.141, -0.071, -1.682)
+shaded = true
 texture = ExtResource("3_b2oix")
 hframes = 7
 
@@ -167,3 +182,16 @@ color_ramp = SubResource("Gradient_pgo3v")
 environment = SubResource("Environment_pgo3v")
 camera_attributes = SubResource("CameraAttributesPractical_8ess1")
 compositor = SubResource("Compositor_l75x4")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=519778987]
+light_color = Color(0.89305216, 0.8792103, 0.82164574, 1)
+spot_range = 2.408
+spot_attenuation = 5.19
+
+[node name="ghost" type="Node3D" parent="." unique_id=679926452]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.155, 1.98, -14.829)
+
+[node name="eye" type="MeshInstance3D" parent="ghost" unique_id=714588836]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_l5lq6")
+script = ExtResource("9_dw4a5")

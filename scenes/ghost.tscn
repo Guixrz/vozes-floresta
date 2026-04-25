@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dyfk4n0tpr388"]
+
+[ext_resource type="Texture2D" uid="uid://b1e8oihmxxufl" path="res://sprites/ghost/eyes.png" id="1_t76o2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t76o2"]
+transparency = 1
+albedo_texture = ExtResource("1_t76o2")
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_l5lq6"]
+material = SubResource("StandardMaterial3D_t76o2")
+size = Vector2(1, 1)
+
+[node name="ghost" type="Node3D" unique_id=679926452]
+
+[node name="eye" type="MeshInstance3D" parent="." unique_id=714588836]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_l5lq6")
