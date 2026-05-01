@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bp13n7ri1i1a0"]
 
 [ext_resource type="Script" uid="uid://b4dnqauw00c7x" path="res://scripts/Menu.gd" id="1_yqeox"]
+[ext_resource type="Texture2D" uid="uid://bo0k1j7jkdwf7" path="res://sprites/menu/tittle_vozesDaFloresta2.png" id="2_vjb58"]
 
 [node name="Menu" type="Control" unique_id=614541986]
 layout_mode = 3
@@ -43,21 +44,19 @@ layout_mode = 2
 text = "options
 "
 
-[node name="tittle" type="Label" parent="." unique_id=1054973030]
+[node name="tittle2" type="TextureRect" parent="." unique_id=345156126]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.223
+anchor_top = 0.253
 anchor_right = 0.5
-anchor_bottom = 0.231
-offset_left = -80.64
-offset_top = -24.624002
-offset_right = 80.36
-offset_bottom = 25.375998
-scale = Vector2(1.54, 1.54)
-pivot_offset = Vector2(80, 25)
-text = "Lendas do folclore:
-Segredos enterrados"
+anchor_bottom = 0.276
+offset_left = -311.04
+offset_top = -64.15201
+offset_right = 310.96
+offset_bottom = 63.847992
+pivot_offset = Vector2(311, 64)
+texture = ExtResource("2_vjb58")
 
 [connection signal="button_down" from="buttons/btnPlay" to="." method="_on_btn_play_button_down"]
 [connection signal="button_down" from="buttons/btnExtra" to="." method="_on_btn_extra_button_down"]

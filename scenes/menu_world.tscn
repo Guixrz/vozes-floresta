@@ -101,7 +101,7 @@ texture = ExtResource("3_b2oix")
 hframes = 7
 
 [node name="floresta" type="Node3D" parent="." unique_id=1453783341]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1324383, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3267937, 0)
 
 [node name="Sprite3D" type="Sprite3D" parent="floresta" unique_id=1779466130]
 transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, -5.2421193, 2.6498477, -4.6911607)
@@ -112,7 +112,31 @@ pixel_size = 0.005
 texture = ExtResource("4_pgo3v")
 
 [node name="Sprite3D7" type="Sprite3D" parent="floresta" unique_id=351003007]
-transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, -0.06853247, 2.6498477, -4.6911607)
+transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, 0.30217743, 2.755019, -5.714654)
+material_override = SubResource("ShaderMaterial_juf05")
+gi_mode = 0
+gi_lightmap_texel_scale = 1.7085
+pixel_size = 0.005
+texture = ExtResource("4_pgo3v")
+
+[node name="Sprite3D8" type="Sprite3D" parent="floresta" unique_id=493815569]
+transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, -2.3893008, 2.6498477, -4.209282)
+material_override = SubResource("ShaderMaterial_juf05")
+gi_mode = 0
+gi_lightmap_texel_scale = 1.7085
+pixel_size = 0.005
+texture = ExtResource("4_pgo3v")
+
+[node name="Sprite3D10" type="Sprite3D" parent="floresta" unique_id=730338128]
+transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, 6.46025, 2.4878762, -4.3478165)
+material_override = SubResource("ShaderMaterial_juf05")
+gi_mode = 0
+gi_lightmap_texel_scale = 1.7085
+pixel_size = 0.005
+texture = ExtResource("4_pgo3v")
+
+[node name="Sprite3D11" type="Sprite3D" parent="floresta" unique_id=796997865]
+transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, -7.429952, 2.6498477, -4.6911607)
 material_override = SubResource("ShaderMaterial_juf05")
 gi_mode = 0
 gi_lightmap_texel_scale = 1.7085
@@ -120,7 +144,7 @@ pixel_size = 0.005
 texture = ExtResource("4_pgo3v")
 
 [node name="Sprite3D2" type="Sprite3D" parent="floresta" unique_id=1518304488]
-transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, 2.2094836, 2.464113, -5.3462677)
+transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, 2.1189847, 2.35273, -6.017776)
 material_override = SubResource("ShaderMaterial_juf05")
 gi_mode = 0
 gi_lightmap_texel_scale = 1.7085
@@ -136,7 +160,7 @@ pixel_size = 0.005
 texture = ExtResource("4_pgo3v")
 
 [node name="Sprite3D4" type="Sprite3D" parent="floresta" unique_id=1931157415]
-transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, -3.660843, 2.464113, -5.3462677)
+transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, -3.660843, 2.464113, -5.069162)
 material_override = SubResource("ShaderMaterial_juf05")
 gi_mode = 0
 gi_lightmap_texel_scale = 1.7085
@@ -152,7 +176,7 @@ pixel_size = 0.005
 texture = ExtResource("4_pgo3v")
 
 [node name="Sprite3D6" type="Sprite3D" parent="floresta" unique_id=1865091692]
-transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, 3.7885635, 2.464113, -4.010368)
+transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, 2.2318656, 2.464113, -4.010368)
 material_override = SubResource("ShaderMaterial_juf05")
 gi_mode = 0
 gi_lightmap_texel_scale = 1.7085
