@@ -31,13 +31,14 @@ text = "TESTING LABEL
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.493
-anchor_top = 0.877
+anchor_top = 0.923
 anchor_right = 0.493
-anchor_bottom = 0.87700003
+anchor_bottom = 0.923
 offset_left = -208.20804
 offset_top = -68.01599
 offset_right = -105.48804
 offset_bottom = 59.983948
+scale = Vector2(0.54, 0.54)
 pivot_offset = Vector2(208, 68)
 columns = 3
 
