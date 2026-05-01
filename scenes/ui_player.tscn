@@ -5,7 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://cooy3p0m8t2f7" path="res://icons/icon_bestiario.jpg" id="2_y58uf"]
 [ext_resource type="PackedScene" uid="uid://cigye72ejbmrv" path="res://scenes/ui_pause.tscn" id="4_vcmmx"]
 
-[node name="ui_player" type="Control" unique_id=907294525]
+[node name="ui_player" type="CanvasLayer" unique_id=992235720]
+
+[node name="ui_control" type="Control" parent="." unique_id=907294525]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -20,14 +22,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0et16")
 
-[node name="taskLabel" type="RichTextLabel" parent="." unique_id=1800619051]
+[node name="taskLabel" type="RichTextLabel" parent="ui_control" unique_id=1800619051]
 layout_mode = 0
 offset_right = 180.0
 offset_bottom = 64.0
 text = "TESTING LABEL
 "
 
-[node name="inventory" type="GridContainer" parent="." unique_id=1777965501]
+[node name="inventory" type="GridContainer" parent="ui_control" unique_id=1777965501]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.493
@@ -42,19 +44,19 @@ scale = Vector2(0.54, 0.54)
 pivot_offset = Vector2(208, 68)
 columns = 3
 
-[node name="stack0" type="Button" parent="inventory" unique_id=1429839693]
+[node name="stack0" type="Button" parent="ui_control/inventory" unique_id=1429839693]
 layout_mode = 2
 icon = ExtResource("1_hif4i")
 
-[node name="stack1" type="Button" parent="inventory" unique_id=148447915]
+[node name="stack1" type="Button" parent="ui_control/inventory" unique_id=148447915]
 layout_mode = 2
 icon = ExtResource("1_hif4i")
 
-[node name="stack2" type="Button" parent="inventory" unique_id=178258286]
+[node name="stack2" type="Button" parent="ui_control/inventory" unique_id=178258286]
 layout_mode = 2
 icon = ExtResource("1_hif4i")
 
-[node name="bestiary_btn" type="Button" parent="." unique_id=261412832]
+[node name="bestiary_btn" type="Button" parent="ui_control" unique_id=261412832]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.946
@@ -69,11 +71,11 @@ scale = Vector2(0.04, 0.04)
 pivot_offset = Vector2(544, 544)
 icon = ExtResource("2_y58uf")
 
-[node name="ui_pause" parent="." unique_id=891036461 instance=ExtResource("4_vcmmx")]
+[node name="ui_pause" parent="ui_control" unique_id=891036461 instance=ExtResource("4_vcmmx")]
 layout_mode = 1
 offset_left = 1.0
 offset_top = -2.0
 offset_right = 1.0
 offset_bottom = -2.0
 
-[connection signal="button_down" from="bestiary_btn" to="." method="_on_bestiary_btn_button_down"]
+[connection signal="button_down" from="ui_control/bestiary_btn" to="ui_control" method="_on_bestiary_btn_button_down"]
