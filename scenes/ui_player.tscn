@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://gcxdn8nl6j3a"]
 
+[ext_resource type="Script" uid="uid://nfscpv4nkf17" path="res://scripts/ui_player.gd" id="1_0et16"]
 [ext_resource type="Texture2D" uid="uid://cqe3ahhfc5k7n" path="res://icon.svg" id="1_hif4i"]
+[ext_resource type="Texture2D" uid="uid://cooy3p0m8t2f7" path="res://icons/icon_bestiario.jpg" id="2_y58uf"]
+[ext_resource type="PackedScene" uid="uid://cigye72ejbmrv" path="res://scenes/ui_pause.tscn" id="4_vcmmx"]
 
 [node name="ui_player" type="Control" unique_id=907294525]
 layout_mode = 3
@@ -9,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_0et16")
 
 [node name="taskLabel" type="RichTextLabel" parent="." unique_id=1800619051]
 layout_mode = 0
@@ -20,34 +24,45 @@ text = "TESTING LABEL
 [node name="inventory" type="GridContainer" parent="." unique_id=1777965501]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.14
-anchor_top = 0.031000001
-anchor_right = 1.036
-anchor_bottom = 0.031000001
-offset_left = 296.36798
-offset_top = 489.912
-offset_right = -633.10406
-offset_bottom = 617.912
-pivot_offset = Vector2(128, 64)
+anchor_left = 0.493
+anchor_top = 0.877
+anchor_right = 0.493
+anchor_bottom = 0.87700003
+offset_left = -208.20804
+offset_top = -68.01599
+offset_right = -105.48804
+offset_bottom = 59.983948
+pivot_offset = Vector2(208, 68)
 columns = 3
 
-[node name="TextureRect" type="TextureRect" parent="inventory" unique_id=296861991]
+[node name="stack0" type="Button" parent="inventory" unique_id=1429839693]
 layout_mode = 2
-texture = ExtResource("1_hif4i")
+icon = ExtResource("1_hif4i")
 
-[node name="TextureRect2" type="TextureRect" parent="inventory" unique_id=2062688462]
+[node name="stack1" type="Button" parent="inventory" unique_id=148447915]
 layout_mode = 2
-texture = ExtResource("1_hif4i")
+icon = ExtResource("1_hif4i")
 
-[node name="TextureRect3" type="TextureRect" parent="inventory" unique_id=1496379441]
+[node name="stack2" type="Button" parent="inventory" unique_id=178258286]
 layout_mode = 2
+icon = ExtResource("1_hif4i")
 
-[node name="bestiary" type="TextureRect" parent="." unique_id=2065755212]
-layout_mode = 0
-offset_left = 1009.0
-offset_top = 75.0
-offset_right = 1137.0
-offset_bottom = 203.0
-scale = Vector2(0.5, 0.5)
-pivot_offset = Vector2(64, 64)
-texture = ExtResource("1_hif4i")
+[node name="bestiary_btn" type="Button" parent="." unique_id=261412832]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.946
+anchor_top = 0.162
+anchor_right = 0.946
+anchor_bottom = 0.167
+offset_left = -543.984
+offset_top = -544.056
+offset_right = 544.016
+offset_bottom = 543.944
+scale = Vector2(0.04, 0.04)
+pivot_offset = Vector2(544, 544)
+icon = ExtResource("2_y58uf")
+
+[node name="ui_pause" parent="." unique_id=891036461 instance=ExtResource("4_vcmmx")]
+layout_mode = 1
+
+[connection signal="button_down" from="bestiary_btn" to="." method="_on_bestiary_btn_button_down"]
