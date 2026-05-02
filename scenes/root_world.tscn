@@ -3,14 +3,22 @@
 [ext_resource type="Script" uid="uid://c07yjmabm6xg5" path="res://scripts/root_world.gd" id="1_jkenv"]
 [ext_resource type="PackedScene" uid="uid://d26gkabaieoif" path="res://scenes/player.tscn" id="2_jllyp"]
 [ext_resource type="Script" uid="uid://bfx3m8qsj1lcd" path="res://scripts/Cam.gd" id="3_tjohw"]
+[ext_resource type="Script" uid="uid://bhwgs1520cin8" path="res://scripts/teste.gd" id="6_ey38o"]
 [ext_resource type="PackedScene" uid="uid://bqru0nbbrqef1" path="res://scenes/map.tscn" id="6_jkenv"]
+[ext_resource type="PackedScene" uid="uid://do8xdikiew12t" path="res://scenes/curupira.tscn" id="7_2jlvb"]
 [ext_resource type="PackedScene" uid="uid://c48gnodw4kcei" path="res://scenes/son_horacio.tscn" id="7_ey38o"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_tue00"]
+radius = 1.9589069
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jkenv"]
+load_path = "res://.godot/imported/98 Sem Título_20260421162551.png-500b7a6cec10a514ce28c2fc38021053.s3tc.ctex"
 
 [node name="root_world" type="Node3D" unique_id=484457010]
 script = ExtResource("1_jkenv")
 
 [node name="player" parent="." unique_id=1533921175 instance=ExtResource("2_jllyp")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.3727386, 0.863778, 10.518658)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 35.819256, 0.86377776, -29.519161)
 
 [node name="cam" type="Camera3D" parent="." unique_id=1392582398 node_paths=PackedStringArray("target")]
 transform = Transform3D(1, 0, 0, 0, 0.73659307, 0.67633617, 0, -0.67633617, 0.73659307, 0, 4.048208, 0)
@@ -21,4 +29,130 @@ target = NodePath("../player")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16319847, 0, 0.010390282)
 
 [node name="sonHoracio" parent="." unique_id=2003751006 instance=ExtResource("7_ey38o")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 2.1346524, 0.8751626, 6.1222754)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -2.3444746, 0.8751626, 6.1222754)
+
+[node name="footprintPath" type="Node3D" parent="." unique_id=350610329]
+
+[node name="footprint" type="Area3D" parent="footprintPath" unique_id=1683826062]
+transform = Transform3D(0.6993266, 0, -0.71480227, 0, 1, 0, 0.71480227, 0, 0.6993266, 6.1251616, 2.3841858e-07, 4.3861794)
+script = ExtResource("6_ey38o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="footprintPath/footprint" unique_id=1244989236]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.34037793, -0.32742977)
+shape = SubResource("SphereShape3D_tue00")
+
+[node name="Sprite3D" type="Sprite3D" parent="footprintPath/footprint" unique_id=1144814133]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0.042509794, 0)
+cast_shadow = 0
+visibility_range_end = 25.0
+visibility_range_end_margin = 10.0
+axis = 1
+alpha_cut = 1
+texture_filter = 0
+texture = SubResource("CompressedTexture2D_jkenv")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="footprintPath/footprint" unique_id=1817409031]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2786317, 0)
+light_color = Color(1, 1, 0, 1)
+light_energy = 0.0
+distance_fade_enabled = true
+
+[node name="footprint2" type="Area3D" parent="footprintPath" unique_id=1378480097]
+transform = Transform3D(0.6993266, 0, -0.71480227, 0, 1, 0, 0.71480227, 0, 0.6993266, 6.758581, 2.3841858e-07, 4.3121815)
+script = ExtResource("6_ey38o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="footprintPath/footprint2" unique_id=1215598644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.34037793, -0.32742977)
+shape = SubResource("SphereShape3D_tue00")
+
+[node name="Sprite3D" type="Sprite3D" parent="footprintPath/footprint2" unique_id=1189696286]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0.042509794, 0)
+cast_shadow = 0
+visibility_range_end = 25.0
+visibility_range_end_margin = 10.0
+axis = 1
+alpha_cut = 1
+texture_filter = 0
+texture = SubResource("CompressedTexture2D_jkenv")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="footprintPath/footprint2" unique_id=1941419997]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2786317, 0)
+light_color = Color(1, 1, 0, 1)
+light_energy = 0.0
+distance_fade_enabled = true
+
+[node name="footprint3" type="Area3D" parent="footprintPath" unique_id=1273255660]
+transform = Transform3D(0.6993266, 0, -0.71480227, 0, 1, 0, 0.71480227, 0, 0.6993266, 6.893218, 2.3841858e-07, 3.5439568)
+script = ExtResource("6_ey38o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="footprintPath/footprint3" unique_id=1787016964]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.34037793, -0.32742977)
+shape = SubResource("SphereShape3D_tue00")
+
+[node name="Sprite3D" type="Sprite3D" parent="footprintPath/footprint3" unique_id=1318016620]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0.042509794, 0)
+cast_shadow = 0
+visibility_range_end = 25.0
+visibility_range_end_margin = 10.0
+axis = 1
+alpha_cut = 1
+texture_filter = 0
+texture = SubResource("CompressedTexture2D_jkenv")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="footprintPath/footprint3" unique_id=1693038674]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2786317, 0)
+light_color = Color(1, 1, 0, 1)
+light_energy = 0.0
+distance_fade_enabled = true
+
+[node name="footprint4" type="Area3D" parent="footprintPath" unique_id=705851836]
+transform = Transform3D(0.33426747, 0, -0.9424782, 0, 1, 0, 0.9424782, 0, 0.33426747, 7.574199, 2.3841858e-07, 3.441987)
+script = ExtResource("6_ey38o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="footprintPath/footprint4" unique_id=128592318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.34037793, -0.32742977)
+shape = SubResource("SphereShape3D_tue00")
+
+[node name="Sprite3D" type="Sprite3D" parent="footprintPath/footprint4" unique_id=1969614220]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0.042509794, 0)
+cast_shadow = 0
+visibility_range_end = 25.0
+visibility_range_end_margin = 10.0
+axis = 1
+alpha_cut = 1
+texture_filter = 0
+texture = SubResource("CompressedTexture2D_jkenv")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="footprintPath/footprint4" unique_id=1562256408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2786317, 0)
+light_color = Color(1, 1, 0, 1)
+light_energy = 0.0
+distance_fade_enabled = true
+
+[node name="footprint5" type="Area3D" parent="footprintPath" unique_id=1403160891]
+transform = Transform3D(0.29490766, 0, -0.9555257, 0, 1, 0, 0.9555257, 0, 0.29490766, 8.014819, 2.3841858e-07, 2.9803114)
+script = ExtResource("6_ey38o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="footprintPath/footprint5" unique_id=1256308500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.34037793, -0.32742977)
+shape = SubResource("SphereShape3D_tue00")
+
+[node name="Sprite3D" type="Sprite3D" parent="footprintPath/footprint5" unique_id=1247248607]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0.042509794, 0)
+cast_shadow = 0
+visibility_range_end = 25.0
+visibility_range_end_margin = 10.0
+axis = 1
+alpha_cut = 1
+texture_filter = 0
+texture = SubResource("CompressedTexture2D_jkenv")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="footprintPath/footprint5" unique_id=338424498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2786317, 0)
+light_color = Color(1, 1, 0, 1)
+light_energy = 0.0
+distance_fade_enabled = true
+
+[node name="curupira" parent="." unique_id=1285362135 instance=ExtResource("7_2jlvb")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 38.856483, 0.6571872, -41.204704)
+visible = false

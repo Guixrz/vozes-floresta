@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca5tf3ngli1y5"
-path.s3tc="res://.godot/imported/98 Sem Título_20260421162551.png-500b7a6cec10a514ce28c2fc38021053.s3tc.ctex"
+uid="uid://b1odi3lrkp7wj"
+path.s3tc="res://.godot/imported/92 Sem Título2_20260430170606.png-70561decf71f06560bc99a0ec361a2b8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://scenario/floresta/98 Sem Título_20260421162551.png"
-dest_files=["res://.godot/imported/98 Sem Título_20260421162551.png-500b7a6cec10a514ce28c2fc38021053.s3tc.ctex"]
+source_file="res://scenario/floresta/92 Sem Título2_20260430170606.png"
+dest_files=["res://.godot/imported/92 Sem Título2_20260430170606.png-70561decf71f06560bc99a0ec361a2b8.s3tc.ctex"]
 
 [params]
 
