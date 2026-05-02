@@ -1,61 +1,43 @@
 [gd_scene format=3 uid="uid://c48gnodw4kcei"]
 
-[ext_resource type="Texture2D" uid="uid://cg0pa74h04aif" path="res://animations/Character_Walk.png" id="1_eogno"]
 [ext_resource type="Script" uid="uid://cl21dh2ouuc4r" path="res://scripts/son_horacio.gd" id="1_loie8"]
-[ext_resource type="Texture2D" uid="uid://ojifb7jc3e5i" path="res://animations/Character_Idle.png" id="2_xh7cw"]
+[ext_resource type="Texture2D" uid="uid://cp0y0jvf6e2ua" path="res://animations/Andando_20260430_182449_0000.png" id="2_loie8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_loie8"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ucxyy"]
-atlas = ExtResource("2_xh7cw")
-region = Rect2(0, 0, 512, 512)
+radius = 0.28759766
+height = 1.9243164
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xh7cw"]
-atlas = ExtResource("1_eogno")
-region = Rect2(0, 0, 512, 512)
+atlas = ExtResource("2_loie8")
+region = Rect2(0, 0, 960, 960)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7ukux"]
-atlas = ExtResource("1_eogno")
-region = Rect2(512, 0, 512, 512)
+atlas = ExtResource("2_loie8")
+region = Rect2(0, 0, 960, 960)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yniyt"]
-atlas = ExtResource("1_eogno")
-region = Rect2(1024, 0, 512, 512)
+atlas = ExtResource("2_loie8")
+region = Rect2(960, 0, 960, 960)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ttiwa"]
-atlas = ExtResource("1_eogno")
-region = Rect2(1536, 0, 512, 512)
+atlas = ExtResource("2_loie8")
+region = Rect2(1920, 0, 960, 960)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_egn7l"]
-atlas = ExtResource("1_eogno")
-region = Rect2(2048, 0, 512, 512)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ulknt"]
-atlas = ExtResource("1_eogno")
-region = Rect2(2560, 0, 512, 512)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3dw2m"]
-atlas = ExtResource("1_eogno")
-region = Rect2(3072, 0, 512, 512)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mvide"]
-atlas = ExtResource("1_eogno")
-region = Rect2(3584, 0, 512, 512)
+atlas = ExtResource("2_loie8")
+region = Rect2(2880, 0, 960, 960)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ucxyy"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ucxyy")
+"texture": SubResource("AtlasTexture_xh7cw")
 }],
 "loop": true,
 "name": &"idle",
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xh7cw")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7ukux")
 }, {
@@ -67,30 +49,23 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_egn7l")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ulknt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3dw2m")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mvide")
 }],
 "loop": true,
 "name": &"walk_right",
-"speed": 4.0
+"speed": 6.0
 }]
 
 [node name="sonHoracio" type="CharacterBody3D" unique_id=2003751006]
 script = ExtResource("1_loie8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=746081783]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.024154186)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05990696, 0.024154186)
 shape = SubResource("CapsuleShape3D_loie8")
 
 [node name="son" type="AnimatedSprite3D" parent="." unique_id=1876226106]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 1.2321417, 0)
 billboard = 1
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_ucxyy")
-animation = &"idle"
+animation = &"walk_right"
+frame_progress = 0.99542946

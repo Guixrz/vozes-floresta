@@ -10,7 +10,7 @@ func _physics_process(_delta: float) -> void:
 	if em_cutscene:
 		if anim_cutscene == "walk":
 			son.play("walk_right")
-		elif anim_cutscene != "":
+		if(anim_cutscene == ""):
 			son.play("idle")
-		else:
-			son.stop()
+	else:
+		son.stop()
