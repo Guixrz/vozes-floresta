@@ -5,6 +5,8 @@
 [ext_resource type="Script" uid="uid://3veeim6a6bwd" path="res://prefabs/node_2d.gd" id="1_nl0pr"]
 [ext_resource type="Texture2D" uid="uid://jgql21dy7q5i" path="res://assetsdialog/assets/interrogation.png" id="3_ieijk"]
 [ext_resource type="Script" uid="uid://b3danfw5g564s" path="res://prefabs/hit_pop.gd" id="4_nl0pr"]
+[ext_resource type="Texture2D" uid="uid://cqdotqb01hh61" path="res://assetsdialog/assets/question.png" id="6_gj6c3"]
+[ext_resource type="Script" uid="uid://d1g1clcby5jxf" path="res://prefabs/area_2d.gd" id="7_obqpg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yuhfq"]
 size = Vector2(1076, 125)
@@ -17,6 +19,11 @@ size = Vector2(20, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gj6c3"]
 size = Vector2(20, 8)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jyvqq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ioxfb"]
+radius = 39.20459
 
 [node name="Node2D" type="Node2D" unique_id=455261625]
 script = ExtResource("1_nl0pr")
@@ -60,4 +67,26 @@ dialog_texts = Array[String](["Ola! Seja bem Vindo!", "Existem muitas tarefas pa
 position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_gj6c3")
 
+[node name="inimi" type="StaticBody2D" parent="." unique_id=1609743233]
+position = Vector2(538, 446)
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="inimi" unique_id=1846693630]
+texture = ExtResource("6_gj6c3")
+
+[node name="caixa2" type="Sprite2D" parent="inimi" unique_id=1299336350]
+position = Vector2(0, -57)
+texture = ExtResource("3_ieijk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inimi" unique_id=1053203741]
+shape = SubResource("CircleShape2D_jyvqq")
+
+[node name="Area2D" type="Area2D" parent="inimi" unique_id=455414435]
+collision_layer = 2
+script = ExtResource("7_obqpg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inimi/Area2D" unique_id=1749919766]
+shape = SubResource("CircleShape2D_ioxfb")
+
 [connection signal="body_entered" from="pop_up/hit_pop" to="pop_up/hit_pop" method="_on_body_entered"]
+[connection signal="body_entered" from="inimi/Area2D" to="inimi/Area2D" method="_on_body_entered"]

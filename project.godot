@@ -23,13 +23,15 @@ Dialogic="*uid://b7ojma1gismy7"
 [dialogic]
 
 directories/dch_directory={
-"bloco": "res://timelines/bloco.dch"
+"bloco": "res://timelines/bloco.dch",
+"blocointer": "res://timelines/blocointer.dch"
 }
 directories/dtl_directory={
+"interacao": "res://timelines/interacao.dtl",
 "introducao": "res://timelines/introducao.dtl"
 }
 variables={}
-layout/style_list=["res://timelines/estilo.tres", "res://assetsdialog/font/estilo2.tres"]
+layout/style_list=["res://timelines/estilo.tres", "res://assetsdialog/font/estilo2.tres", "res://timelines/estiloinimigo.tres"]
 layout/default_style=""
 glossary/default_case_sensitive=true
 
