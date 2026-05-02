@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cigye72ejbmrv"]
 
 [ext_resource type="Script" uid="uid://bauq18ua6r0dn" path="res://scripts/ui_pause.gd" id="1_owhn5"]
+[ext_resource type="PackedScene" uid="uid://cva61pi4nlhfl" path="res://scenes/config_game_ui.tscn" id="2_h8351"]
 
 [node name="ui_pause" type="Control" unique_id=891036461]
 layout_mode = 3
@@ -41,5 +42,9 @@ text = "OPÇÕES
 
 "
 
+[node name="config_game_ui" parent="." unique_id=592948252 instance=ExtResource("2_h8351")]
+layout_mode = 1
+
 [connection signal="button_down" from="VBoxContainer/resume" to="." method="_on_resume_button_down"]
 [connection signal="button_down" from="VBoxContainer/exit" to="." method="_on_exit_button_down"]
+[connection signal="button_down" from="VBoxContainer/config" to="." method="_on_config_button_down"]

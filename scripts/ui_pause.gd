@@ -17,3 +17,8 @@ func _on_resume_button_down() -> void:
 
 func _on_exit_button_down() -> void:
 	get_tree().quit()
+
+
+func _on_config_button_down() -> void:
+	$config_game_ui.show()
+	
