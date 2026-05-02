@@ -2,7 +2,7 @@ shader_type spatial;
 uniform sampler2D albedo_texture : source_color;
 uniform float wind_strength = 0.08;
 uniform float wind_speed = 3;
-render_mode unshaded, cull_disabled;
+render_mode cull_disabled;
 
 void vertex() {
     float height_factor = 1.0 - UV.y;
