@@ -23,8 +23,14 @@ Dialogic="*uid://b7ojma1gismy7"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"bloco": "res://timelines/bloco.dch",
+"blocointer": "res://timelines/blocointer.dch"
+}
+directories/dtl_directory={
+"interacao": "res://timelines/interacao.dtl",
+"introducao": "res://timelines/introducao.dtl"
+}
 variables={}
 layout/style_list=["res://timelines/estilo.tres", "res://assetsdialog/font/estilo2.tres", "res://timelines/estiloinimigo.tres"]
 layout/default_style=""
@@ -47,11 +53,6 @@ choices/reveal_delay=0
 choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
-
-[display]
-
-window/size/viewport_width=800
-window/size/viewport_height=600
 
 [editor_plugins]
 
