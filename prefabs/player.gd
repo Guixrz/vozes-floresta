@@ -6,11 +6,18 @@ const JUMP_VELOCITY = -400.0
 
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+	
+	# parar no dialogo
+	if Dialogic.current_timeline != null or DialogManager.is_showing_dialog:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
+	
+	# gravidade
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# Handle jump.
+	# jump
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
