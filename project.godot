@@ -25,14 +25,19 @@ Dialogic="*uid://b7ojma1gismy7"
 
 directories/dch_directory={
 "bloco": "res://timelines/bloco.dch",
-"blocointer": "res://timelines/blocointer.dch"
+"blocointer": "res://timelines/blocointer.dch",
+"filho": "res://timelines/filho.dch",
+"horacio": "res://timelines/horacio.dch",
+"who": "res://timelines/who.dch"
 }
 directories/dtl_directory={
+"caminho_casa": "res://timelines/caminho_casa.dtl",
 "interacao": "res://timelines/interacao.dtl",
-"introducao": "res://timelines/introducao.dtl"
+"introducao": "res://timelines/introducao.dtl",
+"zoios": "res://timelines/zoios.dtl"
 }
 variables={}
-layout/style_list=["res://timelines/estilo.tres", "res://assetsdialog/font/estilo2.tres", "res://timelines/estiloinimigo.tres"]
+layout/style_list=["res://timelines/estilo.tres", "res://timelines/semperfil.tres", "res://timelines/lenda.tres"]
 layout/default_style=""
 glossary/default_case_sensitive=true
 extensions_folder="res://addons/dialogic_additions"
@@ -53,6 +58,21 @@ choices/reveal_delay=0
 choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
+text/autopauses={}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
 
 [editor_plugins]
 

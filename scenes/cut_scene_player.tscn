@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cwog6wjtml0fy"]
 
+[ext_resource type="Script" uid="uid://fv88xoohules" path="res://scripts/cut_scene_player.gd" id="1_u6iqx"]
 [ext_resource type="PackedScene" uid="uid://bmq8bhyfxf554" path="res://scenes/root_world.tscn" id="1_wuxbb"]
 [ext_resource type="Script" uid="uid://crm183f41hvw0" path="res://scripts/area_locked.gd" id="3_u6iqx"]
 
@@ -164,6 +165,7 @@ _data = {
 size = Vector3(66.80734, 2.9024658, 49.22014)
 
 [node name="cutScenePlayer" type="Node3D" unique_id=346370338]
+script = ExtResource("1_u6iqx")
 
 [node name="root_world" parent="." unique_id=484457010 instance=ExtResource("1_wuxbb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.914078, 0, 6.505016)
