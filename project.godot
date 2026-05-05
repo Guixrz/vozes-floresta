@@ -56,7 +56,7 @@ save/encryption_on_exports_only=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/anthonyec.camera_preview/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/discord_rpc/plugin.cfg")
+enabled=PackedStringArray("res://addons/anthonyec.camera_preview/plugin.cfg", "res://addons/dialogic/plugin.cfg")
 
 [input]
 
