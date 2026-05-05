@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://cva61pi4nlhfl"]
+
+[ext_resource type="Script" uid="uid://qoa6l3druaq6" path="res://scripts/config_game_ui.gd" id="1_mblic"]
+
+[node name="config_game_ui" type="Control" unique_id=592948252]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mblic")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=327744591]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.451
+anchor_right = 0.6
+anchor_bottom = 0.451
+offset_left = -123.26404
+offset_top = -143.20801
+offset_right = 123.36798
+offset_bottom = 143.41602
+
+[node name="VBoxContainer_checks" type="VBoxContainer" parent="PanelContainer" unique_id=538053879]
+layout_mode = 2
+
+[node name="CheckBox_sounds" type="CheckBox" parent="PanelContainer/VBoxContainer_checks" unique_id=1486657226]
+layout_mode = 2
+text = "som 
+
+"
+
+[node name="CheckBox_fullscreen" type="CheckBox" parent="PanelContainer/VBoxContainer_checks" unique_id=838522150]
+layout_mode = 2
+text = "fullscreen
+"
+
+[node name="CheckBox_shadows" type="CheckBox" parent="PanelContainer/VBoxContainer_checks" unique_id=1956114591]
+layout_mode = 2
+text = "sombras
+"
+
+[node name="salvarBtns" type="Button" parent="PanelContainer" unique_id=284741744]
+layout_mode = 2
+size_flags_vertical = 8
+size_flags_stretch_ratio = 7.22
+text = "salvar
+"
+
+[connection signal="button_down" from="PanelContainer/VBoxContainer_checks/CheckBox_sounds" to="." method="_on_check_box_sounds_button_down"]
+[connection signal="button_down" from="PanelContainer/VBoxContainer_checks/CheckBox_fullscreen" to="." method="_on_check_box_fullscreen_button_down"]
+[connection signal="button_down" from="PanelContainer/VBoxContainer_checks/CheckBox_shadows" to="." method="_on_check_box_shadows_button_down"]
+[connection signal="button_down" from="PanelContainer/salvarBtns" to="." method="_on_salvar_btns_button_down"]
