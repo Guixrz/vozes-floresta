@@ -15,8 +15,10 @@ func _on_check_box_sounds_button_down() -> void:
 
 
 func _on_check_box_fullscreen_button_down() -> void:
-	pass # Replace with function body.
-
+	if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
 
 func _on_check_box_shadows_button_down() -> void:
 	pass # Replace with function body.

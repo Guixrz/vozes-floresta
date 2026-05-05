@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dc6c0pue65ijm"
+path="res://.godot/imported/Winds Of Stories.mp3-bf44642d515e6d9af10da59d3beb5e6d.mp3str"
+
+[deps]
+
+source_file="res://sounds/menu/Winds Of Stories.mp3"
+dest_files=["res://.godot/imported/Winds Of Stories.mp3-bf44642d515e6d9af10da59d3beb5e6d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

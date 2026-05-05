@@ -1,0 +1,257 @@
+[gd_scene format=3 uid="uid://dnk1v3qp7bu1d"]
+
+[ext_resource type="Script" uid="uid://emtgmrpoyf2b" path="res://scripts/MenuLogicObjects.gd" id="1_s66br"]
+[ext_resource type="PackedScene" uid="uid://bp13n7ri1i1a0" path="res://scenes/menu.tscn" id="1_wnoju"]
+[ext_resource type="AudioStream" uid="uid://cpkc6kqlagbf5" path="res://sounds/menu/audio-de-floresta.mp3" id="2_l75x4"]
+[ext_resource type="Texture2D" uid="uid://c60n2cg8u8520" path="res://sprites/player/calvo_walking_front.png" id="3_b2oix"]
+[ext_resource type="Texture2D" uid="uid://rx7tqonp6ys1" path="res://scenario/terrain/terrain.png" id="3_r6518"]
+[ext_resource type="Shader" uid="uid://y88dsxjmkqry" path="res://shader/tree_shader.gdshader" id="4_l75x4"]
+[ext_resource type="Texture2D" uid="uid://22iwurf8jhwj" path="res://scenario/floresta/tree.png" id="4_pgo3v"]
+[ext_resource type="Texture2D" uid="uid://bot71k0u5dj1y" path="res://scenario/floresta/skybox.jpeg" id="5_8ess1"]
+[ext_resource type="Texture2D" uid="uid://b1e8oihmxxufl" path="res://sprites/ghost/eyes.png" id="8_dw4a5"]
+[ext_resource type="Script" uid="uid://dt2465eraqqgv" path="res://scripts/eyeMenu.gd" id="9_dw4a5"]
+[ext_resource type="Texture2D" uid="uid://dhk5u7tm4bw47" path="res://scenario/floresta/moita.png" id="11_mkc01"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mkc01"]
+albedo_texture = ExtResource("3_r6518")
+uv1_scale = Vector3(10, 10, 10)
+uv1_offset = Vector3(0.245, 0, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wnoju"]
+material = SubResource("StandardMaterial3D_mkc01")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_juf05"]
+render_priority = 0
+shader = ExtResource("4_l75x4")
+shader_parameter/albedo_texture = ExtResource("4_pgo3v")
+shader_parameter/wind_strength = 0.08
+shader_parameter/wind_speed = 1.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pgo3v"]
+albedo_color = Color(1, 1, 0, 1)
+emission_enabled = true
+emission = Color(0.98, 0.9636667, 0, 1)
+emission_energy_multiplier = 16.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_pgo3v"]
+material = SubResource("StandardMaterial3D_pgo3v")
+size = Vector2(0.01, 0.01)
+
+[sub_resource type="Gradient" id="Gradient_pgo3v"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.5, 0.7)
+metadata/_snap_enabled = true
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_l75x4"]
+panorama = ExtResource("5_8ess1")
+
+[sub_resource type="Sky" id="Sky_juf05"]
+sky_material = SubResource("PanoramaSkyMaterial_l75x4")
+
+[sub_resource type="Environment" id="Environment_pgo3v"]
+background_mode = 2
+background_energy_multiplier = 0.57
+sky = SubResource("Sky_juf05")
+sky_rotation = Vector3(-2.7576203, 0.7661995, 0)
+ambient_light_source = 3
+ambient_light_color = Color(0.013168451, 0.00023229103, 0.10015089, 1)
+ambient_light_energy = 0.0
+sdfgi_enabled = true
+glow_enabled = true
+glow_levels/2 = 0.92
+glow_levels/3 = 1.47
+glow_intensity = 2.22
+glow_strength = 0.12
+glow_bloom = 0.33
+glow_blend_mode = 0
+glow_hdr_threshold = 1.49
+glow_hdr_scale = 2.53
+glow_map_strength = 0.53
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_8ess1"]
+
+[sub_resource type="Compositor" id="Compositor_l75x4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t76o2"]
+transparency = 1
+albedo_texture = ExtResource("8_dw4a5")
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_l5lq6"]
+material = SubResource("StandardMaterial3D_t76o2")
+size = Vector2(1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qr5sr"]
+render_priority = 0
+shader = ExtResource("4_l75x4")
+shader_parameter/albedo_texture = ExtResource("11_mkc01")
+shader_parameter/wind_strength = 0.08
+shader_parameter/wind_speed = 3.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_62k8e"]
+material = SubResource("ShaderMaterial_qr5sr")
+
+[node name="menu-world" type="Node3D" unique_id=755105807]
+script = ExtResource("1_s66br")
+
+[node name="Menu" parent="." unique_id=614541986 instance=ExtResource("1_wnoju")]
+nameWorld = "root_world"
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=489080770]
+transform = Transform3D(1, 0, 0, 0, 0.99942684, -0.03385292, 0, 0.03385292, 0.99942684, 0.11512685, 0.1580686, -1.3421589)
+
+[node name="floor" type="MeshInstance3D" parent="." unique_id=1086316042]
+transform = Transform3D(27.548975, 0, 0, 0, 1, 0, 0, 0, 29.743979, 0, -0.80104697, 0)
+mesh = SubResource("BoxMesh_wnoju")
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=213988421]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=790128959]
+stream = ExtResource("2_l75x4")
+autoplay = true
+parameters/looping = false
+
+[node name="horacio" type="Sprite3D" parent="." unique_id=1581313659]
+transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -0.141, -0.071, -1.682)
+shaded = true
+texture = ExtResource("3_b2oix")
+hframes = 7
+
+[node name="floresta" type="Node3D" parent="." unique_id=1453783341]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3267937, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="floresta" unique_id=1779466130]
+transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, -5.2421193, 2.6498477, -4.6911607)
+material_override = SubResource("ShaderMaterial_juf05")
+gi_mode = 0
+gi_lightmap_texel_scale = 1.7085
+pixel_size = 0.005
+texture = ExtResource("4_pgo3v")
+
+[node name="Sprite3D7" type="Sprite3D" parent="floresta" unique_id=351003007]
+transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, 0.30217743, 2.755019, -5.714654)
+material_override = SubResource("ShaderMaterial_juf05")
+gi_mode = 0
+gi_lightmap_texel_scale = 1.7085
+pixel_size = 0.005
+texture = ExtResource("4_pgo3v")
+
+[node name="Sprite3D8" type="Sprite3D" parent="floresta" unique_id=493815569]
+transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, -2.3893008, 2.6498477, -4.209282)
+material_override = SubResource("ShaderMaterial_juf05")
+gi_mode = 0
+gi_lightmap_texel_scale = 1.7085
+pixel_size = 0.005
+texture = ExtResource("4_pgo3v")
+
+[node name="Sprite3D10" type="Sprite3D" parent="floresta" unique_id=730338128]
+transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, 6.46025, 2.4878762, -4.3478165)
+material_override = SubResource("ShaderMaterial_juf05")
+gi_mode = 0
+gi_lightmap_texel_scale = 1.7085
+pixel_size = 0.005
+texture = ExtResource("4_pgo3v")
+
+[node name="Sprite3D11" type="Sprite3D" parent="floresta" unique_id=796997865]
+transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, -7.429952, 2.6498477, -4.6911607)
+material_override = SubResource("ShaderMaterial_juf05")
+gi_mode = 0
+gi_lightmap_texel_scale = 1.7085
+pixel_size = 0.005
+texture = ExtResource("4_pgo3v")
+
+[node name="Sprite3D2" type="Sprite3D" parent="floresta" unique_id=1518304488]
+transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, 2.1189847, 2.35273, -6.017776)
+material_override = SubResource("ShaderMaterial_juf05")
+gi_mode = 0
+gi_lightmap_texel_scale = 1.7085
+pixel_size = 0.005
+texture = ExtResource("4_pgo3v")
+
+[node name="Sprite3D3" type="Sprite3D" parent="floresta" unique_id=1901310029]
+transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, 5.3601913, 2.464113, -5.3462677)
+material_override = SubResource("ShaderMaterial_juf05")
+gi_mode = 0
+gi_lightmap_texel_scale = 1.7085
+pixel_size = 0.005
+texture = ExtResource("4_pgo3v")
+
+[node name="Sprite3D4" type="Sprite3D" parent="floresta" unique_id=1931157415]
+transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, -3.660843, 2.464113, -5.069162)
+material_override = SubResource("ShaderMaterial_juf05")
+gi_mode = 0
+gi_lightmap_texel_scale = 1.7085
+pixel_size = 0.005
+texture = ExtResource("4_pgo3v")
+
+[node name="Sprite3D5" type="Sprite3D" parent="floresta" unique_id=1021550641]
+transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, -1.9002864, 2.464113, -5.3462677)
+material_override = SubResource("ShaderMaterial_juf05")
+gi_mode = 0
+gi_lightmap_texel_scale = 1.7085
+pixel_size = 0.005
+texture = ExtResource("4_pgo3v")
+
+[node name="Sprite3D6" type="Sprite3D" parent="floresta" unique_id=1865091692]
+transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, 2.2318656, 2.464113, -4.010368)
+material_override = SubResource("ShaderMaterial_juf05")
+gi_mode = 0
+gi_lightmap_texel_scale = 1.7085
+pixel_size = 0.005
+texture = ExtResource("4_pgo3v")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="." unique_id=614776419]
+transform = Transform3D(0.661697, 0, 0, 0, 0.4207554, -0.014354826, 0, 0.014876922, 0.40598926, -0.72536784, 0.30971348, -1.7468593)
+amount = 20
+lifetime = 3.1199999999999997
+preprocess = 0.64
+speed_scale = 0.1
+randomness = 0.4
+fixed_fps = 30
+mesh = SubResource("QuadMesh_pgo3v")
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(0, 0, 0)
+spread = 0.0
+gravity = Vector3(0.5, 0.2, 0)
+angular_velocity_min = -1.0
+angular_velocity_max = 1.0
+color = Color(1, 1, 0, 1)
+color_ramp = SubResource("Gradient_pgo3v")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1007798126]
+environment = SubResource("Environment_pgo3v")
+camera_attributes = SubResource("CameraAttributesPractical_8ess1")
+compositor = SubResource("Compositor_l75x4")
+
+[node name="ghost" type="Node3D" parent="." unique_id=679926452]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.155, 1.98, -14.829)
+
+[node name="eye" type="MeshInstance3D" parent="ghost" unique_id=714588836]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_l5lq6")
+script = ExtResource("9_dw4a5")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=526892439]
+transform = Transform3D(1, 0, 0, 0, 0.6705432, 0.7418705, 0, -0.7418705, 0.6705432, 0, 0, 0)
+light_color = Color(0.28899813, 0.62807375, 0.99999994, 1)
+light_energy = 0.44
+light_indirect_energy = 0.0
+light_specular = 0.0
+light_bake_mode = 1
+
+[node name="moitas" type="Node3D" parent="." unique_id=429242127]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14936233, 0)
+
+[node name="moita2" type="MeshInstance3D" parent="moitas" unique_id=1434511272]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.979712, 0.055568814, -4.813657)
+mesh = SubResource("QuadMesh_62k8e")
+
+[node name="moita3" type="MeshInstance3D" parent="moitas" unique_id=1056091964]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6320918, 0.061225593, -4.726492)
+mesh = SubResource("QuadMesh_62k8e")
+
+[node name="moita" type="MeshInstance3D" parent="moitas" unique_id=56347509]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.69816804, 0.029969335, -2.7545176)
+mesh = SubResource("QuadMesh_62k8e")
