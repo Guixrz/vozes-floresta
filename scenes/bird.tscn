@@ -46,6 +46,9 @@ shape = SubResource("SphereShape3D_bdh3x")
 
 [node name="birdSprite" type="AnimatedSprite3D" parent="." unique_id=1754895168]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05464387, 0)
+cast_shadow = 0
+visibility_range_end = 25.0
+visibility_range_end_margin = 10.0
 billboard = 2
 alpha_cut = 1
 texture_filter = 0
@@ -66,4 +69,3 @@ shape = SubResource("SphereShape3D_hq4t0")
 
 [node name="Timer" type="Timer" parent="." unique_id=1492491495]
 wait_time = 10.0
-autostart = true

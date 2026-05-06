@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @onready var som = $sound
-@onready var area_resgate = $RescueArea
+@onready var area_resgate = $rescueArea
 
 signal piou
 signal silenciou
@@ -29,3 +29,7 @@ func salvar_passarinho():
 	area_resgate.queue_free()
 	passarinho_salvo.emit()
 	queue_free()
+
+func iniciar_procura():
+	show()                # torna o passarinho visível no mapa
+	$Timer.start()
