@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cwog6wjtml0fy"]
 
 [ext_resource type="PackedScene" uid="uid://bmq8bhyfxf554" path="res://scenes/root_world.tscn" id="1_wuxbb"]
-[ext_resource type="Script" uid="uid://crm183f41hvw0" path="res://scripts/area_locked.gd" id="3_u6iqx"]
 
 [sub_resource type="Animation" id="Animation_v2ywo"]
 length = 0.001
@@ -160,8 +159,8 @@ _data = {
 &"caminho_casa": SubResource("Animation_7mu6q")
 }
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_rpu2l"]
-size = Vector3(66.80734, 2.9024658, 49.22014)
+[sub_resource type="BoxShape3D" id="BoxShape3D_wuxbb"]
+size = Vector3(70.835175, 4.053955, 43.368286)
 
 [node name="cutScenePlayer" type="Node3D" unique_id=346370338]
 
@@ -171,19 +170,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.914078, 0, 6.505016)
 [node name="player" parent="root_world" index="0" unique_id=1533921175]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -13.443313, 0.863778, 4.00247)
 
-[node name="sonHoracio" parent="root_world" index="3" unique_id=2003751006]
+[node name="sonHoracio" parent="root_world" index="4" unique_id=2003751006]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -52.518303, 0.4519111, 7.887917)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1518414913]
 libraries/ = SubResource("AnimationLibrary_siw1x")
 autoplay = &"caminho_casa"
 
-[node name="areaLocked" type="Area3D" parent="." unique_id=2002302199]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.527957, 0.632884, -15.495548)
-script = ExtResource("3_u6iqx")
+[node name="areaLocked" type="StaticBody3D" parent="." unique_id=76158139]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.96338, 0, -7.594266)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="areaLocked" unique_id=853370595]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.127151, 0.9512329, -10.921715)
-shape = SubResource("BoxShape3D_rpu2l")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="areaLocked" unique_id=1700171041]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.501282, 2.6776276, -10.479804)
+shape = SubResource("BoxShape3D_wuxbb")
 
 [editable path="root_world"]
