@@ -178,7 +178,6 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -52.518303, 0.4519111, 
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1518414913]
 libraries/ = SubResource("AnimationLibrary_siw1x")
-autoplay = &"caminho_casa"
 
 [node name="areaLocked" type="Area3D" parent="." unique_id=2002302199]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.527957, 0.632884, -15.495548)

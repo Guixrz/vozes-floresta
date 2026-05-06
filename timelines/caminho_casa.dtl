@@ -1,7 +1,12 @@
+[style name="horaciojunior"]
+filho: [aa=3]Pai... o senhor disse que cresceu aqui não foi?
 [style name="estilo"]
-horacio: [aa=3]Filho muito cuidado com os perigos noturnos
-[style name="lenda"]
-filho: [aa=3]Certo papai vou tomar muito cuidado
+horacio: [aa=4]Foi sim, filho. Passei boa parte da minha infância neste lugar...
+[style name="horaciojunior"]
+filho: [aa=4]E como era?
 [style name="estilo"]
-horacio: [aa=3]Não Filho você nao esta entendendo
-horacio: [aa=3]Aqui é muito perigoso, tome cuidado!
+horacio: [aa=4]Hmm... Acho que era um lugar bem comum, na verdade...
+[style name="semperfil"]
+[aa=2]...
+[style name="estilo"]
+horacio: [aa=4]Mas não precisa se preocupar! Tenho certeza de que você vai se divertir muito aqui.

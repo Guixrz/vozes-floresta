@@ -37,7 +37,7 @@ directories/dtl_directory={
 "zoios": "res://timelines/zoios.dtl"
 }
 variables={}
-layout/style_list=["res://timelines/estilo.tres", "res://timelines/semperfil.tres", "res://timelines/lenda.tres"]
+layout/style_list=["res://timelines/estilo.tres", "res://timelines/semperfil.tres", "res://timelines/lenda.tres", "res://horaciojunior.tres"]
 layout/default_style=""
 glossary/default_case_sensitive=true
 extensions_folder="res://addons/dialogic_additions"
@@ -73,6 +73,8 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
+text/input_action="dialogic_default_action"
+text/autoadvance_enabled=false
 
 [editor_plugins]
 
