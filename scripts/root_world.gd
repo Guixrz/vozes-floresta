@@ -61,3 +61,11 @@ func _on_passarinho_salvo():
 	missao_passarinho_ativa = false
 	arrowSound.visible = false
 	print("o passarinho foi salvo")
+
+# Adicione isso no seu root_world.gd
+
+func _unhandled_input(event: InputEvent) -> void:
+	# Se você pressionar a tecla "P" no teclado durante o jogo:
+	if event is InputEventKey and event.pressed and event.keycode == KEY_P:
+		print("DEBUG: Forçando início da missão do passarinho!")
+		iniciar_missao_resgate()

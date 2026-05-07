@@ -5,7 +5,6 @@
 [ext_resource type="Script" uid="uid://bfx3m8qsj1lcd" path="res://scripts/Cam.gd" id="3_tjohw"]
 [ext_resource type="Script" uid="uid://bhwgs1520cin8" path="res://scripts/teste.gd" id="6_ey38o"]
 [ext_resource type="PackedScene" uid="uid://bqru0nbbrqef1" path="res://scenes/map.tscn" id="6_jkenv"]
-[ext_resource type="PackedScene" uid="uid://do8xdikiew12t" path="res://scenes/curupira.tscn" id="7_2jlvb"]
 [ext_resource type="PackedScene" uid="uid://c48gnodw4kcei" path="res://scenes/son_horacio.tscn" id="7_ey38o"]
 [ext_resource type="Texture2D" uid="uid://bpda8webqe877" path="res://scenario/floresta/indicacao-audio.png" id="8_2jlvb"]
 [ext_resource type="PackedScene" uid="uid://cpkj3x6y1tsiq" path="res://scenes/bird.tscn" id="9_4lc3k"]
@@ -159,10 +158,6 @@ light_color = Color(1, 1, 0, 1)
 light_energy = 0.0
 distance_fade_enabled = true
 
-[node name="curupira" parent="." unique_id=1285362135 instance=ExtResource("7_2jlvb")]
-transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 38.856483, 0.6571872, -41.204704)
-visible = false
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=257900207]
 
 [node name="indication" type="TextureRect" parent="CanvasLayer" unique_id=2014111754]
@@ -180,3 +175,5 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(250, 250)
 texture = ExtResource("8_2jlvb")
+
+[editable path="map"]

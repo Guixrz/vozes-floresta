@@ -9,10 +9,8 @@ extends CharacterBody3D
 func _physics_process(_delta: float) -> void:
 	RenderingServer.global_shader_parameter_set("player_position", global_position)
 	if em_cutscene:
-		if anim_cutscene != "":
+		if anim_cutscene == "walk":
 			animConfig.play("walk_right")
-		else:
-			animConfig.stop()
 		return # impede o movimento manual via teclado
 	
 	handle_movement()

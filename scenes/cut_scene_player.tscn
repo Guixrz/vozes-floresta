@@ -185,3 +185,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.501282, 2.6776276, -10.47
 shape = SubResource("BoxShape3D_wuxbb")
 
 [editable path="root_world"]
+[editable path="root_world/map"]

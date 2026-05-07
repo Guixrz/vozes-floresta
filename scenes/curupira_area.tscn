@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c5yxoj8h18c0"]
+
+[ext_resource type="Script" uid="uid://drut8vc266yy4" path="res://scripts/curupira_area.gd" id="1_ykucm"]
+[ext_resource type="PackedScene" uid="uid://dvyo5q1felxbu" path="res://scenes/tree_curupira_sprite.tscn" id="2_ob3su"]
+[ext_resource type="PackedScene" uid="uid://do8xdikiew12t" path="res://scenes/curupira.tscn" id="3_b7k3y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ykucm"]
+size = Vector3(14.429199, 1, 4.9423065)
+
+[node name="curupiraArea" type="Node3D" unique_id=1789974557]
+script = ExtResource("1_ykucm")
+
+[node name="tree_curupira_sprite" parent="." unique_id=679795820 instance=ExtResource("2_ob3su")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.569705, 0.07922721, -2.3737497)
+
+[node name="area" type="Area3D" parent="." unique_id=1414307142]
+
+[node name="colision" type="CollisionShape3D" parent="area" unique_id=1846809243]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41550326, 0, 0.5522685)
+shape = SubResource("BoxShape3D_ykucm")
+
+[node name="MarkerPlayerSpot" type="Marker3D" parent="." unique_id=1520811276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.038, 1, 0.431)
+
+[node name="MarkerCurupiraStart" type="Marker3D" parent="." unique_id=85061650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06523192, 0, -4.529847)
+
+[node name="MarkerCurupiraLeft" type="Marker3D" parent="." unique_id=1622158345]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9762905, -4.7683716e-07, -1.9991951)
+
+[node name="curupira" parent="." unique_id=1285362135 instance=ExtResource("3_b7k3y")]
+transform = Transform3D(0.4999521, -0.0061534103, 0.0031695215, 0.0061553842, 0.49996203, -0.00029203627, -0.0031656867, 0.00033102755, 0.49998987, -0.027692378, -0.48351693, -2.1781213)
+visible = false
