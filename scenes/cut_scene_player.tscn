@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cwog6wjtml0fy"]
 
+[ext_resource type="Script" uid="uid://fv88xoohules" path="res://scripts/cut_scene_player.gd" id="1_u6iqx"]
 [ext_resource type="PackedScene" uid="uid://bmq8bhyfxf554" path="res://scenes/root_world.tscn" id="1_wuxbb"]
 
 [sub_resource type="Animation" id="Animation_v2ywo"]
@@ -163,6 +164,7 @@ _data = {
 size = Vector3(70.835175, 4.053955, 43.368286)
 
 [node name="cutScenePlayer" type="Node3D" unique_id=346370338]
+script = ExtResource("1_u6iqx")
 
 [node name="root_world" parent="." unique_id=484457010 instance=ExtResource("1_wuxbb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.914078, 0, 6.505016)
@@ -175,7 +177,6 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -52.518303, 0.4519111, 
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1518414913]
 libraries/ = SubResource("AnimationLibrary_siw1x")
-autoplay = &"caminho_casa"
 
 [node name="areaLocked" type="StaticBody3D" parent="." unique_id=76158139]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.96338, 0, -7.594266)

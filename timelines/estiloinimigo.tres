@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://cqpb3ie51rwl5" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn" id="1_mqaxa"]
 [ext_resource type="Script" uid="uid://boqmlvf8dystv" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_dd203"]
-[ext_resource type="PackedScene" uid="uid://by6waso0mjpjp" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/textbox_with_speaker_portrait.tscn" id="3_x0yyy"]
 [ext_resource type="Script" uid="uid://bfd52b1dnp1d7" path="res://addons/dialogic/Resources/dialogic_style.gd" id="4_s0mlj"]
 
 [sub_resource type="Resource" id="Resource_af8w8"]
@@ -13,31 +12,10 @@ overrides = {
 "global_font": "\"res://assetsdialog/font/Pix32.ttf\""
 }
 
-[sub_resource type="Resource" id="Resource_qqlvh"]
-script = ExtResource("2_dd203")
-scene = ExtResource("3_x0yyy")
-overrides = {
-"box_modulate_custom_color": "Color(0.49965146, 0.37068775, 0.2460228, 1)",
-"box_modulate_global_color": "false",
-"box_size": "Vector2(520, 100)",
-"name_label_color_mode": "2",
-"name_label_custom_color": "Color(0.14192706, 0.08642235, 0.028274532, 1)",
-"name_label_custom_size": "32.0",
-"name_label_customfont": "\"res://assetsdialog/font/Gamer.ttf\"",
-"name_label_use_global_font": "false",
-"name_label_use_global_size": "false",
-"portrait_bg_modulate": "Color(1, 0.7987976, 0.5481771, 0.5137255)",
-"portrait_position": "1",
-"text_custom_size": "14.0",
-"text_use_global_size": "false"
-}
-
 [resource]
 script = ExtResource("4_s0mlj")
 name = "estiloinimigo"
-layer_list = Array[String](["10"])
 layer_info = {
-"": SubResource("Resource_af8w8"),
-"10": SubResource("Resource_qqlvh")
+"": SubResource("Resource_af8w8")
 }
-metadata/_latest_layer = "10"
+metadata/_latest_layer = ""

@@ -57,6 +57,7 @@ _data = {
 load_path = "res://.godot/imported/101 Sem Título_20260506132236.png-69f8715a57f30c34e9f6ef29aa5b1d1f.ctex"
 
 [node name="transition_maneger" type="CanvasLayer" unique_id=1619858337]
+layer = 10
 script = ExtResource("1_6gfjn")
 
 [node name="background" type="ColorRect" parent="." unique_id=835427022]

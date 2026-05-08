@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="DialogicStyle" format=3 uid="uid://oa08ypfqncdd"]
+
+[ext_resource type="PackedScene" uid="uid://cqpb3ie51rwl5" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn" id="1_j8k3m"]
+[ext_resource type="Script" uid="uid://boqmlvf8dystv" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_fsgqw"]
+[ext_resource type="PackedScene" uid="uid://by6waso0mjpjp" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/textbox_with_speaker_portrait.tscn" id="3_5ksia"]
+[ext_resource type="Script" uid="uid://bfd52b1dnp1d7" path="res://addons/dialogic/Resources/dialogic_style.gd" id="4_o72fh"]
+
+[sub_resource type="Resource" id="Resource_l7rch"]
+script = ExtResource("2_fsgqw")
+scene = ExtResource("1_j8k3m")
+overrides = {
+"global_bg_color": "Color(0.44401044, 0.24155611, 0.08383009, 1)",
+"global_font": "\"res://assetsdialog/font/Pix32.ttf\""
+}
+
+[sub_resource type="Resource" id="Resource_2bpc4"]
+script = ExtResource("2_fsgqw")
+scene = ExtResource("3_5ksia")
+overrides = {
+"box_modulate_custom_color": "Color(0.13333334, 0.10980392, 0.08627451, 1)",
+"box_modulate_global_color": "false",
+"box_size": "Vector2(520, 100)",
+"name_label_alignment": "2",
+"name_label_color_mode": "2",
+"name_label_custom_color": "Color(0.5372549, 0.39607844, 0.23529412, 1)",
+"name_label_custom_size": "32.0",
+"name_label_customfont": "\"res://assetsdialog/font/Gamer.ttf\"",
+"name_label_use_global_font": "false",
+"name_label_use_global_size": "false",
+"portrait_bg_modulate": "Color(0.33333334, 0.40784314, 0.26666668, 0.8901961)",
+"portrait_position": "1",
+"text_alignment": "2",
+"text_custom_size": "14.0",
+"text_use_global_size": "false"
+}
+
+[resource]
+script = ExtResource("4_o72fh")
+name = "horaciojunior"
+layer_list = Array[String](["10"])
+layer_info = {
+"": SubResource("Resource_l7rch"),
+"10": SubResource("Resource_2bpc4")
+}
+metadata/_latest_layer = ""
