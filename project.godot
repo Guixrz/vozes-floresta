@@ -20,6 +20,11 @@ config/icon="res://icon.svg"
 TransitionLendas="*uid://dg7mo1uj402yq"
 DiscordRPCLoader="*uid://qj0exxjsgcrs"
 
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
 [editor_plugins]
 
 enabled=PackedStringArray()

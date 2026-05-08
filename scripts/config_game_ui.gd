@@ -1,6 +1,6 @@
 extends Control
 
-
+signal buttonSounds
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hide()
@@ -11,7 +11,8 @@ func _process(delta: float) -> void:
 
 
 func _on_check_box_sounds_button_down() -> void:
-	pass # Replace with function body.
+	buttonSounds.emit()
+	print("apertei checkbox sound")
 
 
 func _on_check_box_fullscreen_button_down() -> void:
