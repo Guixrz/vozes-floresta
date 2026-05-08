@@ -2,10 +2,67 @@
 
 [ext_resource type="Script" uid="uid://nfscpv4nkf17" path="res://scripts/ui_player.gd" id="1_0et16"]
 [ext_resource type="Texture2D" uid="uid://cqe3ahhfc5k7n" path="res://icon.svg" id="1_hif4i"]
+[ext_resource type="Script" uid="uid://d1pf87syqh61a" path="res://scripts/PLAYER-UI-LOGIC.gd" id="1_w4bd2"]
 [ext_resource type="Texture2D" uid="uid://cooy3p0m8t2f7" path="res://icons/icon_bestiario.jpg" id="2_y58uf"]
 [ext_resource type="PackedScene" uid="uid://cigye72ejbmrv" path="res://scenes/ui_pause.tscn" id="4_vcmmx"]
+[ext_resource type="Texture2D" uid="uid://dfqan4yxkpr1e" path="res://sprites/ui/bestiray.png" id="6_od15l"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_od15l"]
+
+[sub_resource type="Animation" id="Animation_od15l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ui_control/bookLayout:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jubmj"]
+resource_name = "bookFadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ui_control/bookLayout:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_upm3i"]
+resource_name = "bookFadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ui_control/bookLayout:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_upm3i"]
+_data = {
+&"RESET": SubResource("Animation_od15l"),
+&"bookFadeIn": SubResource("Animation_jubmj"),
+&"bookFadeOut": SubResource("Animation_upm3i")
+}
 
 [node name="ui_player" type="CanvasLayer" unique_id=992235720]
+script = ExtResource("1_w4bd2")
 
 [node name="ui_control" type="Control" parent="." unique_id=907294525]
 layout_mode = 3
@@ -22,6 +79,26 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0et16")
 
+[node name="bookLayout" type="TextureRect" parent="ui_control" unique_id=2045739924]
+modulate = Color(1, 1, 1, 0)
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_od15l")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -804.5
+offset_top = -449.5
+offset_right = 794.5
+offset_bottom = 449.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.71, 0.71)
+pivot_offset = Vector2(800, 450)
+texture = ExtResource("6_od15l")
+
 [node name="taskLabel" type="RichTextLabel" parent="ui_control" unique_id=1800619051]
 layout_mode = 0
 offset_right = 180.0
@@ -30,6 +107,7 @@ text = "TESTING LABEL
 "
 
 [node name="inventory" type="GridContainer" parent="ui_control" unique_id=1777965501]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.493
@@ -78,4 +156,8 @@ offset_top = -2.0
 offset_right = 1.0
 offset_bottom = -2.0
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=899440457]
+libraries/ = SubResource("AnimationLibrary_upm3i")
+
+[connection signal="bookEnters" from="ui_control" to="." method="_on_ui_control_book_enters"]
 [connection signal="button_down" from="ui_control/bestiary_btn" to="ui_control" method="_on_bestiary_btn_button_down"]
