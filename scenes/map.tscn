@@ -820,7 +820,88 @@ texture_filter = 0
 texture = ExtResource("3_jh32y")
 
 [node name="bush-second31" type="Sprite3D" parent="bushs" unique_id=304745826]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 33.472836, 0.5361115, 22.80984)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 33.814167, 0.5361115, 23.16783)
+material_override = SubResource("StandardMaterial3D_blm8a")
+cast_shadow = 0
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_jh32y")
+
+[node name="bush-second34" type="Sprite3D" parent="bushs" unique_id=827787319]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 33.236847, 0.5361115, 24.779259)
+material_override = SubResource("StandardMaterial3D_blm8a")
+cast_shadow = 0
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_jh32y")
+
+[node name="bush-second42" type="Sprite3D" parent="bushs" unique_id=55607278]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 32.688957, 0.5361115, 26.34454)
+material_override = SubResource("StandardMaterial3D_blm8a")
+cast_shadow = 0
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_jh32y")
+
+[node name="bush-second35" type="Sprite3D" parent="bushs" unique_id=1169425598]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 34.074104, 0.5361115, 25.223179)
+material_override = SubResource("StandardMaterial3D_blm8a")
+cast_shadow = 0
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_jh32y")
+
+[node name="bush-second36" type="Sprite3D" parent="bushs" unique_id=1684919187]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 31.2363, 0.5361115, 23.588263)
+material_override = SubResource("StandardMaterial3D_blm8a")
+cast_shadow = 0
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_jh32y")
+
+[node name="bush-second37" type="Sprite3D" parent="bushs" unique_id=793618704]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 37.901688, 0.5361115, 26.798538)
+material_override = SubResource("StandardMaterial3D_blm8a")
+cast_shadow = 0
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_jh32y")
+
+[node name="bush-second38" type="Sprite3D" parent="bushs" unique_id=1677745138]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 39.11679, 0.5361115, 22.378313)
+material_override = SubResource("StandardMaterial3D_blm8a")
+cast_shadow = 0
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_jh32y")
+
+[node name="bush-second39" type="Sprite3D" parent="bushs" unique_id=277326702]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 30.515518, 0.53611124, 26.911905)
+material_override = SubResource("StandardMaterial3D_blm8a")
+cast_shadow = 0
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_jh32y")
+
+[node name="bush-second40" type="Sprite3D" parent="bushs" unique_id=1610427376]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 25.225014, 0.53611124, 23.942043)
+material_override = SubResource("StandardMaterial3D_blm8a")
+cast_shadow = 0
+billboard = 1
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("3_jh32y")
+
+[node name="bush-second41" type="Sprite3D" parent="bushs" unique_id=1449277761]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 26.906975, 0.53611124, 17.94055)
 material_override = SubResource("StandardMaterial3D_blm8a")
 cast_shadow = 0
 billboard = 1
@@ -838,7 +919,7 @@ texture_filter = 0
 texture = ExtResource("3_jh32y")
 
 [node name="bush-second33" type="Sprite3D" parent="bushs" unique_id=1322700462]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 35.50926, 0.5361115, 23.558916)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 34.792244, 0.5361115, 24.493809)
 material_override = SubResource("StandardMaterial3D_blm8a")
 cast_shadow = 0
 billboard = 1

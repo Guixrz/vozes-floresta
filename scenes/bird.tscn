@@ -1,59 +1,19 @@
 [gd_scene format=3 uid="uid://cpkj3x6y1tsiq"]
 
 [ext_resource type="Script" uid="uid://bmoco76hn1mfo" path="res://scripts/bird.gd" id="1_hq4t0"]
-[ext_resource type="Texture2D" uid="uid://d1grr52301oym" path="res://scenario/floresta/BirdSprite.png" id="2_twsrt"]
 [ext_resource type="AudioStream" uid="uid://mp7p14bnap8q" path="res://scenario/floresta/sounds-bird.mp3" id="3_b7mtg"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_bdh3x"]
 radius = 0.046843387
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jggmu"]
-atlas = ExtResource("2_twsrt")
-region = Rect2(0, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hrcfq"]
-atlas = ExtResource("2_twsrt")
-region = Rect2(16, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ehebh"]
-atlas = ExtResource("2_twsrt")
-region = Rect2(32, 32, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_qavic"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jggmu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hrcfq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ehebh")
-}],
-"loop": true,
-"name": &"default",
-"speed": 1.0
-}]
-
 [sub_resource type="SphereShape3D" id="SphereShape3D_hq4t0"]
+radius = 0.15760283
 
 [node name="bird" type="CharacterBody3D" unique_id=1468430596]
 script = ExtResource("1_hq4t0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=635766025]
 shape = SubResource("SphereShape3D_bdh3x")
-
-[node name="birdSprite" type="AnimatedSprite3D" parent="." unique_id=1754895168]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05464387, 0)
-cast_shadow = 0
-visibility_range_end = 25.0
-visibility_range_end_margin = 10.0
-billboard = 2
-alpha_cut = 1
-texture_filter = 0
-sprite_frames = SubResource("SpriteFrames_qavic")
-frame_progress = 0.45743224
 
 [node name="lightInteration" type="OmniLight3D" parent="." unique_id=1487395561]
 light_energy = 0.5
@@ -69,4 +29,4 @@ max_distance = 30.0
 shape = SubResource("SphereShape3D_hq4t0")
 
 [node name="Timer" type="Timer" parent="." unique_id=1492491495]
-wait_time = 10.0
+wait_time = 2.0
