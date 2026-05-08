@@ -15,16 +15,16 @@ overrides = {
 script = ExtResource("1_0sckv")
 scene = ExtResource("2_hwecx")
 overrides = {
-"box_modulate_custom_color": "Color(0.49965146, 0.37068775, 0.2460228, 1)",
+"box_modulate_custom_color": "Color(0.13151044, 0.10837102, 0.08715991, 1)",
 "box_modulate_global_color": "false",
 "box_size": "Vector2(520, 100)",
 "name_label_color_mode": "2",
-"name_label_custom_color": "Color(0.14192706, 0.08642235, 0.028274532, 1)",
+"name_label_custom_color": "Color(0.5377604, 0.39749178, 0.23597036, 1)",
 "name_label_custom_size": "32.0",
 "name_label_customfont": "\"res://assetsdialog/font/Gamer.ttf\"",
 "name_label_use_global_font": "false",
 "name_label_use_global_size": "false",
-"portrait_bg_modulate": "Color(1, 0.7987976, 0.5481771, 0.5137255)",
+"portrait_bg_modulate": "Color(0.33164772, 0.40755206, 0.26586404, 0.8901961)",
 "text_custom_size": "14.0",
 "text_use_global_size": "false"
 }
