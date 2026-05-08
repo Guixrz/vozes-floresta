@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://emtgmrpoyf2b" path="res://scripts/MenuLogicObjects.gd" id="1_pgo3v"]
 [ext_resource type="PackedScene" uid="uid://bp13n7ri1i1a0" path="res://scenes/menu.tscn" id="1_wnoju"]
 [ext_resource type="AudioStream" uid="uid://cpkc6kqlagbf5" path="res://sounds/menu/audio-de-floresta.mp3" id="3_b2oix"]
+[ext_resource type="AudioStream" uid="uid://6sniuskqipii" path="res://sounds/menu/sino_play.wav" id="5_8ess1"]
 
 [node name="Control" type="Control" unique_id=477282176]
 layout_mode = 3
@@ -34,12 +35,13 @@ anchor_mode = 0
 layout_mode = 1
 nameWorld = "root_world"
 
-[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=1782395574]
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1522703701]
+[node name="bgsound" type="AudioStreamPlayer2D" parent="." unique_id=1522703701]
 stream = ExtResource("3_b2oix")
 autoplay = true
 parameters/looping = true
+
+[node name="clickSound" type="AudioStreamPlayer2D" parent="." unique_id=196902121]
+stream = ExtResource("5_8ess1")
 
 [connection signal="buttonSounds" from="Menu/config_game_ui" to="." method="_on_config_game_ui_button_sounds"]
 

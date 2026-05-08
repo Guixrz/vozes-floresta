@@ -1,6 +1,6 @@
 extends Control
 
-@onready var audioObj:AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var audioObj:AudioStreamPlayer2D = $bgsound
 
 
 func _on_config_game_ui_button_sounds() -> void:
