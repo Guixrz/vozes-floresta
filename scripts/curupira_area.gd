@@ -27,7 +27,7 @@ func rodar_cutscene(player: Node3D) -> void:
 	player.em_cutscene = true
 	player.velocity = Vector3.ZERO
 	
-	definir_animacao_caminhada(player, player_spot.global_position)
+	GameUtils.definir_animacao_caminhada(player, player_spot.global_position)
 
 	# calcula o tempo de caminhada baseado na distância para manter a velocidade constante!
 	var distancia = player.global_position.distance_to(player_spot.global_position)
@@ -55,28 +55,3 @@ func rodar_cutscene(player: Node3D) -> void:
 	
 	await tween_curupira.finished
 	
-
-
-# calcula a direção do movimento e escolhe a animação
-func definir_animacao_caminhada(player: Node3D, target_pos: Vector3) -> void:
-	var animator = player.get_node("animator3D_sprite")
-	if not animator:
-		return
-		
-	# calcula o vetor de direção no plano horizontal XZ (ignora a altura Y)
-	var direcao = (target_pos - player.global_position)
-	direcao.y = 0
-	direcao = direcao.normalized()
-	
-	# Se a movimentação horizontal for maior que a vertical
-	if abs(direcao.x) > abs(direcao.z):
-		if direcao.x > 0:
-			animator.play("walk_right")
-		else:
-			animator.play("walk_left")
-	# Se a movimentação vertical for maior
-	else:
-		if direcao.z > 0:
-			animator.play("walk_front") # Anda em direção à câmera
-		else:
-			animator.play("walk_down")  # Anda para o fundo (direção à árvore)

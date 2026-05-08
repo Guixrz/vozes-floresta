@@ -9,6 +9,7 @@ func _ready() -> void:
 	if passarinho:
 		passarinho.passarinho_salvo.connect(_on_passarinho_salvo)
 
+
 func iniciar_missao_resgate():
 	missao_passarinho_ativa = true
 	if is_instance_valid(passarinho):

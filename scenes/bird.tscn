@@ -7,7 +7,7 @@
 radius = 0.046843387
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_hq4t0"]
-radius = 0.15760283
+radius = 0.8038168
 
 [node name="bird" type="CharacterBody3D" unique_id=1468430596]
 script = ExtResource("1_hq4t0")
@@ -30,3 +30,6 @@ shape = SubResource("SphereShape3D_hq4t0")
 
 [node name="Timer" type="Timer" parent="." unique_id=1492491495]
 wait_time = 2.0
+
+[node name="playerSplot" type="Marker3D" parent="." unique_id=1588308405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
