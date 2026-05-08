@@ -54,6 +54,7 @@ func rodar_cutscene(player: Node3D) -> void:
 	tween_curupira.tween_property(curupira, "global_position", curupira_left.global_position, 1.5).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	
 	await tween_curupira.finished
+	Dialogic.start("curupira")
 	
 
 

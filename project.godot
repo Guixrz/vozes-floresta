@@ -25,19 +25,22 @@ Dialogic="*uid://b7ojma1gismy7"
 
 directories/dch_directory={
 "bloco": "res://timelines/bloco.dch",
-"blocointer": "res://timelines/blocointer.dch"
+"blocointer": "res://timelines/blocointer.dch",
+"curupira": "res://timelines/curupira.dch",
+"horacio": "res://timelines/horacio.dch"
 }
 directories/dtl_directory={
+"curupira": "res://timelines/curupira.dtl",
 "interacao": "res://timelines/interacao.dtl",
 "introducao": "res://timelines/introducao.dtl"
 }
 variables={}
-layout/style_list=["res://timelines/estilo.tres", "res://assetsdialog/font/estilo2.tres", "res://timelines/estiloinimigo.tres"]
+layout/style_list=["res://timelines/estilo.tres", "res://assetsdialog/font/estilo2.tres", "res://timelines/estiloinimigo.tres", "res://timelines/lenda.tres"]
 layout/default_style=""
 glossary/default_case_sensitive=true
 extensions_folder="res://addons/dialogic_additions"
-text/letter_speed=0.01
-text/initial_text_reveal_skippable=true
+text/letter_speed=0.05
+text/initial_text_reveal_skippable=false
 text/text_reveal_skip_delay=0.1
 text/advance_delay=0.1
 text/autoadvance_per_character_delay=0.1
@@ -53,6 +56,22 @@ choices/reveal_delay=0
 choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
+text/autopauses={}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
+text/autocolor_names=true
 
 [editor_plugins]
 
