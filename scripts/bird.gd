@@ -3,7 +3,7 @@ extends CharacterBody3D
 @onready var som = $sound
 @onready var area_resgate = $rescueArea
 @onready var luz = $lightInteration
-@onready var playerSplot: Marker3D = $playerSplot # Mantenha o nome exato do nó na árvore
+@onready var playerSplot: Marker3D = $playerSplot
 
 signal piou
 signal silenciou
@@ -35,7 +35,6 @@ func _on_som_finished():
 		$Timer.start()
 
 func _on_rescue_area_body_entered(body: Node3D):
-	# CORREÇÃO: Passamos 'body' (a instância), não 'Player' (a classe)
 	if body.is_in_group("player") or body.name.to_lower().contains("player"):
 		salvar_passarinho(body)
 
@@ -48,7 +47,6 @@ func salvar_passarinho(player_instancia: Node3D):
 	player_instancia.em_cutscene = true
 	player_instancia.velocity = Vector3.ZERO
 	
-	# Chamando a função global que criamos no Passo 1
 	GameUtils.definir_animacao_caminhada(player_instancia, playerSplot.global_position)
 	
 	var tw = create_tween()
@@ -57,15 +55,16 @@ func salvar_passarinho(player_instancia: Node3D):
 	
 	await tw.finished
 	
-	var trans = get_tree().current_scene.get_node_or_null("CanvasLayer/transition")
-	if trans:
-		trans.tocar_cutscene_resgate()
-	
-	# Remove o passarinho enquanto a tela está preta
+	player_instancia.get_node("animator3D_sprite").stop()
+
+	if TransitionLendas:
+		TransitionLendas.tocar_cutscene_resgate()
+	else:
+		print("singleton TransitionLendas não encontrado!")
+
 	await get_tree().create_timer(1.0).timeout
 	
 	passarinho_salvo.emit()
-	 
 	queue_free()
 
 func iniciar_procura():

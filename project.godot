@@ -19,8 +19,8 @@ config/icon="res://icon.svg"
 
 TransitionLendas="*uid://dg7mo1uj402yq"
 DialogManager="*uid://b5wdy4i3boae2"
-Dialogic="*uid://b7ojma1gismy7"
 GameUtils="*uid://dv20ihkyp5piu"
+Dialogic="*uid://b7ojma1gismy7"
 
 [dialogic]
 

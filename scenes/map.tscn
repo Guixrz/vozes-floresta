@@ -829,7 +829,7 @@ texture_filter = 0
 texture = ExtResource("3_jh32y")
 
 [node name="bush-second34" type="Sprite3D" parent="bushs" unique_id=827787319]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 33.236847, 0.5361115, 24.779259)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 33.215565, 0.5361117, 24.64096)
 material_override = SubResource("StandardMaterial3D_blm8a")
 cast_shadow = 0
 billboard = 1
@@ -847,7 +847,7 @@ texture_filter = 0
 texture = ExtResource("3_jh32y")
 
 [node name="bush-second35" type="Sprite3D" parent="bushs" unique_id=1169425598]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 34.074104, 0.5361115, 25.223179)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 33.98514, 0.5361115, 25.193863)
 material_override = SubResource("StandardMaterial3D_blm8a")
 cast_shadow = 0
 billboard = 1
@@ -919,7 +919,7 @@ texture_filter = 0
 texture = ExtResource("3_jh32y")
 
 [node name="bush-second33" type="Sprite3D" parent="bushs" unique_id=1322700462]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 34.792244, 0.5361115, 24.493809)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 34.749714, 0.5361115, 24.666069)
 material_override = SubResource("StandardMaterial3D_blm8a")
 cast_shadow = 0
 billboard = 1
@@ -1550,7 +1550,7 @@ texture_filter = 0
 texture = ExtResource("2_2klcf")
 
 [node name="stone104" type="Sprite3D" parent="stones" unique_id=1777565478]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 33.8179, 0.039269447, 24.467505)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 41.272373, 0.039269447, 24.33055)
 material_override = SubResource("StandardMaterial3D_c70he")
 cast_shadow = 0
 axis = 1
