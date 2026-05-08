@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 @onready var audioObj:AudioStreamPlayer2D = $bgsound
 

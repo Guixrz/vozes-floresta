@@ -6,17 +6,18 @@
 [ext_resource type="AudioStream" uid="uid://cpkc6kqlagbf5" path="res://sounds/menu/audio-de-floresta.mp3" id="3_b2oix"]
 [ext_resource type="AudioStream" uid="uid://6sniuskqipii" path="res://sounds/menu/sino_play.wav" id="5_8ess1"]
 
-[node name="Control" type="Control" unique_id=477282176]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="menu-world" type="CanvasLayer" unique_id=1335469950]
 script = ExtResource("1_pgo3v")
 
+[node name="bgsound" type="AudioStreamPlayer2D" parent="." unique_id=1522703701]
+stream = ExtResource("3_b2oix")
+autoplay = true
+parameters/looping = true
+
+[node name="clickSound" type="AudioStreamPlayer2D" parent="." unique_id=196902121]
+stream = ExtResource("5_8ess1")
+
 [node name="image" type="TextureRect" parent="." unique_id=76954931]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -32,16 +33,7 @@ stretch_mode = 6
 anchor_mode = 0
 
 [node name="Menu" parent="." unique_id=614541986 instance=ExtResource("1_wnoju")]
-layout_mode = 1
 nameWorld = "root_world"
-
-[node name="bgsound" type="AudioStreamPlayer2D" parent="." unique_id=1522703701]
-stream = ExtResource("3_b2oix")
-autoplay = true
-parameters/looping = true
-
-[node name="clickSound" type="AudioStreamPlayer2D" parent="." unique_id=196902121]
-stream = ExtResource("5_8ess1")
 
 [connection signal="buttonSounds" from="Menu/config_game_ui" to="." method="_on_config_game_ui_button_sounds"]
 
