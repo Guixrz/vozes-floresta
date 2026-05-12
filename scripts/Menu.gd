@@ -2,6 +2,7 @@ extends Control
 
 
 @export var nameWorld:String 
+@onready var audioClick:AudioStreamPlayer2D = $"../clickSound"
 
 #nodes da ui
 
@@ -21,16 +22,16 @@ func _process(delta: float) -> void:
 
 
 func _on_btn_play_button_down() -> void:
-	#quando botao play for apertado carrega uma cena
-	#root_world é provisorio, uma outra cena pode ser usada no lugar
-	TransitionLendas.fade_to_scene("cut_scene_player")
+	audioClick.play()
+	
+	TransitionLendas.fade_to_scene(nameWorld)
 	
 
 
 func _on_btn_extra_button_down() -> void:
 	#quando botao extra(agradecimento, tutoriais, ester eggs) for apertado
-	pass # Replace with function body.
-
+	audioClick.play()
 
 func _on_btn_config_button_down() -> void:
 	$config_game_ui.show()
+	audioClick.play()

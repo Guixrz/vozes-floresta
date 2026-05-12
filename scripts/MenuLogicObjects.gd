@@ -1,12 +1,10 @@
-extends Node3D
+extends CanvasLayer
 
-@onready var eye = $ghost/eye
-var timer:float = 0
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@onready var audioObj:AudioStreamPlayer2D = $bgsound
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_config_game_ui_button_sounds() -> void:
+	if audioObj.playing:
+		audioObj.stop()
+	else:
+		audioObj.play()
