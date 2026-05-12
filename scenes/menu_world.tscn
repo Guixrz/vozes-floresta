@@ -4,15 +4,9 @@
 [ext_resource type="Script" uid="uid://emtgmrpoyf2b" path="res://scripts/MenuLogicObjects.gd" id="1_pgo3v"]
 [ext_resource type="PackedScene" uid="uid://bp13n7ri1i1a0" path="res://scenes/menu.tscn" id="1_wnoju"]
 [ext_resource type="Texture2D" uid="uid://c60n2cg8u8520" path="res://sprites/player/calvo_walking_front.png" id="3_b2oix"]
-[ext_resource type="Texture2D" uid="uid://rx7tqonp6ys1" path="res://scenario/terrain/terrain.png" id="3_r6518"]
-[ext_resource type="Shader" uid="uid://y88dsxjmkqry" path="res://shader/tree_shader.gdshader" id="4_l75x4"]
 [ext_resource type="AudioStream" uid="uid://dc6c0pue65ijm" path="res://sounds/menu/Winds Of Stories.mp3" id="4_mkc01"]
 [ext_resource type="Texture2D" uid="uid://22iwurf8jhwj" path="res://scenario/floresta/tree.png" id="4_pgo3v"]
-[ext_resource type="Texture2D" uid="uid://bot71k0u5dj1y" path="res://scenario/floresta/skybox.jpeg" id="5_8ess1"]
-[ext_resource type="Texture2D" uid="uid://b1e8oihmxxufl" path="res://sprites/ghost/eyes.png" id="8_dw4a5"]
-[ext_resource type="Script" uid="uid://dt2465eraqqgv" path="res://scripts/eyeMenu.gd" id="9_dw4a5"]
-[ext_resource type="Texture2D" uid="uid://dhk5u7tm4bw47" path="res://scenario/floresta/moita.png" id="11_mkc01"]
-[ext_resource type="AudioStream" uid="uid://cpkc6kqlagbf5" path="res://sounds/menu/audio-de-floresta.mp3" id="12_audio_floresta"]
+[ext_resource type="AudioStream" uid="uid://cpkc6kqlagbf5" path="res://sounds/mundo/audio-de-floresta.mp3" id="12_audio_floresta"]
 [ext_resource type="AudioStream" uid="uid://6sniuskqipii" path="res://sounds/menu/sino_play.wav" id="13_sino_som"]
 
 [node name="menu-world" type="CanvasLayer" unique_id=1335469950]
@@ -72,7 +66,6 @@ texture = ExtResource("4_pgo3v")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.155, 1.98, -14.829)
 
 [node name="eye" type="MeshInstance3D" parent="ghost" unique_id=714588836]
-script = ExtResource("9_dw4a5")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=526892439]
 transform = Transform3D(1, 0, 0, 0, 0.6705432, 0.7418705, 0, -0.7418705, 0.6705432, 0, 0, 0)
