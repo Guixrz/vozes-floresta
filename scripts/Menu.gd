@@ -21,17 +21,18 @@ func _process(delta: float) -> void:
 		$tittle2.show()
 
 
-func _on_btn_play_button_down() -> void:
+func _on_play_btn_button_down() -> void:
 	audioClick.play()
-	
 	TransitionLendas.fade_to_scene(nameWorld)
 	
 
-
-func _on_btn_extra_button_down() -> void:
-	#quando botao extra(agradecimento, tutoriais, ester eggs) for apertado
+func _on_extra_btn_button_down() -> void:
 	audioClick.play()
 
-func _on_btn_config_button_down() -> void:
+func _on_option_btn_button_down() -> void:
 	$config_game_ui.show()
 	audioClick.play()
+
+
+func _on_quit_btn_button_down() -> void:
+	get_tree().quit()

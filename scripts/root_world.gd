@@ -15,12 +15,13 @@ func _ready() -> void:
 	
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	
-	if filho:
-		filho.visible = false
+	#if filho:
+		#filho.visible = false
 	
 	Dialogic.start("inicioBuscaFilho")
 
 func iniciar_missao_resgate():
+	#coloca na label do UI player - jerry
 	missao_passarinho_ativa = true
 	if is_instance_valid(passarinho):
 		passarinho.iniciar_procura()

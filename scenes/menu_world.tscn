@@ -3,9 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cjhjavr8ooofy" path="res://sprites/menu/menu_image.png" id="1_dfeuw"]
 [ext_resource type="Script" uid="uid://emtgmrpoyf2b" path="res://scripts/MenuLogicObjects.gd" id="1_pgo3v"]
 [ext_resource type="PackedScene" uid="uid://bp13n7ri1i1a0" path="res://scenes/menu.tscn" id="1_wnoju"]
-[ext_resource type="Texture2D" uid="uid://c60n2cg8u8520" path="res://sprites/player/calvo_walking_front.png" id="3_b2oix"]
 [ext_resource type="AudioStream" uid="uid://dc6c0pue65ijm" path="res://sounds/menu/Winds Of Stories.mp3" id="4_mkc01"]
-[ext_resource type="Texture2D" uid="uid://22iwurf8jhwj" path="res://scenario/floresta/tree.png" id="4_pgo3v"]
 [ext_resource type="AudioStream" uid="uid://cpkc6kqlagbf5" path="res://sounds/mundo/audio-de-floresta.mp3" id="12_audio_floresta"]
 [ext_resource type="AudioStream" uid="uid://6sniuskqipii" path="res://sounds/menu/sino_play.wav" id="13_sino_som"]
 
@@ -36,42 +34,34 @@ stretch_mode = 6
 anchor_mode = 0
 
 [node name="Menu" parent="." unique_id=614541986 instance=ExtResource("1_wnoju")]
-nameWorld = "cut_scene_player"
+nameWorld = "res://scenes/cut_scene_player.tscn"
 
-[node name="floor" type="MeshInstance3D" parent="." unique_id=1086316042]
-transform = Transform3D(27.548975, 0, 0, 0, 1, 0, 0, 0, 29.743979, 0, -0.80104697, 0)
+[node name="playBtn" parent="Menu/buttons" parent_id_path=PackedInt32Array(614541986, 1813523655) index="0" unique_id=300552528]
+modulate = Color(1, 1, 1, 0.50980395)
+
+[node name="playLabel" parent="Menu/buttons/playBtn" index="0" unique_id=1778149816]
+texture_filter = 1
+
+[node name="extraBtn" parent="Menu/buttons" parent_id_path=PackedInt32Array(614541986, 1813523655) index="1" unique_id=1787491154]
+modulate = Color(1, 1, 1, 0.50980395)
+
+[node name="optionBtn" parent="Menu/buttons" parent_id_path=PackedInt32Array(614541986, 1813523655) index="2" unique_id=223469998]
+modulate = Color(1, 1, 1, 0.50980395)
+
+[node name="quitBtn" parent="Menu/buttons" parent_id_path=PackedInt32Array(614541986, 1813523655) index="3" unique_id=707500481]
+modulate = Color(1, 1, 1, 0.50980395)
 
 [node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=213988421]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=790128959]
+[node name="bgsound2" type="AudioStreamPlayer2D" parent="." unique_id=790128959]
 stream = ExtResource("4_mkc01")
 autoplay = true
 parameters/looping = false
 
-[node name="horacio" type="Sprite3D" parent="." unique_id=1581313659]
-transform = Transform3D(0.07, 0, 0, 0, 0.07, 0, 0, 0, 0.07, -0.141, -0.071, -1.682)
-shaded = true
-texture = ExtResource("3_b2oix")
-hframes = 7
-
-[node name="floresta" type="Node3D" parent="." unique_id=1453783341]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3267937, 0)
-
-[node name="Sprite3D" type="Sprite3D" parent="floresta" unique_id=1779466130]
-transform = Transform3D(0.4812709, 0, 0, 0, 0.5057574, 0, 0, 0, 1, -5.2421193, 2.6498477, -4.6911607)
-pixel_size = 0.005
-texture = ExtResource("4_pgo3v")
-
-[node name="ghost" type="Node3D" parent="." unique_id=679926452]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.155, 1.98, -14.829)
-
-[node name="eye" type="MeshInstance3D" parent="ghost" unique_id=714588836]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=526892439]
-transform = Transform3D(1, 0, 0, 0, 0.6705432, 0.7418705, 0, -0.7418705, 0.6705432, 0, 0, 0)
-light_color = Color(0.28899813, 0.62807375, 0.99999994, 1)
-light_energy = 0.44
-
+[connection signal="button_down" from="Menu/buttons/playBtn" to="Menu" method="_on_play_btn_button_down"]
+[connection signal="button_down" from="Menu/buttons/extraBtn" to="Menu" method="_on_extra_btn_button_down"]
+[connection signal="button_down" from="Menu/buttons/optionBtn" to="Menu" method="_on_option_btn_button_down"]
+[connection signal="button_down" from="Menu/buttons/quitBtn" to="Menu" method="_on_quit_btn_button_down"]
 [connection signal="buttonSounds" from="Menu/config_game_ui" to="." method="_on_config_game_ui_button_sounds"]
 
 [editable path="Menu"]

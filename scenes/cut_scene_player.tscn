@@ -174,6 +174,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -13.443313, 0.863778, 4
 
 [node name="sonHoracio" parent="root_world" index="4" unique_id=2003751006]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -52.518303, 0.4519111, 7.887917)
+visible = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1518414913]
 libraries/ = SubResource("AnimationLibrary_siw1x")
