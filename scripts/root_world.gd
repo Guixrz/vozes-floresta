@@ -30,10 +30,10 @@ func _on_passarinho_salvo():
 	missao_passarinho_ativa = false
 	print("O passarinho foi salvo!")
 
-#func _unhandled_input(event: InputEvent) -> void:
-	# Tecla de debug
-	#if event is InputEventKey and event.pressed and event.keycode == KEY_P:
-	#	iniciar_missao_resgate()
+func _unhandled_input(event: InputEvent) -> void:
+	#Tecla de debug
+	if event is InputEventKey and event.pressed and event.keycode == KEY_P:
+		iniciar_missao_resgate()
 
 func executar_sequencia_filho():
 	player.em_cutscene = true
