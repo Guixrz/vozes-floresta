@@ -5,7 +5,7 @@
 [ext_resource type="Shader" uid="uid://dicif1ob50f67" path="res://shader/menu_tittle.gdshader" id="2_mhnvy"]
 [ext_resource type="Texture2D" uid="uid://bo0k1j7jkdwf7" path="res://sprites/menu/tittle_vozesDaFloresta2.png" id="2_vjb58"]
 [ext_resource type="PackedScene" uid="uid://cva61pi4nlhfl" path="res://scenes/config_game_ui.tscn" id="3_con2f"]
-[ext_resource type="FontFile" uid="uid://dpeemxyu21dms" path="res://fontesEscritas/blood_crow/bloodcrowci.ttf" id="3_g3eks"]
+[ext_resource type="FontFile" uid="uid://dmjrm5swmtsro" path="res://fontesEscritas/amnesia_font__amnesiarip__by_mucrush_d6m5g2e.ttf" id="3_g3eks"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_v86rl"]
 font = ExtResource("3_g3eks")
@@ -113,7 +113,7 @@ offset_left = -65.0
 offset_top = -32.0
 offset_right = 63.146988
 offset_bottom = 32.50621
-text = "opções"
+text = "opcoes"
 label_settings = SubResource("LabelSettings_v86rl")
 horizontal_alignment = 1
 vertical_alignment = 1

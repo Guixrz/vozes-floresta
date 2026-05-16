@@ -2,18 +2,18 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dpeemxyu21dms"
-path="res://.godot/imported/bloodcrowci.ttf-2041cea75c29c302ba2227204eaf9a8b.fontdata"
+uid="uid://dmjrm5swmtsro"
+path="res://.godot/imported/amnesia_font__amnesiarip__by_mucrush_d6m5g2e.ttf-0f9ff4575fa4d6396bf4545804460be2.fontdata"
 
 [deps]
 
-source_file="res://fontesEscritas/blood_crow/bloodcrowci.ttf"
-dest_files=["res://.godot/imported/bloodcrowci.ttf-2041cea75c29c302ba2227204eaf9a8b.fontdata"]
+source_file="res://fontesEscritas/amnesia_font__amnesiarip__by_mucrush_d6m5g2e.ttf"
+dest_files=["res://.godot/imported/amnesia_font__amnesiarip__by_mucrush_d6m5g2e.ttf-0f9ff4575fa4d6396bf4545804460be2.fontdata"]
 
 [params]
 
 Rendering=null
-antialiasing=0
+antialiasing=2
 generate_mipmaps=false
 disable_embedded_bitmaps=false
 multichannel_signed_distance_field=false
@@ -23,13 +23,13 @@ allow_system_fallback=false
 force_autohinter=false
 modulate_color_glyphs=false
 hinting=0
-subpixel_positioning=0
+subpixel_positioning=4
 keep_rounding_remainders=false
 oversampling=10.0
 Fallbacks=null
 fallbacks=[]
 Compress=null
-compress=false
+compress=true
 preload=[{
 "chars": [],
 "glyphs": [],
