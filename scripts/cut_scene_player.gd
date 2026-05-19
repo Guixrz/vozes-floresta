@@ -13,3 +13,6 @@ func _ready():
 	
 	Dialogic.start("caminho_casa")
 	
+	
+func go_to_initial_cutscene() -> void:
+	TransitionLendas.fade_to_scene("res://scenes/cut_scene_inital.tscn")

@@ -80,7 +80,7 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id="Animation_7mu6q"]
 resource_name = "caminho_casa"
-length = 24.0
+length = 30.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -153,6 +153,20 @@ tracks/5/keys = {
 "update": 1,
 "values": [true, false]
 }
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(30),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"go_to_initial_cutscene"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_siw1x"]
 _data = {
@@ -174,6 +188,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -13.443313, 0.863778, 4
 
 [node name="sonHoracio" parent="root_world" index="4" unique_id=2003751006]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -52.518303, 0.4519111, 7.887917)
+visible = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1518414913]
 libraries/ = SubResource("AnimationLibrary_siw1x")
