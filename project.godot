@@ -82,7 +82,8 @@ audio/channel_defaults={
 text/autocolor_names=true
 text/input_action="dialogic_default_action"
 text/autoadvance_enabled=false
-text/autoadvance_fixed_delay=1.0
+text/autoadvance_fixed_delay=0.1
+text/autoskip_time_per_event=0.01
 
 [display]
 

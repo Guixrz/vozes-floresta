@@ -63,6 +63,7 @@ func executar_sequencia_filho():
 	
 	filho.queue_free()
 	player.em_cutscene = false
+	
 
 func _on_dialogic_signal(argument: String):
 	if argument == "buscarFilho":
