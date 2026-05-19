@@ -130,7 +130,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.89264, 0.019156933, -38.63
 environment = SubResource("Environment_hrmi8")
 
 [node name="sol" type="DirectionalLight3D" parent="." unique_id=1257296019]
-transform = Transform3D(1, -0.00012230875, 1.2750472e-12, 0.00010764249, 0.88008827, 0.47481036, -5.8073423e-05, -0.47481036, 0.88008827, 0, 6.3716354, 0)
+transform = Transform3D(1, 0, 0, 0, 0.8771462, 0.48022348, 0, -0.4802235, 0.8771461, 0, 6.3716354, 0)
 shadow_enabled = true
 shadow_bias = 1.0
 
