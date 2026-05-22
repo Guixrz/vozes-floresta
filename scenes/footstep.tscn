@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bebwh6g1ggwjg"]
+
+[ext_resource type="Shader" uid="uid://df1pc5ciwgd2n" path="res://shader/foot_outline.gdshader" id="1_5s6n3"]
+[ext_resource type="Texture2D" uid="uid://ca5tf3ngli1y5" path="res://scenario/floresta/pegada.png" id="2_spwqf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b3x0b"]
+render_priority = 0
+shader = ExtResource("1_5s6n3")
+shader_parameter/textura_pegada = ExtResource("2_spwqf")
+shader_parameter/cor_do_radar = Color(1, 1, 1, 1)
+shader_parameter/intensidade_radar = 0.50000002375
+shader_parameter/raio_revelacao = 3.0
+shader_parameter/velocidade_onda = 3.5
+shader_parameter/frequencia_onda = 2.3
+shader_parameter/espessura_linha = 0.12
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_b3x0b"]
+material = SubResource("ShaderMaterial_b3x0b")
+size = Vector2(1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_spwqf"]
+render_priority = 0
+shader = ExtResource("1_5s6n3")
+shader_parameter/textura_pegada = ExtResource("2_spwqf")
+shader_parameter/cor_do_radar = Color(1, 1, 1, 1)
+shader_parameter/intensidade_radar = 0.50000002375
+shader_parameter/raio_revelacao = 3.0
+shader_parameter/velocidade_onda = 3.5
+shader_parameter/frequencia_onda = 2.3
+shader_parameter/espessura_linha = 0.12
+
+[sub_resource type="QuadMesh" id="QuadMesh_l8sj3"]
+material = SubResource("ShaderMaterial_spwqf")
+
+[node name="footstep" type="Node3D" unique_id=1112578157]
+
+[node name="mesh" type="MeshInstance3D" parent="." unique_id=179165784]
+transform = Transform3D(0.4, 0, 0, 0, 0.39982414, 0.011859491, 0, -0.011859491, 0.39982414, -0.171, 0, 0)
+mesh = SubResource("PlaneMesh_b3x0b")
+
+[node name="mesh2" type="MeshInstance3D" parent="." unique_id=141888293]
+transform = Transform3D(-0.4, 0, 0, 0, 1.7484556e-08, 0.40000004, 0, -0.40000004, 1.7484556e-08, 0.167, 0, 0.21275443)
+mesh = SubResource("QuadMesh_l8sj3")

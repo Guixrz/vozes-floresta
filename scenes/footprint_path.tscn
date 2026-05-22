@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cfwj7i3vlboal"]
+
+[ext_resource type="PackedScene" uid="uid://bebwh6g1ggwjg" path="res://scenes/footstep.tscn" id="1_0rev7"]
+
+[node name="footprintPath" type="Node3D" unique_id=1959463250]
+
+[node name="footstep6" parent="." unique_id=1112578157 instance=ExtResource("1_0rev7")]
+transform = Transform3D(0.5441559, 0, -0.83898413, 0, 1, 0, 0.83898413, 0, 0.5441559, 17.58286, 0.165, -2.1662612)
+
+[node name="footstep5" parent="." unique_id=138843087 instance=ExtResource("1_0rev7")]
+transform = Transform3D(0.37784082, 0, 0.9258707, 0, 1, 0, -0.9258707, 0, 0.37784082, 9.320961, 0.14, -8.278208)
+
+[node name="footstep4" parent="." unique_id=816784390 instance=ExtResource("1_0rev7")]
+transform = Transform3D(0.37784076, 0, 0.9258706, 0, 1, 0, -0.9258706, 0, 0.37784076, 8.705015, 0.14, -8.4924755)
+
+[node name="footstep2" parent="." unique_id=1588293115 instance=ExtResource("1_0rev7")]
+transform = Transform3D(0.72611886, 0, -0.6875692, 0, 1, 0, 0.6875692, 0, 0.72611886, 7.108126, 0.13848394, 3.7239265)
+
+[node name="footstep" parent="." unique_id=1685133191 instance=ExtResource("1_0rev7")]
+transform = Transform3D(0.6970148, 0, -0.7170566, 0, 0.9999999, 0, 0.7170566, 0, 0.6970149, 6.5756106, 0.17664337, 4.213594)
+
+[node name="footstep3" parent="." unique_id=863515292 instance=ExtResource("1_0rev7")]
+transform = Transform3D(0.59348917, 0, -0.804842, 0, 1, 0, 0.804842, 0, 0.59348917, 7.82088, 0.21032673, 3.1333303)
+
+[node name="footstep7" parent="." unique_id=352958140 instance=ExtResource("1_0rev7")]
+transform = Transform3D(0.46957937, 0, -0.8828903, 0, 1, 0, 0.8828903, 0, 0.46957937, 18.182152, 0.165, -2.3624206)
+
+[node name="footstep8" parent="." unique_id=686328772 instance=ExtResource("1_0rev7")]
+transform = Transform3D(-0.67163, 0, 0.7408867, 0, 1, 0, -0.7408867, 0, -0.67163, 24.419, 0.194, -4.397)
+
+[node name="footstep9" parent="." unique_id=679381284 instance=ExtResource("1_0rev7")]
+transform = Transform3D(-0.7082659, 0, 0.7059458, 0, 1, 0, -0.7059458, 0, -0.7082659, 37.6866, 0, -7.8734627)
+
+[node name="footstep10" parent="." unique_id=1750477629 instance=ExtResource("1_0rev7")]
+transform = Transform3D(-0.6243159, 0, 0.781172, 0, 1, 0, -0.781172, 0, -0.6243159, 38.124863, 1.1920929e-07, -8.189525)
+
+[node name="footstep11" parent="." unique_id=324282184 instance=ExtResource("1_0rev7")]
+transform = Transform3D(-0.98608613, 0, -0.16623515, 0, 1, 0, 0.16623515, 0, -0.98608613, 25.625023, 0.226, -17.969007)
+
+[node name="footstep12" parent="." unique_id=1715895713 instance=ExtResource("1_0rev7")]
+transform = Transform3D(-0.9814837, 0, -0.19154571, 0, 1, 0, 0.19154571, 0, -0.9814837, 25.61563, 0.226, -18.554846)
+
+[node name="footstep13" parent="." unique_id=535909498 instance=ExtResource("1_0rev7")]
+transform = Transform3D(0.4582463, 0, 0.88882524, 0, 1, 0, -0.88882524, 0, 0.4582463, 26.66599, 0, -29.726816)
+
+[node name="footstep14" parent="." unique_id=1624239951 instance=ExtResource("1_0rev7")]
+transform = Transform3D(0.6592146, 0, 0.75195485, 0, 1, 0, -0.75195485, 0, 0.6592146, 27.153902, -5.9604645e-08, -29.373688)
+
+[node name="footstep15" parent="." unique_id=410605225 instance=ExtResource("1_0rev7")]
+transform = Transform3D(0.7126875, 0, 0.70148164, 0, 1, 0, -0.70148164, 0, 0.7126875, 8.237443, 0.20601559, -19.836977)
+
+[node name="footstep16" parent="." unique_id=2102007477 instance=ExtResource("1_0rev7")]
+transform = Transform3D(0.83618087, 0, 0.54845375, 0, 1, 0, -0.54845375, 0, 0.83618087, 8.649189, 0.20601559, -19.344269)
+
+[node name="footstep17" parent="." unique_id=866788279 instance=ExtResource("1_0rev7")]
+transform = Transform3D(0.8635276, 0, 0.5043016, 0, 1, 0, -0.5043016, 0, 0.8635276, 9.033224, 0.20601547, -18.83279)

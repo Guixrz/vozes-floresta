@@ -3,6 +3,20 @@
 [ext_resource type="Script" uid="uid://fv88xoohules" path="res://scripts/cut_scene_player.gd" id="1_u6iqx"]
 [ext_resource type="PackedScene" uid="uid://bmq8bhyfxf554" path="res://scenes/root_world.tscn" id="1_wuxbb"]
 
+[sub_resource type="Environment" id="Environment_u6iqx"]
+background_mode = 1
+background_color = Color(0.10980392, 0.10980392, 0.16862746, 1)
+glow_intensity = 0.59
+glow_strength = 1.11
+glow_mix = 0.473
+fog_enabled = true
+fog_light_color = Color(0.5176471, 0.5529412, 0.7411765, 1)
+fog_light_energy = 0.0
+fog_density = 0.07
+fog_sky_affect = 0.75
+adjustment_enabled = true
+adjustment_contrast = 1.25
+
 [sub_resource type="Animation" id="Animation_v2ywo"]
 length = 0.001
 tracks/0/type = "value"
@@ -185,6 +199,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.914078, 0, 6.505016)
 
 [node name="player" parent="root_world" index="0" unique_id=1533921175]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -13.443313, 0.863778, 4.00247)
+
+[node name="clim" parent="root_world/map" parent_id_path=PackedInt32Array(484457010, 533742463) index="1" unique_id=1419955687]
+environment = SubResource("Environment_u6iqx")
 
 [node name="sonHoracio" parent="root_world" index="4" unique_id=2003751006]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -52.518303, 0.4519111, 7.887917)
