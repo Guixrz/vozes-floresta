@@ -30,6 +30,7 @@ directories/dch_directory={
 "curupira": "res://timelines/curupira.dch",
 "filho": "res://timelines/filho.dch",
 "horacio": "res://timelines/horacio.dch",
+"narrador": "res://timelines/narrador.dch",
 "timelines": "res://timelines/timelines.dch",
 "who": "res://timelines/who.dch"
 }

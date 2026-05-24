@@ -66,5 +66,14 @@ func executar_sequencia_filho():
 	
 
 func _on_dialogic_signal(argument: String):
+	# Se for o sinal do filho...
 	if argument == "buscarFilho":
 		executar_sequencia_filho()
+		
+	# Se for o sinal do fim da conversa com o Curupira...
+	elif argument == "mostrar_livro":
+		print("Sinal do Curupira recebido! Mostrando o livro...")
+		if has_node("book/LivroIcon"):
+			$book/LivroIcon.aparecer_com_fade()
+		else:
+			print("ERRO: Nó do livro não encontrado na raiz.")

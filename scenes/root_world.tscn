@@ -6,13 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://cfwj7i3vlboal" path="res://scenes/footprint_path.tscn" id="6_ey38o"]
 [ext_resource type="PackedScene" uid="uid://bqru0nbbrqef1" path="res://scenes/map.tscn" id="6_jkenv"]
 [ext_resource type="PackedScene" uid="uid://c48gnodw4kcei" path="res://scenes/son_horacio.tscn" id="7_ey38o"]
+[ext_resource type="PackedScene" uid="uid://qd8gk61wq805" path="res://scenes/livro_icon.tscn" id="8_2jlvb"]
 [ext_resource type="PackedScene" uid="uid://cpkj3x6y1tsiq" path="res://scenes/bird.tscn" id="9_4lc3k"]
 
 [node name="root_world" type="Node3D" unique_id=484457010]
 script = ExtResource("1_jkenv")
 
 [node name="player" parent="." unique_id=1533921175 instance=ExtResource("2_jllyp")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -3.6709733, 0.86377776, 5.4928136)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 31.02488, 0.86377776, -26.76835)
 
 [node name="bird" parent="." unique_id=1468430596 instance=ExtResource("9_4lc3k")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 34.044884, 0.16808146, 24.615456)
@@ -40,5 +41,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.193, 0.3, 1.133)
 
 [node name="MarkerSonFinally" type="Marker3D" parent="." unique_id=166530573]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.860783, 0.3, 0.6444168)
+
+[node name="book" type="CanvasLayer" parent="." unique_id=397904696]
+
+[node name="LivroIcon" parent="book" unique_id=588860776 instance=ExtResource("8_2jlvb")]
 
 [editable path="map"]

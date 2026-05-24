@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://qd8gk61wq805"]
+
+[ext_resource type="Texture2D" uid="uid://bqasji550b4iv" path="res://scenario/floresta/92 Sem Título3_20260507155108.png" id="1_t8nag"]
+[ext_resource type="Texture2D" uid="uid://cf1nxtqmeu7e1" path="res://scenario/floresta/101 Sem Título_20260430210334.png" id="2_l4ksb"]
+[ext_resource type="Script" uid="uid://dt6db3ty81gxk" path="res://scripts/texture_button.gd" id="3_l4ksb"]
+
+[node name="TextureButton" type="TextureButton" unique_id=588860776]
+anchors_preset = -1
+anchor_left = 0.96400005
+anchor_top = 0.5
+anchor_right = 0.96400005
+anchor_bottom = 0.5
+offset_left = -54.528076
+offset_top = -50.0
+offset_right = 1754.4719
+offset_bottom = 1758.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.06, 0.06)
+texture_normal = ExtResource("1_t8nag")
+texture_hover = ExtResource("2_l4ksb")
+script = ExtResource("3_l4ksb")

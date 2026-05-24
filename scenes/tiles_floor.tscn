@@ -62,11 +62,11 @@ shape = SubResource("ConcavePolygonShape3D_a0c0i")
 mesh = SubResource("PlaneMesh_tiejl")
 surface_material_override/0 = SubResource("StandardMaterial3D_538r3")
 
-[node name="teste" type="StaticBody3D" parent="." unique_id=2112861217]
+[node name="florest_floor_v2" type="StaticBody3D" parent="." unique_id=2112861217]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="teste" unique_id=413063865]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="florest_floor_v2" unique_id=413063865]
 shape = SubResource("ConcavePolygonShape3D_tiejl")
 
-[node name="teste" type="MeshInstance3D" parent="teste" unique_id=516839238]
+[node name="florest_floor_v2" type="MeshInstance3D" parent="florest_floor_v2" unique_id=516839238]
 mesh = SubResource("PlaneMesh_u2wus")
 surface_material_override/0 = SubResource("StandardMaterial3D_1pwdc")

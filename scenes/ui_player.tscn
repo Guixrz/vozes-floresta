@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://nfscpv4nkf17" path="res://scripts/ui_player.gd" id="1_0et16"]
 [ext_resource type="Texture2D" uid="uid://cqe3ahhfc5k7n" path="res://icon.svg" id="1_hif4i"]
 [ext_resource type="Script" uid="uid://d1pf87syqh61a" path="res://scripts/PLAYER-UI-LOGIC.gd" id="1_w4bd2"]
-[ext_resource type="Texture2D" uid="uid://cooy3p0m8t2f7" path="res://icons/icon_bestiario.jpg" id="2_y58uf"]
 [ext_resource type="PackedScene" uid="uid://cigye72ejbmrv" path="res://scenes/ui_pause.tscn" id="4_vcmmx"]
 [ext_resource type="Texture2D" uid="uid://dfqan4yxkpr1e" path="res://sprites/ui/bestiray.png" id="6_od15l"]
 
@@ -134,21 +133,6 @@ icon = ExtResource("1_hif4i")
 layout_mode = 2
 icon = ExtResource("1_hif4i")
 
-[node name="bestiary_btn" type="Button" parent="ui_control" unique_id=261412832]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.946
-anchor_top = 0.162
-anchor_right = 0.946
-anchor_bottom = 0.167
-offset_left = -543.984
-offset_top = -544.056
-offset_right = 544.016
-offset_bottom = 543.944
-scale = Vector2(0.04, 0.04)
-pivot_offset = Vector2(544, 544)
-icon = ExtResource("2_y58uf")
-
 [node name="ui_pause" parent="ui_control" unique_id=891036461 instance=ExtResource("4_vcmmx")]
 layout_mode = 1
 offset_left = 1.0
@@ -160,4 +144,3 @@ offset_bottom = -2.0
 libraries/ = SubResource("AnimationLibrary_upm3i")
 
 [connection signal="bookEnters" from="ui_control" to="." method="_on_ui_control_book_enters"]
-[connection signal="button_down" from="ui_control/bestiary_btn" to="ui_control" method="_on_bestiary_btn_button_down"]
