@@ -35,6 +35,7 @@ directories/dch_directory={
 "who": "res://timelines/who.dch"
 }
 directories/dtl_directory={
+"book": "res://timelines/book.dtl",
 "caminho_casa": "res://timelines/caminho_casa.dtl",
 "curupira": "res://timelines/curupira.dtl",
 "inicioBuscaFilho": "res://timelines/inicioBuscaFilho.dtl",

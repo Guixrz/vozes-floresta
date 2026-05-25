@@ -4,8 +4,15 @@ extends Node3D
 @onready var passarinho = $bird
 @onready var filho = $sonHoracio
 @onready var cam = $cam
+
+# Marcadores do Filho
 @onready var marker_inicial = $MarkerSonInitial
+@onready var marker_son_meio = $MarkerSonMiddle
 @onready var marker_final = $MarkerSonFinally
+
+# Marcadores do Horácio (Player)
+@onready var marker_player_initial = $MarkerPlayerInitial
+@onready var marker_player_footprints = $MarkerPlayerFootprints
 
 var missao_passarinho_ativa = false
 
@@ -14,14 +21,23 @@ func _ready() -> void:
 		passarinho.passarinho_salvo.connect(_on_passarinho_salvo)
 	
 	Dialogic.signal_event.connect(_on_dialogic_signal)
+	Dialogic.timeline_ended.connect(_on_dialogo_terminado)
 	
-	#if filho:
-		#filho.visible = false
+	# Trava o player imediatamente ao carregar a cena
+	player.em_cutscene = true
+	if filho:
+		filho.em_cutscene = true
+		filho.global_position = marker_inicial.global_position
+		filho.son.modulate.a = 1.0 
+		filho.show()
+		
+		# A câmera começa focada no filho
+		cam.target = filho
 	
+	# Inicia a Timeline principal (que agora vai gerenciar toda a cena)
 	Dialogic.start("inicioBuscaFilho")
 
 func iniciar_missao_resgate():
-	#coloca na label do UI player - jerry
 	missao_passarinho_ativa = true
 	if is_instance_valid(passarinho):
 		passarinho.iniciar_procura()
@@ -32,48 +48,54 @@ func _on_passarinho_salvo():
 	print("O passarinho foi salvo!")
 
 func _unhandled_input(event: InputEvent) -> void:
-	#Tecla de debug
 	if event is InputEventKey and event.pressed and event.keycode == KEY_P:
 		iniciar_missao_resgate()
 
-func executar_sequencia_filho():
-	player.em_cutscene = true
-	filho.em_cutscene = true
-	
-	filho.global_position = marker_inicial.global_position
-	filho.son.modulate.a = 1.0 
-	filho.show()
-	filho.anim_cutscene = "walk"
-	
-	cam.target = filho
-	
-	filho.anim_cutscene = "walk"
-	
-	var tw = create_tween()
-	tw.tween_property(filho, "global_position", marker_final.global_position, 4.0)
-	
-	await tw.finished
-	filho.anim_cutscene = ""
-	
-	cam.target = player
-	
-	var tw_sumir = create_tween()
-	tw_sumir.tween_property(filho.son, "modulate:a", 0.0, 1.0)
-	await tw_sumir.finished
-	
-	filho.queue_free()
-	player.em_cutscene = false
-	
+func _on_dialogo_terminado():
+	# Libera o player apenas quando a cutscene ou o livro terminarem completamente
+	if player.em_cutscene:
+		player.em_cutscene = false
+		cam.target = player
 
+# --- MÁQUINA DE ESTADOS DA CUTSCENE ---
 func _on_dialogic_signal(argument: String):
-	# Se for o sinal do filho...
-	if argument == "buscarFilho":
-		executar_sequencia_filho()
-		
-	# Se for o sinal do fim da conversa com o Curupira...
-	elif argument == "mostrar_livro":
-		print("Sinal do Curupira recebido! Mostrando o livro...")
-		if has_node("book/LivroIcon"):
-			$book/LivroIcon.aparecer_com_fade()
-		else:
-			print("ERRO: Nó do livro não encontrado na raiz.")
+	match argument:
+		# 1. Filho anda até o meio
+		"filho_anda_meio":
+			filho.anim_cutscene = "walk"
+			var tw = create_tween()
+			tw.tween_property(filho, "global_position", marker_son_meio.global_position, 2.0)
+			await tw.finished
+			filho.anim_cutscene = ""
+			
+		# 2. Filho corre pra floresta e a tela apaga (Fade)
+		"filho_some_fade":
+			filho.anim_cutscene = "walk"
+			var tw = create_tween()
+			tw.tween_property(filho, "global_position", marker_final.global_position, 3.0)
+			
+			# Tela escurece enquanto ele anda
+			TransitionLendas.animator.play("fade_lendas")
+			await tw.finished
+			filho.queue_free() # Remove o filho da cena
+			
+		# 3. Revela o Horácio na porta de casa
+		"revelar_horacio":
+			# Posiciona o Horácio
+			player.global_position = marker_player_initial.global_position
+			cam.target = player
+			
+			# A tela clareia
+			TransitionLendas.animator.play_backwards("fade_lendas")
+			
+		# 4. Horácio anda até os rastros
+		"horacio_ve_rastros":
+			# Se o seu player tiver um método ou variável para forçar animação, chame aqui
+			var tw = create_tween()
+			tw.tween_property(player, "global_position", marker_player_footprints.global_position, 2.0)
+			await tw.finished
+			
+		# Chamada do Livro (Mantido)
+		"mostrar_livro":
+			if has_node("book/LivroIcon"):
+				$book/LivroIcon.aparecer_com_fade()

@@ -6,17 +6,34 @@
 
 [node name="TextureButton" type="TextureButton" unique_id=588860776]
 anchors_preset = -1
-anchor_left = 0.96400005
-anchor_top = 0.5
-anchor_right = 0.96400005
-anchor_bottom = 0.5
-offset_left = -54.528076
-offset_top = -50.0
-offset_right = 1754.4719
-offset_bottom = 1758.0
+anchor_left = 0.94000006
+anchor_top = 0.48200002
+anchor_right = 0.94000006
+anchor_bottom = 0.48200002
+offset_left = -53.880005
+offset_top = -54.33603
+offset_right = 1755.1199
+offset_bottom = 1753.664
 grow_horizontal = 0
 grow_vertical = 2
 scale = Vector2(0.06, 0.06)
 texture_normal = ExtResource("1_t8nag")
 texture_hover = ExtResource("2_l4ksb")
 script = ExtResource("3_l4ksb")
+
+[node name="openBook" type="TextureRect" parent="." unique_id=292470761]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -4.143
+anchor_top = 0.5
+anchor_right = -4.143
+anchor_bottom = 0.5
+offset_left = -5008.11
+offset_top = -2816.666
+offset_right = 5006.7046
+offset_bottom = 2816.667
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_l4ksb")
