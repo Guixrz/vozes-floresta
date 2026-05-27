@@ -73,16 +73,24 @@ func _on_dialogic_signal(argument: String):
 			filho.anim_cutscene = "walk"
 			var tw = create_tween()
 			tw.tween_property(filho, "global_position", marker_final.global_position, 3.0)
-			
-			# Tela escurece enquanto ele anda
+			await get_tree().create_timer(2.0).timeout 
+			# Tela escurece
 			TransitionLendas.animator.play("fade_lendas")
-			await tw.finished
-			filho.queue_free() # Remove o filho da cena
-			
+			# Opcional: Espera 1 segundo para a tela ficar totalmente preta antes de deletar
+			await get_tree().create_timer(1.0).timeout 
+			cam.target = player
+			filho.queue_free() # Agora é seguro remover o filho da cena
+		# 3. Revela o Horácio na porta de casa
 		# 3. Revela o Horácio na porta de casa
 		"revelar_horacio":
-			# Posiciona o Horácio
+			# Posiciona o Horácio no marcador inicial
 			player.global_position = marker_player_initial.global_position
+			
+			# Acessa o sprite do player e força ele a olhar para a câmera (frente)
+			var sprite_player = player.get_node("animator3D_sprite")
+			sprite_player.play("walk_down") # Inicia a animação de frente
+			sprite_player.stop() # Para no frame 0 (estado 'idle' de frente)
+			
 			cam.target = player
 			
 			# A tela clareia
@@ -90,11 +98,18 @@ func _on_dialogic_signal(argument: String):
 			
 		# 4. Horácio anda até os rastros
 		"horacio_ve_rastros":
-			# Se o seu player tiver um método ou variável para forçar animação, chame aqui
+			var sprite_player = player.get_node("animator3D_sprite")
+			
+			# 1. Muda a animação para caminhar para a direita (ou a direção dos rastros)
+			sprite_player.play("walk_right") 
+			
+			# 2. Faz o movimento físico até o marcador
 			var tw = create_tween()
 			tw.tween_property(player, "global_position", marker_player_footprints.global_position, 2.0)
 			await tw.finished
 			
+			# 3. Quando chegar, para a animação (volta para idle)
+			sprite_player.stop()
 		# Chamada do Livro (Mantido)
 		"mostrar_livro":
 			if has_node("book/LivroIcon"):

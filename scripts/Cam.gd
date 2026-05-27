@@ -21,7 +21,9 @@ func _physics_process(delta: float) -> void:
 	lerpCam(delta)
 
 func lerpCam(delta:float) -> void:
-	#essa parte do codigo soh funciona pq eh filha de um objeto
-	#essa funcao deve ser provisoria, ta muito simples esse smooth e o efeito nao eh muito perceptivel
+	# Verificação de segurança: Se o alvo foi deletado ou é nulo, cancela a função
+	if not is_instance_valid(target):
+		return 
+		
 	position.x = lerpf(position.x ,target.position.x, weightLerpCam * delta)
 	position.z = lerpf(position.z, target.position.z + offsetZ, weightLerpCam * delta)

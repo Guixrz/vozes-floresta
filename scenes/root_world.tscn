@@ -37,13 +37,22 @@ transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -2.9948404, 0.4519111, 
 visible = false
 
 [node name="MarkerSonInitial" type="Marker3D" parent="." unique_id=1098250957]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.193, 0.3, 1.133)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1525843, 0.27287322, 5.599848)
 
 [node name="MarkerSonFinally" type="Marker3D" parent="." unique_id=166530573]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.860783, 0.3, 0.6444168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.019139, 0.29999954, 1.4776108)
+
+[node name="MarkerSonMiddle" type="Marker3D" parent="." unique_id=366425154]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6936296, 0.25644326, 5.176912)
 
 [node name="book" type="CanvasLayer" parent="." unique_id=397904696]
 
 [node name="LivroIcon" parent="book" unique_id=588860776 instance=ExtResource("8_2jlvb")]
+
+[node name="MarkerPlayerInitial" type="Marker3D" parent="." unique_id=1461689875]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.28809, 0.7574004, 5.3829827)
+
+[node name="MarkerPlayerFootprints" type="Marker3D" parent="." unique_id=562905064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8003496, 0.6745266, 5.5264125)
 
 [editable path="map"]
