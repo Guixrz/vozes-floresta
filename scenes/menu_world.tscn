@@ -7,8 +7,13 @@
 [ext_resource type="AudioStream" uid="uid://cpkc6kqlagbf5" path="res://sounds/mundo/audio-de-floresta.mp3" id="12_audio_floresta"]
 [ext_resource type="AudioStream" uid="uid://6sniuskqipii" path="res://sounds/menu/sino_play.wav" id="13_sino_som"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dw4a5"]
+
 [node name="menu-world" type="CanvasLayer" unique_id=1335469950]
 script = ExtResource("1_pgo3v")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=138611017]
+color = Color(0.30692267, 0.3069227, 0.3069227, 1)
 
 [node name="bgsound" type="AudioStreamPlayer2D" parent="." unique_id=1522703701]
 stream = ExtResource("12_audio_floresta")
@@ -19,6 +24,8 @@ parameters/looping = true
 stream = ExtResource("13_sino_som")
 
 [node name="image" type="TextureRect" parent="." unique_id=76954931]
+visible = false
+material = SubResource("CanvasItemMaterial_dw4a5")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -36,20 +43,8 @@ anchor_mode = 0
 [node name="Menu" parent="." unique_id=614541986 instance=ExtResource("1_wnoju")]
 nameWorld = "res://scenes/cut_scene_player.tscn"
 
-[node name="playBtn" parent="Menu/buttons" parent_id_path=PackedInt32Array(614541986, 1813523655) index="0" unique_id=300552528]
-modulate = Color(1, 1, 1, 0.50980395)
-
-[node name="playLabel" parent="Menu/buttons/playBtn" index="0" unique_id=1778149816]
-texture_filter = 1
-
-[node name="extraBtn" parent="Menu/buttons" parent_id_path=PackedInt32Array(614541986, 1813523655) index="1" unique_id=1787491154]
-modulate = Color(1, 1, 1, 0.50980395)
-
-[node name="optionBtn" parent="Menu/buttons" parent_id_path=PackedInt32Array(614541986, 1813523655) index="2" unique_id=223469998]
-modulate = Color(1, 1, 1, 0.50980395)
-
-[node name="quitBtn" parent="Menu/buttons" parent_id_path=PackedInt32Array(614541986, 1813523655) index="3" unique_id=707500481]
-modulate = Color(1, 1, 1, 0.50980395)
+[node name="config_game_ui" parent="Menu" index="5" unique_id=592948252]
+visible = true
 
 [node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=213988421]
 
@@ -58,10 +53,6 @@ stream = ExtResource("4_mkc01")
 autoplay = true
 parameters/looping = false
 
-[connection signal="button_down" from="Menu/buttons/playBtn" to="Menu" method="_on_play_btn_button_down"]
-[connection signal="button_down" from="Menu/buttons/extraBtn" to="Menu" method="_on_extra_btn_button_down"]
-[connection signal="button_down" from="Menu/buttons/optionBtn" to="Menu" method="_on_option_btn_button_down"]
-[connection signal="button_down" from="Menu/buttons/quitBtn" to="Menu" method="_on_quit_btn_button_down"]
 [connection signal="buttonSounds" from="Menu/config_game_ui" to="." method="_on_config_game_ui_button_sounds"]
 
 [editable path="Menu"]
