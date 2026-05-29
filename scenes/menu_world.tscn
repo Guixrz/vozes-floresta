@@ -3,15 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://cjhjavr8ooofy" path="res://sprites/menu/menu_image.png" id="1_dfeuw"]
 [ext_resource type="Script" uid="uid://emtgmrpoyf2b" path="res://scripts/MenuLogicObjects.gd" id="1_pgo3v"]
 [ext_resource type="PackedScene" uid="uid://bp13n7ri1i1a0" path="res://scenes/menu.tscn" id="1_wnoju"]
-[ext_resource type="AudioStream" uid="uid://dc6c0pue65ijm" path="res://sounds/menu/Winds Of Stories.mp3" id="4_mkc01"]
-[ext_resource type="AudioStream" uid="uid://cpkc6kqlagbf5" path="res://sounds/mundo/audio-de-floresta.mp3" id="12_audio_floresta"]
+[ext_resource type="AudioStream" uid="uid://cm1sow4bmk1te" path="res://sounds/menu/Passeio_pela_Floresta_Chuvosa.mp3" id="2_8ess1"]
 [ext_resource type="AudioStream" uid="uid://6sniuskqipii" path="res://sounds/menu/sino_play.wav" id="13_sino_som"]
 
 [node name="menu-world" type="CanvasLayer" unique_id=1335469950]
 script = ExtResource("1_pgo3v")
 
 [node name="bgsound" type="AudioStreamPlayer2D" parent="." unique_id=1522703701]
-stream = ExtResource("12_audio_floresta")
+stream = ExtResource("2_8ess1")
 autoplay = true
 parameters/looping = true
 
@@ -52,11 +51,6 @@ modulate = Color(1, 1, 1, 0.50980395)
 modulate = Color(1, 1, 1, 0.50980395)
 
 [node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=213988421]
-
-[node name="bgsound2" type="AudioStreamPlayer2D" parent="." unique_id=790128959]
-stream = ExtResource("4_mkc01")
-autoplay = true
-parameters/looping = false
 
 [connection signal="button_down" from="Menu/buttons/playBtn" to="Menu" method="_on_play_btn_button_down"]
 [connection signal="button_down" from="Menu/buttons/extraBtn" to="Menu" method="_on_extra_btn_button_down"]

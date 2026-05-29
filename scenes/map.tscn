@@ -991,7 +991,7 @@ texture_filter = 0
 texture = ExtResource("4_be0no")
 
 [node name="bush-thirty13" type="Sprite3D" parent="bushs" unique_id=1557960990]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -12.258911, 0.91459346, 25.557384)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -12.247644, 0.68057156, 25.615156)
 material_override = SubResource("StandardMaterial3D_mlgqr")
 cast_shadow = 0
 billboard = 1

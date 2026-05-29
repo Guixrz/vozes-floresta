@@ -4,6 +4,7 @@ extends Node3D
 @onready var passarinho = $bird
 @onready var filho = $sonHoracio
 @onready var cam = $cam
+@onready var musica_fundo = $music
 
 # Marcadores do Filho
 @onready var marker_inicial = $MarkerSonInitial
@@ -77,10 +78,9 @@ func _on_dialogic_signal(argument: String):
 			# Tela escurece
 			TransitionLendas.animator.play("fade_lendas")
 			# Opcional: Espera 1 segundo para a tela ficar totalmente preta antes de deletar
-			await get_tree().create_timer(1.0).timeout 
+			await get_tree().create_timer(3.0).timeout 
 			cam.target = player
 			filho.queue_free() # Agora é seguro remover o filho da cena
-		# 3. Revela o Horácio na porta de casa
 		# 3. Revela o Horácio na porta de casa
 		"revelar_horacio":
 			# Posiciona o Horácio no marcador inicial
@@ -110,6 +110,10 @@ func _on_dialogic_signal(argument: String):
 			
 			# 3. Quando chegar, para a animação (volta para idle)
 			sprite_player.stop()
+			
+			await get_tree().create_timer(4.0).timeout 
+			if not musica_fundo.playing:
+				musica_fundo.play()
 		# Chamada do Livro (Mantido)
 		"mostrar_livro":
 			if has_node("book/LivroIcon"):
