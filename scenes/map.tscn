@@ -244,6 +244,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.438465, 2.861023e-06, -26.
 [node name="tree_sprite108" parent="trees" unique_id=1789919493 instance=ExtResource("1_2klcf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.362434, 2.861023e-06, -29.086891)
 
+[node name="tree_sprite121" parent="trees" unique_id=1992678361 instance=ExtResource("1_2klcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.599754, 2.3841858e-06, -31.448103)
+
 [node name="tree_sprite109" parent="trees" unique_id=682728905 instance=ExtResource("1_2klcf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.79576, 2.861023e-06, -29.453552)
 
@@ -433,6 +436,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.754324, 0, -41.98025)
 [node name="tree_sprite97" parent="trees" unique_id=663251584 instance=ExtResource("1_2klcf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.626894, 0, -44.44264)
 
+[node name="tree_sprite119" parent="trees" unique_id=1302717784 instance=ExtResource("1_2klcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.170437, 0, -41.11764)
+
+[node name="tree_sprite120" parent="trees" unique_id=43514131 instance=ExtResource("1_2klcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.62981, 0, -41.920002)
+
 [node name="tree_sprite99" parent="trees" unique_id=2127204657 instance=ExtResource("1_2klcf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.560204, 0, -51.150036)
 
@@ -456,6 +465,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.407394, 0, -44.901657)
 
 [node name="tree_sprite103" parent="trees" unique_id=213200789 instance=ExtResource("1_2klcf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.026787, 0, -37.96157)
+
+[node name="tree_sprite117" parent="trees" unique_id=1651145636 instance=ExtResource("1_2klcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.372486, 0, -36.90855)
+
+[node name="tree_sprite118" parent="trees" unique_id=1034445790 instance=ExtResource("1_2klcf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.364555, 0, -41.92863)
 
 [node name="tree_sprite104" parent="trees" unique_id=766026612 instance=ExtResource("1_2klcf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.74839, 0, -31.839771)

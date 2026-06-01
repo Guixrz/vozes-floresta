@@ -6,7 +6,18 @@
 &"custom_info": {
 "prefix": "",
 "sound_mood_default": "",
-"sound_moods": {},
+"sound_moods": {
+"Mood 1": {
+"mode": 0,
+"name": "Mood 1",
+"pitch_base": 0.4,
+"pitch_variance": 0.1,
+"skip_characters": 3.0,
+"sound_path": "res://sounds/mundo/bolha.mp3",
+"volume_base": -20.0,
+"volume_variance": 0.1
+}
+},
 "style": "",
 "suffix": ""
 },

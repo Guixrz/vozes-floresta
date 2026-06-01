@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://boqmlvf8dystv" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_0sckv"]
 [ext_resource type="PackedScene" uid="uid://by6waso0mjpjp" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/textbox_with_speaker_portrait.tscn" id="2_hwecx"]
 [ext_resource type="Script" uid="uid://bfd52b1dnp1d7" path="res://addons/dialogic/Resources/dialogic_style.gd" id="2_lr6o8"]
+[ext_resource type="AudioStream" uid="uid://c6t8q2e68mbyy" path="res://sounds/mundo/Som Digitacao.mp3" id="2_w3qv2"]
 
 [sub_resource type="Resource" id="Resource_hwecx"]
 script = ExtResource("1_0sckv")
@@ -26,7 +27,8 @@ overrides = {
 "name_label_use_global_size": "false",
 "portrait_bg_modulate": "Color(0.33164772, 0.40755206, 0.26586404, 0.8901961)",
 "text_custom_size": "14.0",
-"text_use_global_size": "false"
+"text_use_global_size": "false",
+ExtResource("2_w3qv2"): true
 }
 
 [resource]

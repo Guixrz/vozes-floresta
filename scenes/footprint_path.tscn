@@ -77,10 +77,10 @@ transform = Transform3D(0.9525871, 0, 0.30426583, 0, 1, 0, -0.30426583, 0, 0.952
 transform = Transform3D(0.9978612, 0, 0.065368295, 0, 1, 0, -0.065368295, 0, 0.9978612, 14.922317, -5.9604645e-08, -33.58246)
 
 [node name="footstep26" parent="." unique_id=414628510 instance=ExtResource("1_0rev7")]
-transform = Transform3D(0.6150424, 0, 0.788494, 0, 1, 0, -0.788494, 0, 0.6150424, 37.825855, 0, -39.94743)
+transform = Transform3D(0.6150424, 0, 0.788494, 0, 1, 0, -0.788494, 0, 0.6150424, 56.055927, -9.536743e-07, -17.331322)
 
 [node name="footstep27" parent="." unique_id=361938320 instance=ExtResource("1_0rev7")]
-transform = Transform3D(0.7871611, 0, 0.6167474, 0, 1, 0, -0.6167474, 0, 0.7871611, 38.23986, -5.9604645e-08, -39.509987)
+transform = Transform3D(0.7871611, 0, 0.6167474, 0, 1, 0, -0.6167474, 0, 0.7871611, 56.469933, -1.013279e-06, -16.893879)
 
 [node name="footstep15" parent="." unique_id=410605225 instance=ExtResource("1_0rev7")]
 transform = Transform3D(0.7126875, 0, 0.70148164, 0, 1, 0, -0.70148164, 0, 0.7126875, 8.237443, 0.20601559, -19.836977)

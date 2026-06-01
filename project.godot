@@ -30,7 +30,6 @@ directories/dch_directory={
 "curupira": "res://timelines/curupira.dch",
 "filho": "res://timelines/filho.dch",
 "horacio": "res://timelines/horacio.dch",
-"narrador": "res://timelines/narrador.dch",
 "timelines": "res://timelines/timelines.dch",
 "who": "res://timelines/who.dch"
 }
@@ -38,14 +37,16 @@ directories/dtl_directory={
 "book": "res://timelines/book.dtl",
 "caminho_casa": "res://timelines/caminho_casa.dtl",
 "curupira": "res://timelines/curupira.dtl",
+"curupira_finalizacao": "res://timelines/curupira_finalizacao.dtl",
 "inicioBuscaFilho": "res://timelines/inicioBuscaFilho.dtl",
 "interacao": "res://timelines/interacao.dtl",
 "introducao": "res://timelines/introducao.dtl",
+"passaroSalvo": "res://timelines/passaroSalvo.dtl",
 "timelines": "res://timelines/timelines.dtl",
 "zoios": "res://timelines/zoios.dtl"
 }
 variables={}
-layout/style_list=["res://timelines/estilo.tres", "res://timelines/semperfil.tres", "res://timelines/lenda.tres", "res://horaciojunior.tres"]
+layout/style_list=["res://timelines/estilo.tres", "res://timelines/semperfil.tres", "res://timelines/lenda.tres"]
 layout/default_style=""
 glossary/default_case_sensitive=true
 extensions_folder="res://addons/dialogic_additions"

@@ -243,4 +243,6 @@ omni_range = 4.3507376
 
 [node name="passosSound" type="AudioStreamPlayer3D" parent="." unique_id=1003850089]
 stream = ExtResource("4_dqkch")
+volume_db = 1.0
 unit_size = 5.0
+panning_strength = 0.5

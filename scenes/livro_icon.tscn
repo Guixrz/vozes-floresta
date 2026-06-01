@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://bqasji550b4iv" path="res://scenario/floresta/92 Sem Título3_20260507155108.png" id="1_t8nag"]
 [ext_resource type="Texture2D" uid="uid://cf1nxtqmeu7e1" path="res://scenario/floresta/101 Sem Título_20260430210334.png" id="2_l4ksb"]
 [ext_resource type="Script" uid="uid://dt6db3ty81gxk" path="res://scripts/texture_button.gd" id="3_l4ksb"]
+[ext_resource type="FontFile" uid="uid://41dii3skm3ok" path="res://fontesEscritas/SpecialElite-Regular.ttf" id="4_ju8ae"]
+[ext_resource type="AudioStream" uid="uid://cyw67l0calub7" path="res://sounds/mundo/escritaSound.wav" id="5_ju8ae"]
+[ext_resource type="Texture2D" uid="uid://ir7xvts5kqrq" path="res://scenario/floresta/92 Sem Título2_20260429194503.png" id="6_snf0p"]
 
 [node name="TextureButton" type="TextureButton" unique_id=588860776]
 anchors_preset = -1
@@ -22,18 +25,59 @@ texture_hover = ExtResource("2_l4ksb")
 script = ExtResource("3_l4ksb")
 
 [node name="openBook" type="TextureRect" parent="." unique_id=292470761]
-visible = false
-modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -4.143
+anchor_left = -4.63
 anchor_top = 0.5
-anchor_right = -4.143
+anchor_right = -4.63
 anchor_bottom = 0.5
-offset_left = -5008.11
-offset_top = -2816.666
-offset_right = 5006.7046
-offset_bottom = 2816.667
+offset_left = -6507.663
+offset_top = -3620.6667
+offset_right = 6506.8564
+offset_bottom = 3700.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_l4ksb")
+
+[node name="curupira" type="Sprite2D" parent="openBook" unique_id=741509707]
+position = Vector2(8333.333, 2683.3335)
+scale = Vector2(1.5421084, 1.4364719)
+texture = ExtResource("6_snf0p")
+
+[node name="text" type="RichTextLabel" parent="openBook" unique_id=1852290334]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.275
+anchor_top = 0.29200003
+anchor_right = 0.46500003
+anchor_bottom = 0.75100005
+offset_left = -1.277832
+offset_top = 1.065918
+offset_right = 214.91406
+offset_bottom = -1.3007813
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_ju8ae")
+theme_override_font_sizes/normal_font_size = 200
+visible_characters = 0
+
+[node name="text2" type="RichTextLabel" parent="openBook" unique_id=1399385171]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.55300003
+anchor_top = 0.53000003
+anchor_right = 0.74
+anchor_bottom = 0.754
+offset_left = 2.9702148
+offset_top = 3.378418
+offset_right = 2.5908203
+offset_bottom = -3.118164
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/table_border = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_ju8ae")
+theme_override_font_sizes/normal_font_size = 200
+visible_characters = 0
+
+[node name="read" type="AudioStreamPlayer" parent="openBook" unique_id=407733430]
+stream = ExtResource("5_ju8ae")
+volume_db = 10.0

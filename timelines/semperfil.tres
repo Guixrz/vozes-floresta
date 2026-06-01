@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cqpb3ie51rwl5" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn" id="1_ydvag"]
 [ext_resource type="Script" uid="uid://boqmlvf8dystv" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_jqqcs"]
+[ext_resource type="AudioStream" uid="uid://c6t8q2e68mbyy" path="res://sounds/mundo/Som Digitacao.mp3" id="3_jqqcs"]
 [ext_resource type="PackedScene" uid="uid://by6waso0mjpjp" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/textbox_with_speaker_portrait.tscn" id="3_w8uid"]
 [ext_resource type="Script" uid="uid://bfd52b1dnp1d7" path="res://addons/dialogic/Resources/dialogic_style.gd" id="4_hsj0c"]
 
@@ -29,7 +30,8 @@ overrides = {
 "portrait_bg_modulate": "Color(0.13333334, 0.10980392, 0.08627451, 1)",
 "text_alignment": "1",
 "text_custom_size": "14.0",
-"text_use_global_size": "false"
+"text_use_global_size": "false",
+ExtResource("3_jqqcs"): true
 }
 
 [resource]

@@ -24,7 +24,6 @@ func _ready() -> void:
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.timeline_ended.connect(_on_dialogo_terminado)
 	
-	# Trava o player imediatamente ao carregar a cena
 	player.em_cutscene = true
 	if filho:
 		filho.em_cutscene = true
@@ -32,10 +31,8 @@ func _ready() -> void:
 		filho.son.modulate.a = 1.0 
 		filho.show()
 		
-		# A câmera começa focada no filho
 		cam.target = filho
 	
-	# Inicia a Timeline principal (que agora vai gerenciar toda a cena)
 	Dialogic.start("inicioBuscaFilho")
 
 func iniciar_missao_resgate():
@@ -47,21 +44,32 @@ func iniciar_missao_resgate():
 func _on_passarinho_salvo():
 	missao_passarinho_ativa = false
 	print("O passarinho foi salvo!")
+	
+	await get_tree().create_timer(5.0).timeout
+	Dialogic.start("passaroSalvo")
+	
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and event.keycode == KEY_P:
 		iniciar_missao_resgate()
+	
+	if event is InputEventKey and event.pressed and event.keycode == KEY_L:
+		print("Debug: Pulando diálogo e abrindo livro!")
+		
+		Dialogic.end_timeline() 
+		
+		if has_node("book/LivroIcon"):
+			var icone = $book/LivroIcon
+			icone.hide() 
+			icone.abrir_livro()
 
 func _on_dialogo_terminado():
-	# Libera o player apenas quando a cutscene ou o livro terminarem completamente
 	if player.em_cutscene:
 		player.em_cutscene = false
 		cam.target = player
 
-# --- MÁQUINA DE ESTADOS DA CUTSCENE ---
 func _on_dialogic_signal(argument: String):
 	match argument:
-		# 1. Filho anda até o meio
 		"filho_anda_meio":
 			filho.anim_cutscene = "walk"
 			var tw = create_tween()
@@ -69,52 +77,55 @@ func _on_dialogic_signal(argument: String):
 			await tw.finished
 			filho.anim_cutscene = ""
 			
-		# 2. Filho corre pra floresta e a tela apaga (Fade)
 		"filho_some_fade":
 			filho.anim_cutscene = "walk"
 			var tw = create_tween()
 			tw.tween_property(filho, "global_position", marker_final.global_position, 3.0)
 			await get_tree().create_timer(2.0).timeout 
-			# Tela escurece
 			TransitionLendas.animator.play("fade_lendas")
-			# Opcional: Espera 1 segundo para a tela ficar totalmente preta antes de deletar
 			await get_tree().create_timer(3.0).timeout 
 			cam.target = player
-			filho.queue_free() # Agora é seguro remover o filho da cena
-		# 3. Revela o Horácio na porta de casa
+			filho.queue_free()
 		"revelar_horacio":
-			# Posiciona o Horácio no marcador inicial
 			player.global_position = marker_player_initial.global_position
 			
-			# Acessa o sprite do player e força ele a olhar para a câmera (frente)
 			var sprite_player = player.get_node("animator3D_sprite")
-			sprite_player.play("walk_down") # Inicia a animação de frente
-			sprite_player.stop() # Para no frame 0 (estado 'idle' de frente)
+			sprite_player.play("walk_down")
+			sprite_player.stop()
 			
 			cam.target = player
 			
-			# A tela clareia
 			TransitionLendas.animator.play_backwards("fade_lendas")
 			
-		# 4. Horácio anda até os rastros
 		"horacio_ve_rastros":
 			var sprite_player = player.get_node("animator3D_sprite")
 			
-			# 1. Muda a animação para caminhar para a direita (ou a direção dos rastros)
 			sprite_player.play("walk_right") 
 			
-			# 2. Faz o movimento físico até o marcador
 			var tw = create_tween()
 			tw.tween_property(player, "global_position", marker_player_footprints.global_position, 2.0)
 			await tw.finished
 			
-			# 3. Quando chegar, para a animação (volta para idle)
 			sprite_player.stop()
 			
-			await get_tree().create_timer(4.0).timeout 
-			if not musica_fundo.playing:
-				musica_fundo.play()
-		# Chamada do Livro (Mantido)
+			await get_tree().create_timer(10.0).timeout 
+			musica_fundo.volume_db = -80.0
+			musica_fundo.play()
+			
+			var twMusic = create_tween()
+			twMusic.tween_property(musica_fundo, "volume_db", 0.0, 3.0)
+		
+		"iniciar_missao":
+			iniciar_missao_resgate()
+		
 		"mostrar_livro":
 			if has_node("book/LivroIcon"):
 				$book/LivroIcon.aparecer_com_fade()
+		
+		"book_manage":
+			if has_node("book/LivroIcon"):
+				$book/LivroIcon.abrir_livro()
+		
+		"parte2_curupira":
+			if has_node("curupiraArea"):
+				$curupiraArea.preparar_agradecimento

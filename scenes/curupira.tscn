@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://do8xdikiew12t"]
 
 [ext_resource type="Script" uid="uid://ohckl02n3o5w" path="res://scripts/curupira.gd" id="1_38npl"]
-[ext_resource type="Texture2D" uid="uid://ir7xvts5kqrq" path="res://scenario/floresta/92 Sem Título2_20260429194503.png" id="2_qh6tu"]
 [ext_resource type="Texture2D" uid="uid://b1odi3lrkp7wj" path="res://scenario/floresta/92 Sem Título2_20260430170606.png" id="3_fvxk4"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_se248"]
+load_path = "res://.godot/imported/92 Sem Título2_20260429194503.png-be97f53780b3fd181cd57e3f4113cc53.ctex"
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a78ah"]
 height = 2.6240234
@@ -10,7 +12,7 @@ height = 2.6240234
 [node name="curupira" type="CharacterBody3D" unique_id=1285362135]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
 script = ExtResource("1_38npl")
-spriteQuest = ExtResource("2_qh6tu")
+spriteQuest = SubResource("CompressedTexture2D_se248")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=263447517]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32307494, 0)

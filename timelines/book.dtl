@@ -1,5 +1,3 @@
-horacio: O que é isso? Meu livro está brilhando!
 [style name="estilo"]
-[signal arg="bookManage"]
-narrador: a tempos atras em eras disntitas conformes ditas as eras correlacionadas detestaveis inimigos da poeira e do calor , determina o fim da era de plasma
-[style name="semperfil"]
+horacio: O que é isso? Meu livro está brilhando!
+[signal arg="book_manage"]
