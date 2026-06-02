@@ -10,9 +10,13 @@
 [ext_resource type="PackedScene" uid="uid://cpkj3x6y1tsiq" path="res://scenes/bird.tscn" id="9_4lc3k"]
 [ext_resource type="AudioStream" uid="uid://b2ujgllh8ym2x" path="res://sounds/mundo/TrilhadaBuscaMod2.mp3" id="9_jmtw2"]
 [ext_resource type="Script" uid="uid://b61pfvt8fymf8" path="res://scripts/rastros_irreais.gd" id="10_jmtw2"]
+[ext_resource type="Script" uid="uid://dya70bsfj8exm" path="res://scripts/area_final.gd" id="11_g4r4f"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4lc3k"]
 size = Vector3(114.999886, 0.4732783, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_a6dt2"]
+radius = 5.326808
 
 [node name="root_world" type="Node3D" unique_id=484457010]
 script = ExtResource("1_jkenv")
@@ -71,5 +75,16 @@ script = ExtResource("10_jmtw2")
 [node name="collision" type="CollisionShape3D" parent="RastrosIrreais" unique_id=223115269]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.024427, 0.73563915, -6.663389)
 shape = SubResource("BoxShape3D_4lc3k")
+
+[node name="AreaFinal" type="Area3D" parent="." unique_id=1190199857 node_paths=PackedStringArray("curupira_node")]
+script = ExtResource("11_g4r4f")
+curupira_node = NodePath("../map/curupiraArea")
+
+[node name="collision" type="CollisionShape3D" parent="AreaFinal" unique_id=276859833]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.37825, 0, -38.598656)
+shape = SubResource("SphereShape3D_a6dt2")
+
+[node name="MarkerFinalPlayer" type="Marker3D" parent="." unique_id=928350214]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.584812, 0.67251205, -38.020607)
 
 [editable path="map"]

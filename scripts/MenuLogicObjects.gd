@@ -1,7 +1,6 @@
 extends CanvasLayer
 
 @onready var audioObj:AudioStreamPlayer2D = $bgsound
-@onready var audioObj2:AudioStreamPlayer2D = $bgsound2
 
 func _ready() -> void:
 	pass

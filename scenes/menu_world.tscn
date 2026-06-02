@@ -47,10 +47,6 @@ visible = true
 
 [node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=213988421]
 
-[node name="bgsound2" type="AudioStreamPlayer2D" parent="." unique_id=790128959]
-stream = ExtResource("4_mkc01")
-autoplay = true
-parameters/looping = false
 
 [connection signal="buttonSounds" from="Menu/config_game_ui" to="." method="_on_config_game_ui_button_sounds"]
 

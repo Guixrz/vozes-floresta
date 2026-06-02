@@ -129,6 +129,3 @@ func _on_dialogic_signal(argument: String):
 			if has_node("book/LivroIcon"):
 				$book/LivroIcon.abrir_livro()
 		
-		"parte2_curupira":
-			if has_node("curupiraArea"):
-				$curupiraArea.rodar_cutscene_agradecimento()
