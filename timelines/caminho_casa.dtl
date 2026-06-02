@@ -1,12 +1,13 @@
-[style name="horaciojunior"]
+[style name="estilo"]
 filho: [aa=3]Pai... o senhor disse que cresceu aqui não foi?
 [style name="estilo"]
 horacio: [aa=3]Foi sim, filho. Passei boa parte da minha infância neste lugar...
-[style name="horaciojunior"]
+[style name="estilo"]
 filho: [aa=2]E como era?
 [style name="estilo"]
 horacio: [aa=2]Hmm... Acho que era um lugar bem comum, na verdade...
-[style name="semperfil"]
+[style name="estilo"]
 [aa=2]...
 [style name="estilo"]
 horacio: [aa=3]Mas não precisa se preocupar! Tenho certeza de que você vai se divertir muito aqui.
+horacio: [aa=3]Por ora, vamos descansar!

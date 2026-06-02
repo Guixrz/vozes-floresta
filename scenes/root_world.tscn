@@ -9,6 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://qd8gk61wq805" path="res://scenes/livro_icon.tscn" id="8_2jlvb"]
 [ext_resource type="PackedScene" uid="uid://cpkj3x6y1tsiq" path="res://scenes/bird.tscn" id="9_4lc3k"]
 [ext_resource type="AudioStream" uid="uid://b2ujgllh8ym2x" path="res://sounds/mundo/TrilhadaBuscaMod2.mp3" id="9_jmtw2"]
+[ext_resource type="Script" uid="uid://b61pfvt8fymf8" path="res://scripts/rastros_irreais.gd" id="10_jmtw2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4lc3k"]
+size = Vector3(114.999886, 0.4732783, 1)
 
 [node name="root_world" type="Node3D" unique_id=484457010]
 script = ExtResource("1_jkenv")
@@ -32,6 +36,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16319847, -0.397717, 0.0103
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 34.106056, 0.5361115, 23.5974)
 
 [node name="footprintPath" parent="map" unique_id=1959463250 instance=ExtResource("6_ey38o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18813515, 0)
 
 [node name="sonHoracio" parent="." unique_id=2003751006 instance=ExtResource("7_ey38o")]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -2.9948404, 0.4519111, 7.1548967)
@@ -59,5 +64,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8003496, 0.6745266, 5.52641
 [node name="music" type="AudioStreamPlayer" parent="." unique_id=778513586]
 stream = ExtResource("9_jmtw2")
 volume_db = 1.0
+
+[node name="RastrosIrreais" type="Area3D" parent="." unique_id=392445632]
+script = ExtResource("10_jmtw2")
+
+[node name="collision" type="CollisionShape3D" parent="RastrosIrreais" unique_id=223115269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.024427, 0.73563915, -6.663389)
+shape = SubResource("BoxShape3D_4lc3k")
 
 [editable path="map"]

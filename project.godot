@@ -42,6 +42,7 @@ directories/dtl_directory={
 "interacao": "res://timelines/interacao.dtl",
 "introducao": "res://timelines/introducao.dtl",
 "passaroSalvo": "res://timelines/passaroSalvo.dtl",
+"rastrosIrreais": "res://timelines/rastrosIrreais.dtl",
 "timelines": "res://timelines/timelines.dtl",
 "zoios": "res://timelines/zoios.dtl"
 }

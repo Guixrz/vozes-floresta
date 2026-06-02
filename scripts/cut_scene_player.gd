@@ -1,6 +1,7 @@
 extends Node3D
 
 func _ready():
+	
 	DialogicUtil.get_style_by_name("semperfil.tres").prepare()
 	DialogicUtil.get_style_by_name("estilo.tres").prepare()
 	DialogicUtil.get_style_by_name("estiloinimigo.tres").prepare()

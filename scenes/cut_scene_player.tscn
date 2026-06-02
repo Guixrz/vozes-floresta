@@ -196,6 +196,7 @@ script = ExtResource("1_u6iqx")
 
 [node name="root_world" parent="." unique_id=484457010 instance=ExtResource("1_wuxbb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.914078, 0, 6.505016)
+iniciar_dialogo_padrao = false
 
 [node name="player" parent="root_world" index="0" unique_id=1533921175]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -13.443313, 0.863778, 4.00247)

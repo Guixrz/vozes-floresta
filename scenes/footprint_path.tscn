@@ -53,10 +53,10 @@ transform = Transform3D(-0.7841053, 0, -0.6206279, 0, 1, 0, 0.6206279, 0, -0.784
 transform = Transform3D(-0.8489718, 0, -0.52843827, 0, 1, 0, 0.52843827, 0, -0.8489718, 48.304, 1.1920929e-07, -9.842286)
 
 [node name="footstep24" parent="." unique_id=99928091 instance=ExtResource("1_0rev7")]
-transform = Transform3D(-0.7841053, 0, -0.6206279, 0, 1, 0, 0.6206279, 0, -0.7841053, 48.54668, 0, -10.716891)
+transform = Transform3D(-0.7841053, 0, -0.6206279, 0, 1, 0, 0.6206279, 0, -0.7841053, 45.080475, 0, -13.839858)
 
 [node name="footstep25" parent="." unique_id=855434029 instance=ExtResource("1_0rev7")]
-transform = Transform3D(-0.8489718, 0, -0.52843827, 0, 1, 0, 0.52843827, 0, -0.8489718, 48.284176, 1.1920929e-07, -11.189183)
+transform = Transform3D(-0.8489718, 0, -0.52843827, 0, 1, 0, 0.52843827, 0, -0.8489718, 44.81797, 1.1920929e-07, -14.31215)
 
 [node name="footstep11" parent="." unique_id=324282184 instance=ExtResource("1_0rev7")]
 transform = Transform3D(-0.98608613, 0, -0.16623515, 0, 1, 0, 0.16623515, 0, -0.98608613, 25.625023, 0.226, -17.969007)

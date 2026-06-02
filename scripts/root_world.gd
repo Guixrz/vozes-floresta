@@ -1,5 +1,7 @@
 extends Node3D
 
+@export var iniciar_dialogo_padrao: bool = true
+
 @onready var player = $player
 @onready var passarinho = $bird
 @onready var filho = $sonHoracio
@@ -33,7 +35,8 @@ func _ready() -> void:
 		
 		cam.target = filho
 	
-	Dialogic.start("inicioBuscaFilho")
+	if iniciar_dialogo_padrao:
+		Dialogic.start("inicioBuscaFilho")
 
 func iniciar_missao_resgate():
 	missao_passarinho_ativa = true
@@ -128,4 +131,4 @@ func _on_dialogic_signal(argument: String):
 		
 		"parte2_curupira":
 			if has_node("curupiraArea"):
-				$curupiraArea.preparar_agradecimento
+				$curupiraArea.rodar_cutscene_agradecimento()
