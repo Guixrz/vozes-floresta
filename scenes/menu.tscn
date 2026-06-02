@@ -1,17 +1,21 @@
 [gd_scene format=3 uid="uid://bp13n7ri1i1a0"]
 
 [ext_resource type="Script" uid="uid://b4dnqauw00c7x" path="res://scripts/Menu.gd" id="1_yqeox"]
-[ext_resource type="Texture2D" uid="uid://bueka022iihm8" path="res://sprites/menu/bgButton.png" id="2_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://bnt84osv4mawd" path="res://assetsmenu/seta2.png" id="2_13sgg"]
+[ext_resource type="Texture2D" uid="uid://cdn8cxlepael0" path="res://assetsmenu/ripa.png" id="2_i6lef"]
 [ext_resource type="Shader" uid="uid://dicif1ob50f67" path="res://shader/menu_tittle.gdshader" id="2_mhnvy"]
 [ext_resource type="Texture2D" uid="uid://bo0k1j7jkdwf7" path="res://sprites/menu/tittle_vozesDaFloresta2.png" id="2_vjb58"]
 [ext_resource type="PackedScene" uid="uid://cva61pi4nlhfl" path="res://scenes/config_game_ui.tscn" id="3_con2f"]
 [ext_resource type="FontFile" uid="uid://dmjrm5swmtsro" path="res://fontesEscritas/amnesia_font__amnesiarip__by_mucrush_d6m5g2e.ttf" id="3_g3eks"]
+[ext_resource type="Texture2D" uid="uid://cr83sb465ycfe" path="res://assetsmenu/seta1.png" id="4_13sgg"]
+[ext_resource type="Texture2D" uid="uid://bwtefa4kdc848" path="res://assetsmenu/seta0.png" id="4_v86rl"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g3eks"]
 load_path = "res://.godot/imported/101 Sem Título2_20260524110731.png-1d0804151003e689e107bdd399dab128.ctex"
 
 [sub_resource type="LabelSettings" id="LabelSettings_v86rl"]
 font = ExtResource("3_g3eks")
+font_size = 39
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4ytvr"]
 shader = ExtResource("2_mhnvy")
@@ -26,6 +30,102 @@ shader_parameter/aura_color = Vector3(0.3, 0.8, 1)
 shader_parameter/aura_strength = 3.935
 shader_parameter/aura_size = 0.2
 
+[sub_resource type="Animation" id="Animation_13sgg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("playBtn:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(390, 235)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("optionBtn:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(355, 370)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("quitBtn:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(376, 502)]
+}
+
+[sub_resource type="Animation" id="Animation_70i5f"]
+resource_name = "option_on_mouse"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("optionBtn:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(355, 370), Vector2(355, 360), Vector2(355, 370), Vector2(355, 380), Vector2(355, 370)]
+}
+
+[sub_resource type="Animation" id="Animation_i6lef"]
+resource_name = "play_on_mouse"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("playBtn:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 2.97, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(390, 235), Vector2(390, 250), Vector2(390, 235), Vector2(390, 220), Vector2(390, 235)]
+}
+
+[sub_resource type="Animation" id="Animation_mj5lg"]
+resource_name = "sair_on_mouse"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("quitBtn:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(376, 500), Vector2(376, 515), Vector2(376, 500), Vector2(376, 485), Vector2(376, 500)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_70i5f"]
+_data = {
+&"RESET": SubResource("Animation_13sgg"),
+&"option_on_mouse": SubResource("Animation_70i5f"),
+&"play_on_mouse": SubResource("Animation_i6lef"),
+&"sair_on_mouse": SubResource("Animation_mj5lg")
+}
+
 [node name="Menu" type="Control" unique_id=614541986]
 layout_mode = 3
 anchors_preset = 15
@@ -35,110 +135,107 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yqeox")
 
-[node name="buttons" type="VBoxContainer" parent="." unique_id=1813523655]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.527
-anchor_top = 0.65800005
-anchor_right = 0.527
-anchor_bottom = 0.65800005
-offset_left = -64.604004
-offset_top = -50.284027
-offset_right = 65.395996
-offset_bottom = 50.715973
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2.415, 2.415)
-pivot_offset = Vector2(65, 50.5)
-alignment = 1
+[node name="ripa" type="Control" parent="." unique_id=1548303025]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="playBtn" type="TextureButton" parent="buttons" unique_id=300552528]
+[node name="TextureRect" type="TextureRect" parent="ripa" unique_id=572801376]
+clip_contents = true
+layout_mode = 0
+offset_left = 446.0
+offset_top = 177.0
+offset_right = 629.0
+offset_bottom = 905.1875
+scale = Vector2(1, 0.64)
+texture = ExtResource("2_i6lef")
+
+[node name="quitBtn" type="TextureButton" parent="." unique_id=707500481]
 custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-texture_normal = SubResource("CompressedTexture2D_g3eks")
+layout_mode = 0
+offset_left = 376.0
+offset_top = 502.0
+offset_right = 708.0
+offset_bottom = 639.0
+texture_normal = ExtResource("2_13sgg")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="playLabel" type="Label" parent="buttons/playBtn" unique_id=1778149816]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "play"
-label_settings = SubResource("LabelSettings_v86rl")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="extraBtn" type="TextureButton" parent="buttons" unique_id=1787491154]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-texture_normal = ExtResource("2_4ytvr")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="extraLabel" type="Label" parent="buttons/extraBtn" unique_id=818719609]
+[node name="quitLabel" type="Label" parent="quitBtn" unique_id=522162680]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -65.0
-offset_top = -32.0
-offset_right = 63.146988
-offset_bottom = 32.50621
-text = "extra"
-label_settings = SubResource("LabelSettings_v86rl")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="optionBtn" type="TextureButton" parent="buttons" unique_id=223469998]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-texture_normal = ExtResource("2_4ytvr")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="optionLabel" type="Label" parent="buttons/optionBtn" unique_id=765139979]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -65.0
-offset_top = -32.0
-offset_right = 63.146988
-offset_bottom = 32.50621
-text = "opcoes"
-label_settings = SubResource("LabelSettings_v86rl")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="quitBtn" type="TextureButton" parent="buttons" unique_id=707500481]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-texture_normal = ExtResource("2_4ytvr")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="quitLabel" type="Label" parent="buttons/quitBtn" unique_id=522162680]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -65.0
-offset_top = -32.0
-offset_right = 63.146988
-offset_bottom = 32.50621
+offset_left = -57.0
+offset_top = -42.5
+offset_right = 71.14699
+offset_bottom = 22.00621
+rotation = 0.17015864
 text = "sair"
 label_settings = SubResource("LabelSettings_v86rl")
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="optionBtn" type="TextureButton" parent="." unique_id=223469998]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 0
+offset_left = 355.0
+offset_top = 370.0
+offset_right = 716.0
+offset_bottom = 498.0
+texture_normal = ExtResource("4_13sgg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="optionLabel" type="Label" parent="optionBtn" unique_id=765139979]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.525024
+offset_top = -26.556274
+offset_right = 61.621964
+offset_bottom = 37.949936
+rotation = -0.11179367
+text = "opcoes"
+label_settings = SubResource("LabelSettings_v86rl")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="playBtn" type="TextureButton" parent="." unique_id=300552528]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 0
+offset_left = 390.0
+offset_top = 235.0
+offset_right = 697.0007
+offset_bottom = 380.0033
+texture_normal = ExtResource("4_v86rl")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="playLabel" type="Label" parent="playBtn" unique_id=1778149816]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.525024
+offset_top = -20.071259
+offset_right = 59.621964
+offset_bottom = 44.43495
+rotation = -0.16886373
+text = "play"
+label_settings = SubResource("LabelSettings_v86rl")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
 
 [node name="tittle2" type="TextureRect" parent="." unique_id=345156126]
 material = SubResource("ShaderMaterial_4ytvr")
@@ -156,4 +253,15 @@ pivot_offset = Vector2(311, 64)
 texture = ExtResource("2_vjb58")
 
 [node name="config_game_ui" parent="." unique_id=592948252 instance=ExtResource("3_con2f")]
+visible = false
 layout_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1626827780]
+libraries/ = SubResource("AnimationLibrary_70i5f")
+
+[connection signal="button_down" from="quitBtn" to="." method="_on_quit_btn_button_down"]
+[connection signal="mouse_entered" from="quitBtn" to="." method="_on_quit_btn_mouse_entered"]
+[connection signal="button_down" from="optionBtn" to="." method="_on_option_btn_button_down"]
+[connection signal="mouse_entered" from="optionBtn" to="." method="_on_option_btn_mouse_entered"]
+[connection signal="button_down" from="playBtn" to="." method="_on_play_btn_button_down"]
+[connection signal="mouse_entered" from="playBtn" to="." method="_on_play_btn_mouse_entered"]

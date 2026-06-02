@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="jogo-folclore"
-run/main_scene="uid://dnk1v3qp7bu1d"
+run/main_scene="uid://bd3k3w2pioa2l"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

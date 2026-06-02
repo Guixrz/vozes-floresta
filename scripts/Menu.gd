@@ -3,6 +3,7 @@ extends Control
 
 @export var nameWorld:String 
 @onready var audioClick:AudioStreamPlayer2D = $"../clickSound"
+@onready var animator:AnimationPlayer = $AnimationPlayer
 
 #nodes da ui
 
@@ -13,12 +14,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if $config_game_ui.visible:
-		$buttons.hide()
-		$tittle2.hide()
-	else:
-		$buttons.show()
-		$tittle2.show()
+	pass
+	
 
 
 func _on_play_btn_button_down() -> void:
@@ -36,3 +33,15 @@ func _on_option_btn_button_down() -> void:
 
 func _on_quit_btn_button_down() -> void:
 	get_tree().quit()
+
+
+func _on_play_btn_mouse_entered() -> void:
+	animator.play("play_on_mouse")
+
+
+func _on_option_btn_mouse_entered() -> void:
+	animator.play("option_on_mouse")
+
+
+func _on_quit_btn_mouse_entered() -> void:
+	animator.play("sair_on_mouse")

@@ -1,0 +1,172 @@
+[gd_scene format=3 uid="uid://cx8hr2x4b8rx6"]
+
+[ext_resource type="Texture2D" uid="uid://cobib0ovj26kc" path="res://assetsmenu/menu_image.png" id="1_7mk7e"]
+[ext_resource type="Script" uid="uid://ja6dyn8nrl5q" path="res://scripts/vagalume.gd" id="1_x2asv"]
+
+[sub_resource type="Gradient" id="Gradient_x2asv"]
+offsets = PackedFloat32Array(0, 0.68421054, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.7398989, 0.7398989, 0.7398989, 0.036437273, 0.73006314, 0.73006314, 0.73006314, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6x5wp"]
+gradient = SubResource("Gradient_x2asv")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.53418803, 0.51282054)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_x2asv"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_6x5wp"]
+offsets = PackedFloat32Array(0, 0.6680162)
+colors = PackedColorArray(1, 1, 0, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_eragx"]
+gradient = SubResource("Gradient_6x5wp")
+fill = 1
+fill_from = Vector2(0.508547, 0.53418803)
+fill_to = Vector2(0, 1)
+
+[sub_resource type="Curve2D" id="Curve2D_x2asv"]
+bake_interval = 9.15
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 13, 47, 0, 0, 0, 0, 139, 56, 0, 0, 0, 0, 299, 70, 0, 0, 0, 0, 394, 96, 0, 0, 0, 0, 470, 138, 0, 0, 0, 0, 562, 171, 0, 0, 0, 0, 654, 195, 0, 0, 0, 0, 743, 196, 0, 0, 0, 0, 834, 212, 0, 0, 0, 0, 907, 246, 0, 0, 0, 0, 1002, 274, 0, 0, 0, 0, 1088, 278, 0, 0, 0, 0, 1153, 298, 0, 0, 0, 0, 1208, 287, 0, 0, 0, 0, 1226, 371, 0, 0, 0, 0, 1087, 424, 0, 0, 0, 0, 952, 441, 0, 0, 0, 0, 841, 452, 0, 0, 0, 0, 725, 442, 0, 0, 0, 0, 625, 424, 0, 0, 0, 0, 562, 446, 0, 0, 0, 0, 514, 491, 0, 0, 0, 0, 419, 492, 0, 0, 0, 0, 302, 516, 0, 0, 0, 0, 184, 567, 0, 0, 0, 0, 93, 551, 0, 0, 0, 0, 20, 584, 0, 0, 0, 0, 18, 584, 0, 0, 0, 0, -54, 610, 0, 0, 0, 0, -45, 501, 0, 0, 0, 0, -63, 433, 0, 0, 0, 0, 116, 400, 0, 0, 0, 0, 160, 361, 0, 0, 0, 0, 204, 301, 0, 0, 0, 0, 303, 293, 0, 0, 0, 0, 373, 278, 0, 0, 0, 0, 453, 267, 0, 0, 0, 0, 557, 280, 0, 0, 0, 0, 658, 304, 0, 0, 0, 0, 775, 332, 0, 0, 0, 0, 902, 324, 0, 0, 0, 0, 951, 366, 0, 0, 0, 0, 988, 368, 0, 0, 0, 0, 1079, 457, 0, 0, 0, 0, 1120, 483, 0, 0, 0, 0, 1195, 514, 0, 0, 0, 0, 1094, 568, 0, 0, 0, 0, 1029, 586, 0, 0, 0, 0, 928, 599, 0, 0, 0, 0, 793, 617, 0, 0, 0, 0, 689, 581, 0, 0, 0, 0, 606, 542, 0, 0, 0, 0, 549, 496, 0, 0, 0, 0, 485, 439, 0, 0, 0, 0, 420, 366, 0, 0, 0, 0, 357, 278, 0, 0, 0, 0, 306, 213, 0, 0, 0, 0, 238, 164, 0, 0, 0, 0, 111, 99, 0, 0, 0, 0, 28, 114, 0, 0, 0, 0, -45, 125)
+}
+point_count = 61
+
+[sub_resource type="Animation" id="Animation_6x5wp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D3:progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_eragx"]
+resource_name = "vagalume"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D3:progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 5678.4385]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3qmna"]
+_data = {
+&"RESET": SubResource("Animation_6x5wp"),
+&"vagalume": SubResource("Animation_eragx")
+}
+
+[sub_resource type="Environment" id="Environment_3qmna"]
+glow_enabled = true
+
+[node name="vagalumes" type="Node2D" unique_id=1814792631]
+z_index = -1
+
+[node name="vagalume" type="PointLight2D" parent="." unique_id=1295431643]
+z_index = 100
+position = Vector2(204, 225)
+color = Color(1, 1, 0, 1)
+energy = 1.87
+blend_mode = 2
+texture = SubResource("GradientTexture2D_6x5wp")
+script = ExtResource("1_x2asv")
+
+[node name="glowVagalume" type="Sprite2D" parent="vagalume" unique_id=2109662201]
+material = SubResource("CanvasItemMaterial_x2asv")
+position = Vector2(0, -2)
+texture = SubResource("GradientTexture2D_eragx")
+
+[node name="fundo" type="Sprite2D" parent="." unique_id=2003686049]
+position = Vector2(600.00006, 334)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_7mk7e")
+metadata/_edit_lock_ = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1865672512]
+color = Color(0.38857287, 0.38857287, 0.38857287, 1)
+
+[node name="Path2D" type="Path2D" parent="." unique_id=2116825496]
+position = Vector2(2, 1)
+curve = SubResource("Curve2D_x2asv")
+
+[node name="PathFollow2D3" type="PathFollow2D" parent="Path2D" unique_id=301202012]
+position = Vector2(13, 47)
+rotation = 0.07130746
+rotates = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1801640275]
+libraries/ = SubResource("AnimationLibrary_3qmna")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1939223040]
+environment = SubResource("Environment_3qmna")
+
+[node name="vagalume2" type="PointLight2D" parent="." unique_id=317171415]
+z_index = 100
+position = Vector2(843, 137)
+color = Color(1, 1, 0, 1)
+energy = 1.87
+blend_mode = 2
+texture = SubResource("GradientTexture2D_6x5wp")
+script = ExtResource("1_x2asv")
+
+[node name="glowVagalume" type="Sprite2D" parent="vagalume2" unique_id=1608612571]
+material = SubResource("CanvasItemMaterial_x2asv")
+position = Vector2(0, -2)
+texture = SubResource("GradientTexture2D_eragx")
+
+[node name="vagalume3" type="PointLight2D" parent="." unique_id=429651738]
+z_index = 100
+position = Vector2(677, 538)
+color = Color(1, 1, 0, 1)
+energy = 1.87
+blend_mode = 2
+texture = SubResource("GradientTexture2D_6x5wp")
+script = ExtResource("1_x2asv")
+
+[node name="glowVagalume" type="Sprite2D" parent="vagalume3" unique_id=1509898146]
+material = SubResource("CanvasItemMaterial_x2asv")
+position = Vector2(0, -2)
+texture = SubResource("GradientTexture2D_eragx")
+
+[node name="vagalume4" type="PointLight2D" parent="." unique_id=423183960]
+z_index = 100
+position = Vector2(975, 401)
+color = Color(1, 1, 0, 1)
+energy = 1.87
+blend_mode = 2
+texture = SubResource("GradientTexture2D_6x5wp")
+script = ExtResource("1_x2asv")
+
+[node name="glowVagalume" type="Sprite2D" parent="vagalume4" unique_id=1205229520]
+material = SubResource("CanvasItemMaterial_x2asv")
+position = Vector2(0, -2)
+texture = SubResource("GradientTexture2D_eragx")
+
+[node name="vagalume5" type="PointLight2D" parent="." unique_id=451588700]
+z_index = 100
+position = Vector2(132, 610)
+color = Color(1, 1, 0, 1)
+energy = 1.87
+blend_mode = 2
+texture = SubResource("GradientTexture2D_6x5wp")
+script = ExtResource("1_x2asv")
+
+[node name="glowVagalume" type="Sprite2D" parent="vagalume5" unique_id=112951760]
+material = SubResource("CanvasItemMaterial_x2asv")
+position = Vector2(0, -2)
+texture = SubResource("GradientTexture2D_eragx")

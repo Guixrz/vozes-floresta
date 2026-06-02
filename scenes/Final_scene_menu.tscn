@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bd3k3w2pioa2l"]
+
+[ext_resource type="PackedScene" uid="uid://dnk1v3qp7bu1d" path="res://scenes/menu_world.tscn" id="1_tooa7"]
+[ext_resource type="PackedScene" uid="uid://cx8hr2x4b8rx6" path="res://scenes/vagalumes.tscn" id="2_1a2fk"]
+
+[node name="FinalMenuScene" type="Node2D" unique_id=1833536714]
+
+[node name="menu-world" parent="." unique_id=1335469950 instance=ExtResource("1_tooa7")]
+
+[node name="vagalumes" parent="." unique_id=1814792631 instance=ExtResource("2_1a2fk")]
+position = Vector2(-2, -2)
